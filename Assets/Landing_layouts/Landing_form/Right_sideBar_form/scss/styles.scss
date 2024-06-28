@@ -1,0 +1,119 @@
+// cuadro contenedor 
+
+
+
+
+.cuadranteMiddleLeftTop
+{
+
+height: auto!important;
+@include md{
+    padding-right: 60px!important;
+}
+
+@include mdMax{
+    padding-bottom: 20px!important;
+}
+
+}
+ .cuadranteMiddleRightTop{
+    
+
+    padding-left: 40px!important;
+    padding-top: 0!important;
+    // border-radius: 20px;
+
+height: auto!important;
+
+position: relative;
+overflow: hidden;
+
+@include mdMax{
+    border-top: 1px solid map-get($colors, 'lightGray');
+    padding: 0!important;
+    padding-top: 40px!important;
+
+    
+}
+
+@include md{
+    border-left: 1px solid map-get($colors, 'lightGray');
+  
+}
+
+
+& > div > h3 {
+   
+   
+
+    // padding: 25px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+
+
+
+}
+
+
+#tabsForm{
+
+
+}
+
+
+
+
+}
+
+
+
+    #show_enfermedades{
+        -webkit-transition: all 200ms ease-in;
+-moz-transition: all 200ms ease-in;
+-ms-transition: all 200ms ease-in;
+-o-transition: all 200ms ease-in;
+transition: all 200ms ease-in;
+    }
+
+    @media (max-width: 760px) {
+
+      a.btn_enviar_con, .btn_ama.btn_enviar_con.btn_suscribe{margin: 0!important;}
+h1{width: 100%!important;}
+ .cuadranteMiddleLeftTop
+{
+    padding-right: 0;
+}
+
+
+    }
+
+
+    section.producto .contenidoLibre h2.check{
+position: relative;
+padding-top: 55px!important;
+padding-bottom: 55px!important;
+text-align: center;
+background-image: none;
+font-size: $s5!important;
+color: map-get($colors, 'extraDarkGray' )!important;
+background-color: #fff;
+margin-top: -70px;
+}
+section.producto .contenidoLibre h2.check:after{
+content: "\e90a";
+position: absolute;
+font-family: 'icomoon'!important;
+top: 0; 
+font-size: 35px;
+width: 100px;
+text-align: center;
+margin-left: -50px;
+left:  50%;
+color: #22B267!important;
+
+
+}

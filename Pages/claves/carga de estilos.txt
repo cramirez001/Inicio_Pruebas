@@ -1,0 +1,16 @@
+
+
+    <!-- Repositorio Git -->
+    <link rel="stylesheet" href="../../Assets/..."/>
+    <link rel="stylesheet" href="../../Assets/..."/>
+    <!-- Repositorio Git -->
+
+    <!-- máquina virtual -->
+    <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/..."/>
+    <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/..." />
+    <!-- máquina virtual -->
+
+    <!-- Desarrollo, QA y Producción -->
+    <link rel="stylesheet"href="/Style%20Library/Assets/..."/>
+    <link rel="stylesheet"href="/Style%20Library/Assets/..."/>
+    <!-- Desarrollo, QA y Producción -->

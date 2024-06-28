@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../Assets/Globals/css/cpl-Styles.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+  <body>
+    <div class="cpl_body">
+      <div class="cpl_container">
+        <!-- titulo -->
+        <div class="flex_row">
+          <div class="cpl_col cpl_col_12">
+            <div class="cpl_col cpl_col_12 margin_bottom_small">
+              <h1 class="center_text">Selección de pago</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex_row">
+          <div class="cpl_col cpl_col_12">
+            <div class="fex_row auto_cols">
+              <div class="cpl_col">
+                <span
+                  id="status_read"
+                  class="t-aqua cpl_icon icon-alert-fill fs_h3"
+                ></span>
+              </div>
+              <div class="cpl_col">
+                <h3>Consideraciones importantes<br /></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- información importante -->
+        <div class="flex_row important_info">
+          <div class="cpl_col cpl_col_12">
+            <p>
+              <strong>Los valores se presentan a modo referencial</strong> con
+              objeto de ayudarlo a conocer el costo aproximado de su impuesto a
+              la renta por su retiro de fondos previsionales, según LEY N°
+              21.309 <br /><br />
+              <strong
+                >La ley no incorporó beneficios tributarios por el retiro de los
+                fondos previsionales</strong
+              >, por lo tanto, su pensión y el retiro de excedente de libre
+              disposición se encuentran afectos a la Ley de impuestos a la
+              renta. <br /><br />
+              No obstante, la ley de la renta considera una opción de beneficio
+              tributario para el retiro de excedente de libre disposición de
+              hasta UTM 800 (Aproximado $41.273.600). Este beneficio tributario
+              no es un
+              <strong> "Ingreso no renta" </strong>, sino es una
+              <strong>"Renta exenta".</strong> <br /><br />
+              <strong>La renta exenta</strong> (retiro exedente de libre
+              disposición) lo deberá agregar a su base imponible del impuesto
+              global complementario y después deberá utilizar un crédito
+              proporcional a su favor reduciendo en parte su impuesto final.
+              <br /><br />
+              Si usted anteriormente ha usado el beneficio tributario, no podrá
+              usarlo nuevamente.
+            </p>
+          </div>
+
+          <!-- Declaración -->
+          <div
+            class="cpl_col cpl_col_12 center_cont margin_top_medium declaracion_rdo"
+          >
+            <div class="cpl_flex_form mw_400">
+              <div
+                class="cpl_col cpl_col_12 input_wrap checkbox_wrap center_cont_row"
+              >
+                <label class="cpl_input_check">
+                  <input
+                    id="agree_read"
+                    type="checkbox"
+                    name="1"
+                    value="cuentaBancaria"
+                  /><span class="check"></span>
+                  <p class="padding_left_10">
+                    Declaro haber leído esta información antes de seleccionar el
+                    pago
+                  </p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Btn mostrar opciones -->
+          <div class="cpl_col cpl_col_12 show_options">
+            <button
+              id="show_options_btn"
+              class="cpl_btn mw_300 center_div aqua"
+              onclick="mostrarOpciones_ELD()"
+              disabled
+            >
+              Seleccionar pago
+            </button>
+          </div>
+        </div>
+        <div class="flex_row">
+          <div class="cpl_col cpl_col_12 border_bottom_lightGray">
+            <h3><a id="reLeer">Volver a leer</a></h3>
+          </div>
+        </div>
+
+        <!-- Opciones -->
+        <div class="flex_row option_zone padding_top_medium">
+          <div class="cpl_col cpl_col_12">
+            <h3>Selecciona una opción</h3>
+          </div>
+          <div class="cpl_col cpl_col_12 d-flex wrap wrap_cajas_excedente over800">
+            <label class="cpl_input_radio caja-excedente">
+              <div class="circulo-padding">
+                <input
+                  id="1"
+                  class="radio_ELD"
+                  type="radio"
+                  name="radio_ELD"
+                  value="max_renta"
+                  onclick="showWithRadio(this, 'tipoPago')"
+                /><span class="check"></span>
+              </div>
+              <div class="cont">
+                <p class="p-sin title">
+                  Máxima <br />
+                  Renta temporal
+                </p>
+                <h2 class="cpl_number p-sin">$570.000</h2>
+                <p class="p-sin">
+                  <strong class="t-blue">$0</strong> de excedente de libre
+                  disposición
+                </p>
+              </div>
+            </label>
+
+            <label class="cpl_input_radio caja-excedente">
+              <div class="circulo-padding">
+                <input
+                  id="1"
+                  class="radio_ELD"
+                  type="radio"
+                  name="radio_ELD"
+                  value="max_ELD"
+                  onclick="showWithRadio(this, 'tipoPago')"
+                /><span class="check"></span>
+              </div>
+              <div class="cont">
+                <p class="p-sin title">
+                  Máximo <br />
+                  excedente libre disposición
+                </p>
+                <h2 class="cpl_number p-sin">$310.000</h2>
+                <p class="p-sin">
+                  <strong class="t-blue">$105.000</strong> de Renta temporal
+                </p>
+              </div>
+            </label>
+
+            <label class="cpl_input_radio caja-excedente">
+                        <div class="circulo-padding">
+                            <input id="1" type="radio" class="radio_ELD" name="radio_ELD" value="800_UTM" ><span class="check"></span>
+                        </div>
+                        <div>
+                            <p class="p-sin title">Retirar máximo excedente con beneficio tributario:</p>
+                            <h3 class="cpl_number p-sin">800 UTM</h3>
+                            <p class="p-sin ">La ley de la renta considera un beneficio tributario para el retiro de excedente de libre disposición de hasta UTM 800 (Aproximado $41.273.600).</p>
+
+                            <p>La <strong>Renta temporal</strong> se ajustará al monto que corresponda.</p>
+
+                        </div>
+                    </label>
+
+            <label class="cpl_input_radio caja-excedente">
+              <div class="circulo-padding">
+                <input
+                  id="1"
+                  class="radio_ELD"
+                  type="radio"
+                  name="radio_ELD"
+                  value="monto_fijo"
+                  onclick="showWithRadio(this, 'tipoPago')"
+                /><span class="check"></span>
+              </div>
+              <div class="cont">
+                <p class="p-sin title">Fijar monto</p>
+
+                <p class="p-sin">
+                  Puede fijar un monto en UF de renta temporal o de excedente de
+                  libre disposición
+                </p>
+
+                <div class="bottom-3">
+                  <div class="cpl_flex_form">
+                    <div class="cpl_col cpl_col_12 input_wrap select_wrap">
+                      <label class="label_l"
+                        ><span>¿Qué deseas fijar?</span></label
+                      >
+                      <select class="cpl_input" name="" id="">
+                        <option value="">Excedente de libre disposición</option>
+                        <option value="">Renta temporal</option>
+                      </select>
+                      <!-- <div class="f_error">Campo requerido</div> -->
+                    </div>
+                    <div class="cpl_col cpl_col_12 input_wrap">
+                      <label class="label_l">
+                        <span>Monto a fijar (UF)</span>
+                      </label>
+                      <input
+                        class="cpl_input"
+                        type="text"
+                        placeholder="100 UF"
+                      />
+                      <!-- <div class="f_error">Campo requerido</div> -->
+                    </div>
+                  </div>
+                  <p class="">
+                    El <strong>Excedente de libre disposición</strong> se
+                    ajustará al monto que corresponda
+                  </p>
+                </div>
+              </div>
+            </label>
+          </div>
+          <!-- Continuar -->
+          <div class="cpl_col cpl_col_12 padding_top_40">
+            <div class="cpl_btn center_div mw_350">Siguiente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var rad = document.getElementsByClassName("radio_ELD");
+      var b3 = document.getElementsByClassName("bottom-3")[0];
+      var wrapCajasExcedente = document.getElementsByClassName(
+        "wrap_cajas_excedente"
+      )[0];
+      var prev = null;
+      for (var i = 0; i < rad.length; i++) {
+        rad[i].addEventListener("change", function () {
+          if (this !== prev) {
+            prev = this;
+          }
+          if (this.value == "monto_fijo") {
+            b3.style.display = "block";
+            b3.classList.add("animate__animated");
+            b3.classList.add("animate__slideInUp");
+            wrapCajasExcedente.classList.add("align_items_start");
+          } else {
+            b3.style.display = "none";
+            b3.classList.remove("animate__animated");
+            b3.classList.remove("animate__slideInUp");
+            wrapCajasExcedente.classList.remove("align_items_start");
+          }
+        });
+      }
+
+      var agreeRead = document.getElementById("agree_read");
+      var showOptionsBtn = document.getElementById("show_options_btn");
+
+      agreeRead.addEventListener("change", function () {
+        if (agreeRead.checked == true) {
+          alert('true');
+          showOptionsBtn.disabled = false;
+        } else {
+          alert('false');
+          showOptionsBtn.disabled = true;
+        }
+      });
+
+      var declaracionRdo = document.getElementsByClassName(
+        "declaracion_rdo"
+      )[0];
+      var showOptions = document.getElementsByClassName("show_options")[0];
+      var optionZone = document.getElementsByClassName("option_zone")[0];
+      var statusRead = document.getElementById("status_read");
+      var reLeer = document.getElementById("reLeer");
+      var importantInfo = document.getElementsByClassName("important_info")[0];
+      function mostrarOpciones_ELD() {
+        optionZone.style.display = "block";
+        importantInfo.classList.add("collapsed");
+
+        showOptions.style.display = "none";
+
+        reLeer.style.display = "block";
+        declaracionRdo.style.display = "none";
+        statusRead.classList.add("icon-check-fill", "t-green");
+        window.scrollTo({ top: 100, behavior: "smooth" });
+      }
+      reLeer.addEventListener("click", function () {
+        // optionZone.style.display = 'none';
+        if (reLeer.classList.contains("opened")) {
+          importantInfo.classList.add("collapsed");
+          reLeer.classList.remove("opened");
+          reLeer.innerHTML = "Volver a leer";
+          window.scrollTo({ top: 100, behavior: "smooth" });
+        } else {
+          importantInfo.classList.remove("collapsed");
+          reLeer.classList.add("opened");
+          reLeer.innerHTML = "Cerrar";
+          window.scrollTo({ top: 100, behavior: "smooth" });
+        }
+      });
+    </script>
+  </body>
+</html>

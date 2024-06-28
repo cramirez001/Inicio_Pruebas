@@ -1,0 +1,44 @@
+
+//   Clases de asignación de colores 
+
+
+@each $class, $value in $colors{
+    .t-#{$class}{
+      color: $value!important
+    }
+    .b-#{$class}{
+      background-color: $value!important
+    }
+
+        @include attrRange(t-#{$class}){
+          color: $value!important
+        }
+
+        
+        @include attrRange(b-#{$class}){
+          background-color: $value!important
+        }
+
+    
+  }
+  
+  @each $class, $value in $colors{
+    .t_#{$class}{
+      color: $value!important
+    }
+    .b_#{$class}{
+      background-color: $value!important
+    }
+
+        @include attrRange(t_#{$class}){
+          color: $value!important
+        }
+
+        
+        @include attrRange(b_#{$class}){
+          background-color: $value!important
+        }
+
+    
+  }
+  

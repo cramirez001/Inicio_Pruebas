@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Assets/Globals/css/cpl-Styles.css">
+    <link rel="stylesheet" href="../../Assets/Customs/Privado/Crecimiento_historico/css/custom.css">
+    <script src="../../Assets/Globals/js/jquery.js"></script>
+    <script src="../../Assets/Globals/js/jquery.animateNumbers.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cpl_body">
+        <div class="cpl_container">
+            <div class="flex_row">
+                <div class="cpl_col cpl_col_12">
+                    <h3>Crecimiento historico Cotización obligatoria</h3>
+                </div>
+
+
+                <div class="cpl_col cpl_col_12 ">
+                    <div class="co_cards">
+
+                        <div class="card comparative_box">
+                            <div class="card_cont">
+                                <div class="flex_row row_cols_offset_12">
+                                    <div class="crecimiento cpl_col cpl_col_6">
+                                        <div class="header">
+                                            <div class="flex_row">
+                                                <div class="cpl_col cpl_col_6">
+                                                    <p>Crecimiento histórico</p>
+                                                    <h1 class="amount">$<span id="num_crecimiento">0</span></h1>
+                                                </div>
+                                                <div class="cpl_col cpl_col_6 d-flex">
+                                                    <img src="../../Assets/Globals/img/Ilustraciones/coins-01.svg"
+                                                        alt="crecimiento" width="70" style="margin-left:auto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body">
+                                            <p>Este monto corresponde a todas tus ganancias generadas por AFP Capital
+                                                desde tu primera cotización el <strong><span
+                                                        class="initial_date">12/03/2010</span></strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="aporte cpl_col cpl_col_6">
+                                        <div class="header">
+                                            <p>Tu aporte obligatorio</p>
+                                            <h1 class="amount">$<span id="num_aporte">0</span></h1>
+                                        </div>
+                                        <div class="body">
+                                            <p>Corresponde a todo lo que has ahorrado a partir del descuento mensual a
+                                                tu sueldo, correspondiente al 10%. Desde tu primera cotización el
+                                                <strong><span class="initial_date">12/03/2010</span></strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="cpl_col cpl_col_12 ">
+                                        <div class="grafico">
+                                            <div class="legend">
+                                                <p>Crecimiento</p>
+                                                <p>Aporte</p>
+                                            </div>
+                                            <div class="bars">
+                                                <div id="bar_crecimiento" class="bar crecimiento"></div>
+                                                <div id="bar_aporte" class="bar aporte"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="cpl_col cpl_col_12 margin_top_medium padding_30">
+
+
+                                <h3>Composición de tu ahorro actual</h3>
+            
+            
+            
+                                <div class="cpl_accordion balance_box">
+                                    <div id="balance_crecimiento" class="accordion_item">
+            
+            
+                                        <div class="data">
+                                            <h1><span class="cpl_icon arrowPack"></span></h1>
+                                            <h3>Crecimiento histórico</h3>
+                                        </div>
+                                        <div class="value">
+                                            <h3 class="amount">$<span>0</span></h3>
+                                        </div>
+            
+                                        <div class="detail">
+                                            <h3><span class="cpl_icon icon-arrow-right"></span></h3>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div id="balance_aporte" class="accordion_item">
+            
+            
+                                        <div class="data">
+                                            <h1><span class="cpl_icon arrowPack"></span></h1>
+                                            <h3>Aporte</h3>
+                                        </div>
+                                        <div class="value">
+                                            <h3 class="amount">$<span>0</span></h3>
+                                        </div>
+            
+                                        <div class="detail">
+                                            <h3><span class="cpl_icon icon-arrow-right"></span></h3>
+                                        </div>
+            
+                                    </div>
+            
+                                    <div id="balance_otros" class="accordion_item">
+            
+            
+                                        <div class="data">
+                                            <h1><span class="cpl_icon arrowPack"></span></h1>
+                                            <h3>Otros cargos y aportes</h3>
+                                        </div>
+                                        <div class="value">
+                                            <h3 class="amount">$<span>0</span></h3>
+                                        </div>
+            
+                                        <div class="detail">
+                                            <h3><span class="cpl_icon icon-arrow-right"></span></h3>
+                                        </div>
+            
+                                    </div>
+            
+            
+            
+                                    <div id="balance_retiros" class="accordion_item">
+            
+            
+                                        <div class="data">
+                                            <h1><span class="cpl_icon arrowPack"></span></h1>
+                                            <h3>Retiros 10%</h3>
+                                        </div>
+                                        <div class="value">
+                                            <h3 class="amount">$<span>0</span></h3>
+                                        </div>
+            
+                                        <div class="detail">
+                                            <h3><span class="cpl_icon icon-arrow-right"></span></h3>
+                                        </div>
+            
+                                    </div>
+            
+            
+            
+            
+            
+            
+                                    <div id="balance_saldoFinal" class="accordion_item total">
+            
+            
+                                        <div class="data">
+                                            <h1><span class="cpl_icon icon-money-bag t-gray"></span></h1>
+                                            <div>
+                                                <h3>Ahorro Total</h3>
+                                                <p>Actualizado al <span class="close_date"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="value">
+                                            <h3 class="amount">$<span>0</span></h3>
+                                        </div>
+            
+                                        <div class="detail">
+                                            <h3><span class="cpl_icon icon-arrow-right"></span></h3>
+                                        </div>
+            
+                                    </div>
+                                </div>
+            
+            
+            
+            
+            
+            
+                            </div>
+                        </div>
+
+
+
+
+                        
+                    </div>
+
+
+                    
+
+                </div>
+
+
+                
+            </div>
+        </div>
+
+
+
+
+        <!-- modales  -->
+
+        <!-- Modal Central -->
+        <div class="cpl_modal center_modal detalle_modal detalle_balance_crecimiento">
+            <div class="modal_box max_w_600">
+                <div class="close close_action"></div>
+                <div class="modal_cont">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 ">
+                            <div class="mw_50 center_div">
+                            </div>
+
+                            <br>
+                            <h2 class="t-extraDarkGray">Crecimiento histórico</h2>
+
+                            <p>Este monto corresponde a todas tus ganancias generadas por AFP Capital desde tu primera
+                                cotización el <strong><span class="initial_date">12/03/2010</span></strong></p>
+
+
+
+
+
+
+
+                        </div>
+                        <div class="cpl_col cpl_col_12 border_top_lightGray margin_top_20">
+                            <h2 class="t-extraDarkGray  amount">$<span class="modal_amount">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Central -->
+
+
+        <!-- Modal Central -->
+        <div class="cpl_modal center_modal detalle_modal detalle_balance_aporte">
+            <div class="modal_box max_w_600">
+                <div class="close close_action"></div>
+                <div class="modal_cont">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 ">
+                            <div class="mw_50 center_div">
+                            </div>
+
+                            <br>
+                            <h2 class="t-extraDarkGray">Aporte obligatorio</h2>
+
+                            <p>Este monto corresponde a todas tus ganancias generadas por AFP Capital desde tu primera
+                                cotización el <strong><span class="initial_date">12/03/2010</span></strong></p>
+
+
+
+
+
+
+
+                        </div>
+                        <div class="cpl_accordion open balance_box cpl_col_12">
+                            <div id="balance_crecimiento" class="accordion_item  d_flex direction_column">
+
+                                <div class="accordion_detail ">
+                                    <div class="d_flex align_items_center">
+                                        <h1 class="cpl_icon arrowPack icon-arrow_positive t-lightAqua"></h1>
+                                        <h4 class="t-extraDarkGray">Aporte obligatorio</h4>
+                                    </div>
+                                    <h2 class="t-extraDarkGray  amount">$<span class="aporte_inicial">0</span></h2>
+
+
+                                </div>
+
+                            </div>
+                            <div id="balance_crecimiento" class="accordion_item d_flex direction_column ">
+
+                                <div class="accordion_arrow_icon"></div>
+                                <div class="accordion_detail">
+
+                                    <div class="d_flex align_items_center">
+                                        <h1 class="cpl_icon arrowPack icon-arrow_negative t-lightRed"></h1>
+                                        <h4 class="t-extraDarkGray">Comisión histórica</h4>
+                                        
+                                    </div>
+                                    <h2 class="t-extraDarkGray  amount ">$<span class="comision_historica">0</span></h2>
+                                </div>
+
+                                <div class="accordion_content">
+                                    <p>Es el cobro de AFP Capital por la gestón y administración de tus ahorros. Por
+                                        ley, esa comisión se aplica como un porcentaje de la remuneración o la renta
+                                        imponible.</p>
+                                </div>
+
+                            </div>
+
+
+                            <div id="balance_crecimiento" class="accordion_item d_flex direction_column ">
+
+                                <div class="accordion_detail">
+                                    <div class="d_flex align_items_center">
+                                        <h1 class="cpl_icon icon-money-bag t-lightGray"></h1>
+                                    <h4 class="t-extraDarkGray">Aporte Total</h4>
+                                    
+                                    </div>
+                                    <h2 class="t-extraDarkGray  amount">$<span class="modal_amount">0</span></h2>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Central -->
+
+
+
+
+
+        <!-- Modal Central -->
+        <div class="cpl_modal center_modal detalle_modal detalle_balance_otros">
+            <div class="modal_box max_w_600">
+                <div class="close close_action"></div>
+                <div class="modal_cont">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 ">
+                            <div class="mw_50 center_div">
+                            </div>
+
+                            <br>
+                            <h2 class="t-extraDarkGray">Otros cargos y aportes</h2>
+
+                            <p>Este monto corresponde a todas tus ganancias generadas por AFP Capital desde tu primera
+                                cotización el <strong><span class="initial_date">12/03/2010</span></strong></p>
+
+
+
+
+
+
+
+                        </div>
+                        <div class="cpl_col cpl_col_12 border_top_lightGray margin_top_20">
+                            <h2 class="t-extraDarkGray  amount">$<span class="modal_amount">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Central -->
+
+
+
+        <!-- Modal Central -->
+        <div class="cpl_modal center_modal detalle_modal detalle_balance_retiros">
+            <div class="modal_box max_w_600">
+                <div class="close close_action"></div>
+                <div class="modal_cont">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 ">
+                            <div class="mw_50 center_div">
+                            </div>
+
+                            <br>
+                            <h2 class="t-extraDarkGray">Retiros del 10%</h2>
+
+                            <p>Este monto corresponde a todas tus ganancias generadas por AFP Capital desde tu primera
+                                cotización el <strong><span class="initial_date">12/03/2010</span></strong></p>
+
+
+
+
+
+
+
+                        </div>
+                        <div class="cpl_col cpl_col_12 border_top_lightGray margin_top_20">
+                            <h2 class="t-extraDarkGray  amount">$<span class="modal_amount">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Central -->
+
+    </div>
+
+
+</body>
+<script src="../../Assets/Globals/js/modal.js"></script>
+<script src="../../Assets/Globals/js/accordion.js"></script>
+<script src="../../Assets/Customs/Privado/Crecimiento_historico/js//crecimiento_historico.js"></script>
+
+</html>

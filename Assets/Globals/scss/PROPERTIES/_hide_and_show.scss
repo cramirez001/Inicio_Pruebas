@@ -1,0 +1,8 @@
+
+.hide{display: none!important;}
+
+ // attr range
+ @include attrRange(hide){
+    display: none!important;
+       }   
+ 

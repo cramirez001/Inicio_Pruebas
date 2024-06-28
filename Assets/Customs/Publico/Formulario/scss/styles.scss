@@ -1,0 +1,202 @@
+// Aquí van nuestros estilos personalizados
+
+.tab_buttons{
+    margin-top: 10px!important;
+    margin-bottom: 20px!important;
+}
+
+.accordion_form_file{
+    .accordion_item{
+        &.active{
+            .file_title{
+                display: none;
+            }
+        }
+    }
+}
+
+.info_solicitud_msg{
+    .info_solicitud_msg_cont{
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-top:solid 2px map-get($colors, 'lightGray' );
+    border-bottom:solid 2px map-get($colors, 'lightGray' );
+}
+}
+
+.step {
+    display: none;
+}
+
+.step_1 {
+    display: block;
+}
+
+
+.detalle_de_solicitud{
+   display: none; 
+}
+
+.tab_buttons{
+    float: none!important;
+
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    @include mdMax{
+        margin: 0 auto!important;
+     }
+}
+.option_zone{
+    h1{  margin-bottom: 0!important;}
+    @include md{
+h1{ text-align: left!important;}
+}
+h1, h2, h3, h4{ width: 100%!important; }
+
+
+
+.wrap_cajas {
+    align-items: stretch !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+
+ .caja {
+    border: 2px solid #d0d6d9;
+    border-radius: 10px;
+    padding: 20px !important;
+    /* padding-left: 6px;  */
+    display: flex;
+    width: calc(100%) !important;
+
+
+
+    overflow: hidden;
+    /* min-height: 200px; */
+
+    span{
+        position: relative;
+    }
+
+}
+
+ .caja .cont {
+    width: 100%;
+    margin-left: 10px;
+
+}
+
+/*  .caja .cont p{
+padding-right: 30px;
+} */
+ .caja:hover {
+    border: 2px solid #00aec7;
+    background-color: #d2f5ff;
+
+}
+
+ .caja:hover .check {
+    background-color: #fff !important;
+
+}
+
+ .caja .title {
+    font-family: "FSJoey", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif !important;
+    /* font-size: 1.1em!important; */
+    font-weight: 500 !important;
+
+}
+
+
+
+ .caja.cpl_input_radio {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin: 0 !important;
+
+    flex-wrap: nowrap;
+
+    margin: 3px !important;
+    align-self: inherit !important;
+
+} 
+
+
+
+
+
+}
+}
+
+
+
+
+
+
+
+// Detalle de solicitud 
+
+ .message_box {
+    float: left;
+    width: 100%;
+    border-radius: 6px
+}
+
+ .message_box .message {
+    margin-top: 10px;
+    float: left;
+    border-radius: 6px;
+    background-color: #fff;
+    border: solid 2px #d0d6d9;
+    padding: 25px;
+    width: 100%;
+    position: relative
+}
+
+ .message_box .message:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #d0d6d9;
+    border-radius: 50%;
+    position: absolute;
+    top: 32px;
+    left: 10px
+}
+
+ .message_box .message.afp:after {
+    background-color: #e3e829
+}
+
+ .message_box .message.user:after {
+    background-color: #00aec7
+}
+
+ .message_box .message:first-child {
+    margin-top: 0
+}
+
+ .message_box .message .sender {
+    width: 100%;
+    border-bottom: 1.5px solid #d0d6d9
+}
+
+ .message_box .message .date {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: #abb0b2 !important
+}
+
+
+
+
+

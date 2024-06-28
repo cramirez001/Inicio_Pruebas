@@ -1,0 +1,145 @@
+//tabla de resumen
+.table_resumen{
+    border-collapse: inherit !important;
+      position: relative;
+      border-spacing: 0px;
+      width: 100%;
+      // border: solid 1px map-get($colors, "lightGray");
+      margin-bottom: 30px;
+      border-bottom: 0;
+       border: solid 1.5px map-get($colors, "lightGray");
+       border-radius: 6px;
+       padding-left: 15px;
+       padding-right: 15px;
+       
+    tr.table_action{
+      td{
+        padding: 0!important;
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        border: 0!important;
+        
+      }
+    }
+    
+    
+     .cpl_dato,
+     
+      .cpl_valor {
+      width: 100%;
+      
+    }
+    
+     .cpl_valor {
+      float: left;
+      width: auto;
+      font-weight: 400;
+      margin-top: -4px;
+      
+    }
+    
+     .cpl_dato {
+      
+      margin-top: -4px;
+     
+    }
+    
+      .cpl_valor p {
+  
+      font-weight: 600 !important;
+      color: map-get($colors, extraDarkGray ) !important;
+      margin-bottom: 0!important;
+    }
+    
+      .cpl_dato p {
+      color: map-get($colors, "extraDarkGray") !important;
+      margin-bottom: 5px!important;
+    }
+    
+      
+    
+     .cpl_valor p {
+      color: map-get($colors, "extraDarkGray");
+    }
+    
+      p {
+      margin: 0;
+      margin-bottom: 0 !important;
+    }
+    
+    tr{
+      &:last-child td{
+       border-bottom: 0;
+     }
+    
+    
+      td {
+     border-bottom: solid 1px map-get($colors, "lightGray");
+      vertical-align: text-top;
+      width: 50%;
+      padding: 20px;
+      padding-left: 0;
+      
+     
+    }
+    }
+  
+    
+    
+     &.responsive_table{  
+      @include mdMax{
+        tr{
+          &:last-child td{
+    
+            border-bottom: solid 1px map-get($colors, "lightGray");
+            &:last-child{
+              border-bottom: 0;
+            }
+         }
+        }
+        
+     td {
+      width: 100%;
+      @include disp(flex);
+      @include geneBrow(flex-direction, column);
+    
+        // vertical-align: text-top;
+       
+        display: block;
+        float: left;
+        margin: 0;
+        
+      }
+    
+    }
+      }
+    
+      &.one_column{  
+        
+          tr{
+            &:last-child td{
+              border-bottom: solid 1px map-get($colors, "lightGray");
+              &:last-child{
+                border-bottom: 0;
+              }
+           }
+          }
+          
+       td {
+        width: 100%;
+        @include disp(flex);
+        @include geneBrow(flex-direction, column);
+      
+          // vertical-align: text-top;
+         
+          display: block;
+          float: left;
+          margin: 0;
+          
+        }
+      
+      
+        }
+      
+    }//TABLE-resumen 

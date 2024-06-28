@@ -1,0 +1,74 @@
+// Aquí van nuestros estilos personalizados
+&#Paso_IntentoFallido_{
+   > .cpl_container{
+       margin-bottom: 140px;
+    .cpl_icon.icon-alert-fill:after{
+        color: map-get($colors, 'red' );
+        font-size: 30px!important;
+    }
+       >div.center_div.center_text:nth-child(1){
+           padding-bottom: 20px!important;
+       }
+        >.flex_row:nth-child(2){
+           
+                display: none!important;
+            
+
+            // > .cpl_col:nth-child(2){
+
+            // }
+        }
+
+
+        .cpl_col_sd_6 > div{
+            padding: 30px;
+            border: solid 2px map-get($colors, 'lightGray' );
+            border-radius: 12px;
+            -webkit-transition: all 0.5s 0s ease;
+-moz-transition: all 0.5s 0s ease;
+-o-transition: all 0.5s 0s ease;
+transition: all 0.5s 0s ease;
+
+
+
+            &:hover{
+                background-color: map-get($colors, 'extraLightAqua' );
+                border-color: map-get($colors, 'aqua' );
+            }
+
+            .caja-icono{
+                max-width: 50px;
+            }
+        }
+    }
+}
+
+
+&#Paso_errorToken_{
+    > .cpl_container{
+       > .flex_row:first-child{
+           >.cpl_col{
+           > div.center_div.mw_500{
+               display: none!important;
+           }
+           h1{
+               margin-top: 40px!important;
+           }
+           h1::after{
+               content: map-get($iconos, 'icon-alert-fill');
+               color: map-get($colors, 'red' );
+               font-weight: initial!important;
+               position: absolute;
+               font-family: $iconFont;
+               font-size: 30px;
+               margin-left:-15px ;
+               left: 50%;
+               top:0px;
+           }
+
+           h4{ @include define_p}
+        }
+
+        }
+    }
+}

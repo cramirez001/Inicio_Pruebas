@@ -1,0 +1,27 @@
+// Aquí van nuestros estilos personalizados
+.contenidoLibre{
+ @include disp(flex);
+ @include geneBrow(flex-wrap, wrap);
+
+
+.cuadrante{
+    padding: 3px;
+}
+
+.cuadranteMiddleLeftTop, .cuadranteMiddleRightTop, .cuadranteMiddleLeftBottom, .cuadranteMiddleRightBottom{
+    width: 50%!important;
+}
+
+@include mdMax {
+
+    .cuadranteMiddleLeftTop, .cuadranteMiddleRightTop, .cuadranteMiddleLeftBottom, .cuadranteMiddleRightBottom{
+        height: auto!important;
+        width: 100%!important;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+        
+}
+
+
+}

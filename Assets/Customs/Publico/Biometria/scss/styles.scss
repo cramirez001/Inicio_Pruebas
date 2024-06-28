@@ -1,0 +1,52 @@
+// Aquí van nuestros estilos personalizados
+ .cpl_alert_bar>* {
+    line-height: 115%;
+    max-width: 700px;
+    margin: none !important;
+    margin-bottom: 15px !important;
+}
+
+.i-background {
+    color: map-get($colors, 'aqua' );
+}
+
+.caja-gris {
+    background-color: white;
+    border: 3px solid map-get($colors, 'lightGray' )!important;
+    border-radius: 6px!important;
+    padding: 20px!important;
+    margin-top: 20px!important;
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+    width: 47%!important;
+}
+
+.justify a.caja-gris:hover {
+    border: 3px solid map-get($colors, 'aqua' )!important;
+}
+
+.space {
+    justify-content: space-between;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.caja-icono {
+    width: 20%;
+}
+
+@include mdMax {
+    .caja-gris {
+        background-color: white;
+        border: 3px solid map-get($colors, 'lightGray' )!important;
+        border-radius: 6px!important;
+        padding: 20px!important;
+        margin-top: 20px!important;
+        width: 100%!important;
+    }
+    .space {
+        justify-content: center;
+    }
+}

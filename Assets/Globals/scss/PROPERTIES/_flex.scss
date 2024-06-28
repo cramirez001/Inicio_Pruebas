@@ -1,0 +1,338 @@
+.d_flex, .d-flex {
+  @include disp(flex!important);
+  @include geneBrow(flex-shrink, 0!important);
+  > * {
+    @include geneBrow(flex, 0 0 1);
+    @include geneBrow(flex-shrink, 0);
+  }
+} //flex
+
+
+@include attrRange(d_flex){
+  @include disp(flex!important);
+  @include geneBrow(flex-shrink, 0!important);
+  > * {
+    @include geneBrow(flex, 0 0 1);
+    @include geneBrow(flex-shrink, 0);
+  }
+}
+
+
+@include attrRange(d-flex){
+  @include disp(flex!important);
+  @include geneBrow(flex-shrink, 0!important);
+  > * {
+    @include geneBrow(flex, 0 0 1);
+    @include geneBrow(flex-shrink, 0);
+  }
+}
+
+
+
+  //Flex direction
+ .direction_row {
+    @include geneBrow(flex-direction, row!important);
+   
+  }
+ @include attrRange(direction_row){
+    @include geneBrow(flex-direction, row!important);
+  }
+ .direction_row_reverse {
+    @include geneBrow(flex-direction, row-reverse!important);
+    
+  }
+ 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Replicar formato a todos
+
+ .direction_column {
+    @include geneBrow(flex-direction, column!important);  
+  }
+  // attr range
+  @include attrRange(direction_column){
+   @include geneBrow(flex-direction, column!important);
+  }
+        
+  
+ .direction_column_reverse {
+    @include geneBrow(flex-direction, column-reverse!important);
+ }
+   // attr range
+   @include attrRange(direction_column_reverse){
+    @include geneBrow(flex-direction, column-reverse!important);
+   }
+ 
+
+  //Flex wrap
+ .wrap {
+    @include geneBrow(flex-wrap, wrap!important);
+  }
+    // attr range
+    @include attrRange(wrap){
+      @include geneBrow(flex-direction, wrap!important);
+     }
+
+//  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   Replicar formato a todos
+
+
+ .wrap_nowrap {
+    @include geneBrow(flex-wrap, nowrap!important);
+    
+  }
+ // attr range
+  @include attrRange(wrap_nowrap){
+    @include geneBrow(flex-wrap, nowrap!important);
+    }
+
+ .wrap_reverse {
+    @include geneBrow(flex-wrap, wrap-reverse!important);
+   
+  }
+   // attr range
+  @include attrRange(wrap_reverse){
+    @include geneBrow(flex-wrap, wrap-reverse!important);
+    }
+
+  //justify content
+ .justify_content_start {
+    @include geneBrow(justify-content, flex-start!important);
+  
+  }
+  // attr range
+  @include attrRange(justify_content_start){
+    @include geneBrow(justify-content, flex-start!important);
+    }
+ .justify_content_end {
+    @include geneBrow(justify-content, flex-end!important);
+    
+  }
+   // attr range
+  @include attrRange(justify_content_end){
+    @include geneBrow(justify-content, flex-end!important);
+    }
+ .justify_content_center {
+    @include geneBrow(justify-content, center!important);
+    
+  }
+     // attr range
+  @include attrRange(justify_content_center){
+    @include geneBrow(justify-content, center!important);
+    }
+ .justify_content_space_between {
+    @include geneBrow(justify-content, space-between!important);
+    
+  }
+   // attr range 
+  @include attrRange(justify_content_space_between){
+    @include geneBrow(justify-content, space-between!important);
+    }
+ .justify_content_space_around {
+    @include geneBrow(justify-content, space-around!important);
+   
+  }
+    // attr range
+  @include attrRange(justify_content_space_around){
+    @include geneBrow(justify-content, space-around!important);
+    }
+
+  // align items
+ .align_items_start {
+    @include geneBrow(align-items, flex-start!important);
+    
+  }
+  // attr range
+  @include attrRange(align_items_start){
+    @include geneBrow(align-items, flex-start!important);
+    }
+
+ .align_items_end {
+    @include geneBrow(align-items, flex-end!important);
+   
+  }
+   // attr range
+  @include attrRange(align_items_end){
+    @include geneBrow(align-items, flex-end!important);
+    }
+
+ .align_items_center {
+    @include geneBrow(align-items, center!important);
+   
+  }
+    // attr range
+  @include attrRange(align_items_center){
+    @include geneBrow(align-items, center!important);
+    }
+ .align_items_baseline {
+    @include geneBrow(align-items, baseline!important);
+    
+  }
+  // attr range
+  @include attrRange(align_items_baseline){                 
+    @include geneBrow(align-items, baseline!important);
+    }
+ .align_items_stretch {
+    @include geneBrow(align-items, stretch!important);
+    
+  }
+   // attr range
+  @include attrRange(align_items_stretch){
+    @include geneBrow(align-items, stretch!important);
+    }
+
+  // align content
+ .align_content_start {
+    @include geneBrow(align-items, flex-start!important);
+     
+  }
+  // attr range
+  @include attrRange(align_content_start){
+    @include geneBrow(align-items, flex-start!important);
+    }
+
+ .align_content_end {
+    @include geneBrow(align-content, flex-end!important);
+    
+  }
+  // attr range
+  @include attrRange(align_content_end){
+    @include geneBrow(align-content, flex-end!important);
+    }
+ .align_content_center {
+    @include geneBrow(align-content, center!important);
+    
+  }
+  // attr range
+  @include attrRange(align_content_center){
+    @include geneBrow(align-content, center!important);
+    }
+ .align_content_space_between {
+    @include geneBrow(align-content, space-between!important);
+     
+  }
+    // attr range
+  @include attrRange(align_content_space_between){
+    @include geneBrow(align-content, space-between!important);
+    }
+ .align_content_space_around {
+    @include geneBrow(align-content, space-around!important);
+    
+  }
+    // attr range
+  @include attrRange(align_content_space_around){
+    @include geneBrow(align-content, space-around!important);
+    }
+
+ .align_content_stretch {
+    @include geneBrow(align-content, stretch!important);
+    
+  }
+  // attr range
+  @include attrRange(align_content_stretch){
+    @include geneBrow(align-content, stretch!important);
+    }
+
+  // hijos
+
+  //for
+  @for $number from 0 through 12 {
+    .flex_#{$number} {
+      @include geneBrow(flex, #{$number} #{$number} auto!important);
+     
+    }
+     // attr range
+    @include attrRange(flex_#{$number}){
+      @include geneBrow(flex, #{$number} #{$number} auto!important);
+      }
+
+    //Order
+
+    .order_#{$number} {
+      @include geneBrow(order, #{$number}!important);
+        
+    }
+    // attr range
+    @include attrRange(order_#{$number}){
+      @include geneBrow(order, #{$number}!important);
+        }
+
+    //flex-grow
+
+    .grow_#{$number} {
+      @include geneBrow(flex-grow, #{$number}!important);
+        
+    }
+    // attr range
+    @include attrRange(grow_#{$number}){
+      @include geneBrow(flex-grow, #{$number}!important);
+        }
+
+    //flex-grow
+    .shrink_#{$number} {
+      @include geneBrow(flex-shrink, #{$number}!important);
+       
+    }
+    // attr range
+    @include attrRange(shrink_#{$number}){
+      @include geneBrow(flex-shrink, #{$number}!important);
+        }
+  }
+  //for
+
+  // Flex Align
+  .align_self_auto { 
+    @include geneBrow(align-self, auto!important); 
+     
+  }
+  // attr range
+  @include attrRange(align_self_auto){
+    @include geneBrow(align-self, auto!important); 
+     }   
+
+  .align_self_baseline {
+    @include geneBrow(align-self, baseline!important);
+    
+  }
+   // attr range
+   @include attrRange(align_self_baseline){
+    @include geneBrow(align-self, baseline!important);
+       }   
+
+  .align_self_start {
+    @include geneBrow(align-self, flex-start!important);
+     
+  }
+   // attr range
+   @include attrRange(align_self_start){
+    @include geneBrow(align-self, flex-start!important);
+       }   
+
+  .align_self_end {
+    @include geneBrow(align-self, flex-end!important);
+       
+  }
+   // attr range
+   @include attrRange(align_self_end){
+    @include geneBrow(align-self, flex-end!important);
+       } 
+
+  .align_self_center {
+    @include geneBrow(align-self, center!important);
+     
+  }
+  // attr range
+  @include attrRange(align_self_center){
+    @include geneBrow(align-self, center!important);
+       }   
+
+  .align_self_stretch {
+    @include geneBrow(align-self, stretch!important);
+     
+  }
+   // attr range
+   @include attrRange(align_self_stretch){
+    @include geneBrow(align-self, stretch!important);
+       }   
+
+
+
+
+

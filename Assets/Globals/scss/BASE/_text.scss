@@ -1,0 +1,47 @@
+&{
+    font-family: $fontCorp2;
+    color: map-get($colors, 'extraDarkGray');
+    font-size: 17px;
+
+    @include mdMax{
+        font-size: 16px; 
+    }
+
+    @include sdMax{
+        font-size: 15px; 
+    }
+}
+
+// h1, h2, h3, h4
+
+// Los tamaños de definen en las variables
+h1{
+  @include define_h1;
+}
+
+h2{
+  @include define_h2;
+}
+
+h3{
+  @include define_h3;
+}
+
+h4{
+  @include define_h4;
+}
+
+
+p {
+  @include define_p; 
+}
+
+
+
+//basics config
+
+xmp {
+  padding: 20px;
+  background-color: map-get($colors, "extraLightGray");
+  color: map-get($colors, "blue");
+}

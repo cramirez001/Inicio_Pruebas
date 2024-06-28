@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Assets/Globals/css/cpl-Styles.css">
+    <link rel="stylesheet" href="../../Assets/Customs/Privado/Deposito_directo/css/custom.css">
+    <script src="../../Assets/Globals/js/jquery.js"></script>
+</head>
+<body>
+
+    <style>
+
+        /* header.s4-notdlg{
+            z-index: 1!important;
+        } */
+
+
+.error_cuenta_cont{
+    display: none;
+}
+
+.wrap_cajas{ margin-bottom: 40px!important;}
+
+.wrap_cajas .f_error{
+    margin-top: 20px!important;
+    right: 0!important;
+    margin-bottom: 0!important;
+}
+
+/* Opciones */
+#MSOZoneCell_WebPartctl00_ctl48_g_f8df2b06_1ce4_450f_87c0_994e2f24a781{
+
+
+
+}
+
+/* Éxito */
+#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivComprobante .cpl_page_title.active{
+
+    display: none!important;
+
+
+}
+
+#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivComprobante .cpl_page_title{
+
+display: none!important;
+
+
+}
+
+/* Error */
+#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivErrorPrincipal div:nth-child(3){
+    order: 2;
+
+
+
+}
+#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivErrorPrincipal div:nth-child(2){
+    order: 3;
+
+
+
+}
+
+
+        .checkbox_wrap{
+            margin-bottom: 0!important;
+        }
+
+        .cpl_body .cpl_flex_form  label.cpl_input_check{
+    margin-bottom: 0!important;
+ 
+   
+}
+
+.ms-webpartzone-cell{
+
+    padding-bottom: 0!important;
+}
+
+
+
+
+.no_cuentas_mode .cpl_section:nth-child(4){
+     display: none!important;
+        } 
+        .no_cuentas_mode .cpl_col_s_12{
+        display: none!important;
+        } 
+
+
+
+       .cpl_body .ms-webpart-zone .cpl_container{
+       
+            padding:0!important
+      
+        }
+        .contenidos.c_prod{
+            margin-bottom: 0!important;
+            padding-bottom: 0!important;
+        }
+        .ms-webpart-zone .cpl_body .sub_section{
+            margin-bottom: 0!important;
+        }
+        .cpl_page_title{
+            display: none!important;
+        }   
+        .cpl_page_title.active{
+            display: block!important;
+        }   
+        .sub_section h4{
+            display: none!important;  
+        }
+        .sub_section select{
+            display: none!important;  
+        }
+
+        .cpl_section:nth-child(2)  {
+         display: none!important
+        } 
+
+        .cpl_section:nth-child(3)  .align_center{
+         display: none!important
+        } 
+
+        .cpl_section:nth-child(4){
+          order: 2!important;
+        } 
+
+
+        #MSOZoneCell_WebPartctl00_ctl48_g_6eb7707c_bd05_4d47_a0f2_374b650ed503{
+            display: none;
+        }
+
+        .cpl_col_s_12{
+          order: 1!important;
+          margin-bottom: 30px!important;
+        } 
+    </style>
+    <div id="opciones" class="contenidos c_prod cpl_body">
+        <div class="cpl_container">
+           <div class="flex_row">
+            
+
+          <div class="cpl_col cpl_col_12">
+              <h1 class="center_text">Depósito directo</h1>
+      
+          </div>
+
+
+            <div id="CUENTA_2" class="cpl_col cpl_col_12 mw_650 center_div" style="display:none">
+                <h3 class="center_text">¿En que cuenta quieres realizar el depósito?</h3>
+           
+                <div class="option_zone ">
+                
+                    <div class="wrap_cajas">
+                        <div class="flex_row">
+                            
+        
+
+                    <div class="cpl_col cpl_col_6 sd_padding_bottom_35 md_padding_bottom_35">
+                        <label class="cpl_input_radio caja active">
+                            <div class="circulo-padding">
+                                <input class="radio_tipoSolicitud" type="radio"
+                                   name="worker_type" value="CUENTA2" /><span
+                                   class="check"></span>
+                             </div>
+                           <div class="cont">
+                             
+                              <div class="flex_row ">
+
+                                <div class="padding_none cpl_col cpl_col_12">
+                                    <h3 class="">
+                               
+                                       CUENTA 2
+                                        </h3>
+                                        <p class="padding_none">Cuenta de ahorro para tus proyectos </p>
+                                   
+                                </div>
+
+                                <div class="cpl_btn extraSmall aqua mw_200 aqua ">Tienes esta cuenta</div>
+
+                             
+                              </div>
+                           
+                
+                         
+                         
+                       </div>
+                        </label>
+                        </div>
+
+
+
+
+                        <div class="cpl_col cpl_col_6">
+                            <label class="cpl_input_radio caja ">
+                                <div class="circulo-padding">
+                                    <!-- <input class="radio_tipoSolicitud" type="radio"
+                                       name="worker_type" value="apv" /><span
+                                       class="check"></span> -->
+                                 </div>
+                               <div class="cont">
+                                 
+                                  <div class="flex_row ">
+    
+                                    <div class="padding_none cpl_col cpl_col_12">
+                                        <h3 class="">
+                                   
+                                            APV
+                                            </h3>
+                                            <p class="padding_none">Cuenta de ahorro para mejorar tu pensión </p>
+                                    </div>
+
+
+                                    <a href="/Paginas/Producto-Cotizacion-Voluntaria-APV-Suscripcion.aspx" class="cpl_btn extraSmall aqua mw_200 aqua">Contratar</a>
+    
+                                 
+                                  </div>
+                               
+                    
+                             
+                             
+                           </div>
+                            </label>
+                            </div>
+
+
+
+
+                            <div class="cpl_col cpl_col_12 error_cuenta_cont">
+                                <div class="f_error error_cuenta ">
+                                    Debes seleccionar una cuenta
+                                </div>
+                             </div>
+
+                 
+
+                   
+                    </div>
+                   
+                    </div>
+                
+
+             
+                 </div>
+               </div>
+
+
+
+               <div id="APV" class="cpl_col cpl_col_12 mw_650 center_div" style="display:none">
+                <h3 class="center_text">¿En que cuenta quieres realizar el depósito?</h3>
+           
+                <div class="option_zone ">
+                
+                    <div class="wrap_cajas">
+                        <div class="flex_row">
+                            
+        
+
+                    <div class="cpl_col cpl_col_6  sd_padding_bottom_35 md_padding_bottom_35">
+                        <label class="cpl_input_radio caja active">
+                            <div class="circulo-padding">
+                                <input class="radio_tipoSolicitud" type="radio"
+                                   name="worker_type" value="APV" /><span
+                                   class="check"></span>
+                             </div>
+                           <div class="cont">
+                             
+                              <div class="flex_row ">
+
+                                <div class="padding_none cpl_col cpl_col_12">
+                                    <h3 class="">
+                               
+                                        APV
+                                        </h3>
+                                    <p class="padding_none">Cuenta de ahorro para mejorar tu pensión </p>
+                                </div>
+
+                                <div class="cpl_btn extraSmall aqua mw_200 aqua ">Tienes esta cuenta</div>
+
+                             
+                              </div>
+                           
+                
+                         
+                         
+                       </div>
+                        </label>
+                        </div>
+
+
+
+
+                        <div class="cpl_col cpl_col_6">
+                            <label class="cpl_input_radio caja ">
+                                <div class="circulo-padding">
+                                    <!-- <input class="radio_tipoSolicitud" type="radio"
+                                       name="worker_type" value="apv" /><span
+                                       class="check"></span> -->
+                                 </div>
+                               <div class="cont">
+                                 
+                                  <div class="flex_row ">
+    
+                                    <div class="padding_none cpl_col cpl_col_12">
+                                        <h3 class="">
+                                   
+                                            CUENTA 2
+                                            </h3>
+                                        <p class="padding_none">Cuenta de ahorro para tus proyectos </p>
+                                    </div>
+
+
+                                    <a href="/Paginas/Producto-Ahorro-Voluntario-Cuenta-2-Suscripcion.aspx?IDList=151" class="cpl_btn extraSmall aqua mw_200 aqua">Contratar</a>
+    
+                                 
+                                  </div>
+                               
+                    
+                             
+                             
+                           </div>
+                            </label>
+                            </div>
+
+
+
+
+                    <div class="cpl_col cpl_col_12 error_cuenta_cont">
+                       <div class="f_error error_cuenta ">
+                           Debes seleccionar una cuenta
+                       </div>
+                    </div>
+
+                 
+
+                   
+                    </div>
+                   
+                    </div>
+                
+
+             
+                 </div>
+               </div>
+
+
+
+               <div id="APV_CUENTA2" class="cpl_col cpl_col_12 mw_650 center_div" style="display:none">
+                <h3 class="center_text">¿En que cuenta quieres realizar el depósito?...</h3>
+           
+                <div class="option_zone ">
+                
+                    <div class="wrap_cajas">
+                        <div class="flex_row">
+                            
+        
+
+                    <div class="cpl_col cpl_col_6  sd_padding_bottom_35 md_padding_bottom_35">
+                        <label class="cpl_input_radio caja active">
+                            <div class="circulo-padding">
+                                <input class="radio_tipoSolicitud" type="radio"
+                                   name="worker_type" value="APV" /><span
+                                   class="check"></span>
+                             </div>
+                           <div class="cont">
+                             
+                              <div class="flex_row ">
+
+                                <div class="padding_none cpl_col cpl_col_12">
+                                    <h3 class="">
+                               
+                                        APV
+                                        </h3>
+                                    <p class="padding_none">Cuenta de ahorro para mejorar tu pensión </p>
+                                </div>
+
+                                <!-- <div class="cpl_btn extraSmall aqua mw_200 aqua ">Tienes esta cuenta</div> -->
+
+                             
+                              </div>
+                           
+                
+                         
+                         
+                       </div>
+                        </label>
+                        </div>
+
+
+
+
+                        <div class="cpl_col cpl_col_6">
+                            <label class="cpl_input_radio caja active">
+                                <div class="circulo-padding">
+                                    <input class="radio_tipoSolicitud" type="radio"
+                                       name="worker_type" value="CUENTA2" /><span
+                                       class="check"></span>
+                                 </div>
+                               <div class="cont">
+                                 
+                                  <div class="flex_row ">
+    
+                                    <div class="padding_none cpl_col cpl_col_12">
+                                        <h3 class="">
+                                   
+                                            CUENTA 2
+                                            </h3>
+                                        <p class="padding_none">Cuenta de ahorro para tus proyectos </p>
+                                    </div>
+
+
+                                    <!-- <div class="cpl_btn extraSmall aqua mw_200 aqua">Contratar</div> -->
+    
+                                 
+                                  </div>
+                               
+                    
+                             
+                             
+                           </div>
+                            </label>
+                            </div>
+
+
+
+
+         
+                            <div class="cpl_col cpl_col_12 error_cuenta_cont">
+                                <div class="f_error error_cuenta ">
+                                    Debes seleccionar una cuenta
+                                </div>
+                             </div>
+                 
+
+                   
+                    </div>
+                   
+                    </div>
+                
+
+             
+                 </div>
+               </div>
+
+
+
+               <div id="sin_cuenta" class="cpl_col cpl_col_12 mw_850 center_div" style="display:none">
+           
+                <div class="option_zone ">
+                
+                    <div class="wrap_cajas">
+                        <div class="flex_row">
+
+               <div class="cpl_col_12">
+                <!-- <h3 class="center_text">No poses cuentas donde realizar un depósito directo</h3> -->
+
+                <h3 class="center_text">Invierte tu dinero en la siguientes cuentas:</h3>
+               </div>
+
+
+
+               <div class="cpl_col cpl_col_12">
+                <div class="cards_options co_cards">
+                    <div class="cpl_col cpl_col_6 ">
+                        <div class="card  card_contrata ">
+                         
+                           <div class="card_cont">
+                            
+
+                            <div class="card_header">
+                              <div class="flex_row ">
+
+
+                                <div class=" cpl_col cpl_col_12 ld_padding_left_5 xld_padding_left_5 center_cont sd_order_1 md_order_1 center_div" style="max-width: 66px;">
+                                    <img src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/img/Iconos/cuenta2.svg" alt="" width="100%">
+                             </div>
+        
+                                <div class="padding_none cpl_col cpl_col_12 sd_order_2 md_order_2 center_cont">
+                                    <h1 class="t-aqua center_text " style="text-align: center!important;">
+                                        CUENTA 2
+                                       </h1>
+                                    <h4 class="padding_none center_text">Ahorra para alcanzar tus sueños</h4>
+                                </div>
+        
+                            
+                            </div>
+                        </div>
+        
+                              <div class="card_footer">
+                                <div class="cpl_col cpl_col_12 ">
+                                    <!-- <p>Si estás buscando una herramienta de ahorro para hacer 
+                                       realidad tus proyectos y sueños, una Cuenta 2  
+                                       es lo que necesitas, haz que tu dinero crezca
+                                       con bajas comisiones y gira tu dinero de forma simple.    
+                                    </p> -->
+                                      <!-- <ul class="">
+                                          <li>-Para cualquier fin</li>
+                                          <li>-Beneficio tributario</li>
+                                          <li>-Permite girar el dinero ahorrado</li>
+                                          <li>-Renta en los multifondos</li>
+                                          <li>-Bajas comisiones</li>
+                                      </ul> -->
+                                </div>
+        
+                                <div class="cpl_col cpl_col_12 ">
+                                    <a href="/Paginas/Producto-Ahorro-Voluntario-Cuenta-2-Suscripcion.aspx" class="cpl_btn center_div small aqua mw_200 aqua  ">Ir a contratación</a>
+                                </div>
+                            </div>
+                          
+                           
+                
+                         
+                         
+                       </div>
+                        </div>
+                        </div>
+
+
+                        <div class="cpl_col cpl_col_6 ">
+                            <div class="card  card_contrata ">
+                             
+                               <div class="card_cont">
+                                
+    
+                                <div class="card_header">
+                                  <div class="flex_row ">
+
+                                    <div class=" cpl_col cpl_col_12  ld_padding_left_5 xld_padding_left_5 center_cont sd_order_1 md_order_1 center_div"  style="max-width: 66px;">
+                                        <img src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/img/Iconos/apv.svg" alt="" width="100%" >
+         
+                                
+                                 </div>
+            
+                                    <div class="padding_none cpl_col cpl_col_12 sd_order_2 md_order_2 center_cont">
+                                        <h1 class="t-aqua center_text" style="text-align: center!important;">
+                                   
+                                            APV
+                                           </h1>
+                                        <h4 class="padding_none center_text">Ahorra para mejorar tu pensión</h4>
+                                    </div>
+            
+                                 
+                                </div>
+                            </div>
+            
+                                  <div class="card_footer">
+                                    <div class="cpl_col cpl_col_12 ">
+
+                                        <!-- <p>Un APV (Ahorro previsional voluntario) es la 
+                                            herramienta de ahorro ideal para mejorar tu 
+                                            futura pensión, ya que que cuenta con beneficios
+                                            tributarios y aporte estatal.</p> -->
+                                          <!-- <ul class="">
+                                              <li>-Para Mejorar tu pensión</li>
+                                              <li>-Beneficios tributarios y aporte estatal
+                                                (Régimen A, Régimen B)</li>
+                                              <li>-Permite girar el dinero ahorrado</li>
+                                              <li>-Saldo no embargable</li>
+                                              <li>-Renta en los multifondos</li>
+                                          </ul> -->
+                                    </div>
+            
+                                    <div class="cpl_col cpl_col_12 ">
+                                        <a href="/Paginas/Producto-Cotizacion-Voluntaria-APV-Suscripcion.aspx" class="cpl_btn center_div small aqua mw_200 aqua  ">Ir a contratación</a>
+                                    </div>
+                                </div>
+                              
+                               
+                    
+                             
+                             
+                           </div>
+                            </div>
+                            </div>
+                </div>
+               </div>
+
+
+
+
+
+        
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="cpl_col cpl_col_12 ayuda_asesor">
+        <div class="cpl_flex_form max_w_450 center_div">
+            <div class="cpl_col cpl_col_12 input_wrap checkbox_wrap max_w_600  ">
+                <label  class="cpl_input_check center_div">
+                  <input id="asesor_ayuda"  type="checkbox" name="1"><span class="checkbox">
+                  </span>
+
+                  <p class="padding_left_15">
+                   ¿Recibiste ayuda de uno de nuestros asesores?
+                  </p>
+
+                </label >
+
+          
+              </div>
+           
+        </div>
+    </div>
+           </div>
+</div>
+    </div>
+
+    <div id="exitoTitle" class="contenidos c_prod " style="display: none;">
+        <div class="cpl_container">
+           <div class="flex_row">
+            
+
+          <div class="cpl_col cpl_col_12">
+
+            <h1 class="center_text"> <span class="cpl_icon icon-check-fill t-green"></span></h1>
+
+            <h1 class="center_text">Pago realizado con éxito</h1>
+            
+          </div>
+
+
+
+
+
+    
+
+
+
+      
+
+
+
+
+           </div>
+</div>
+    </div>
+
+    <div class="contenidos c_prod">
+
+
+
+
+
+
+
+    <!-- Modal Central -->
+    <div class="cpl_modal center_modal modal_recuerda">
+        <div class="modal_box" >
+          <div class="close close_action"></div>
+          <div class="modal_cont">
+            <div class="flex_row">
+          
+                <div class="cpl_col cpl_col_s_12 center_div mw_400">
+                    <h3 class="center_text">Recuerda:</h3>
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12">
+                            <div class="flex_row auto_cols flex_align_center">
+                                <div class="cpl_col">
+                                    <img src="/SiteCollectionImages/DepositoDirecto/popup.png" alt="" width="70">
+                                </div>
+                                <div class="cpl_col">
+                                    <p>
+                                        Permitir ventanas emergentes en tu navegador para realizar el depósito
+                                        directo. <a onclick="BuenosModales('ModalLateral')">
+            
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="cpl_col cpl_col_12">
+                            <div class="flex_row auto_cols flex_align_center">
+                                <div class="cpl_col">
+                                    <img src="/SiteCollectionImages/DepositoDirecto/calendar_value.png" alt="" width="70">
+                                </div>
+                                <div class="cpl_col">
+                                    <p>
+                                        Se considerará el Valor Cuota correspondiente al día en que se realice este
+                                        depósito.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                        <div class="cpl_col cpl_col_12">
+                            <div class="flex_row auto_cols flex_align_center">
+                                <div class="cpl_col">
+                                    <img src="/SiteCollectionImages/DepositoDirecto/ie.png" alt="" width="70">
+                                </div>
+                                <div class="cpl_col">
+                                    <p>
+                                        Este servicio no está disponible en Internet Explorer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+        </div>
+
+
+          </div>
+        </div>
+      </div>
+    <!-- Fin Modal Central -->
+</div>
+
+
+
+    <script src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/js/modal.js"></script>
+    <script>
+  
+//     $(document).ready(function(){ 
+//         BuenosModales('modal_recuerda');
+//  });
+   </script>
+  
+ 
+    <script>
+        var radioOp = $('input[name="worker_type"');
+        var errorCuenta = ('.error_cuenta');
+var button = $('#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_btnContinuar');
+var exito = $('#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivComprobante');
+var exitoTitle = $('#exitoTitle');
+var error = $('#ctl00_ctl48_g_3c099d4d_430f_4c68_b4fc_10f808bd8e85_DivErrorPrincipal');
+var opciones = $("#opciones");
+var pageTitle = $('.cpl_page_title');
+
+
+     var vistaConCuenta2 = $('#CUENTA_2');
+     var vistaConAPV = $('#APV');
+     var vistaDosCuentas = $('#APV_CUENTA2');
+     var vistaSinCuentas = $('#sin_cuenta');
+     var selected_option = document.getElementsByName('worker_type');
+     var selectCuentas = $('#dllCuentasVoluntarias');
+     var asesorAyuda = $('#asesor_ayuda');
+     var chkAsesor = $('#chkAsesor');
+     var divAsesor = $('#divAsesor');
+
+
+     $(document).ready(function(){
+         
+        $("#dllCuentasVoluntarias option[value='-1']").attr("selected", true);
+
+
+     });
+
+
+     button.click(function(){
+        
+        // tENGO QUE REINICIAR EL SELECT SIEMPRE 
+
+
+         if(selectCuentas.val() == '-1'){
+            // alert('No has seleccionado cuenta');
+           
+            //scroll
+            var spanElement = $('.error_cuenta_cont');   
+
+if (spanElement != undefined && spanElement.length > 0) {
+
+
+
+// esto es en ambiente sitio
+if($('#s4-workspace').length){
+
+
+    var scrollActual = $('#s4-workspace').scrollTop();
+    if (scrollActual != undefined) {
+        var top = spanElement.offset().top + scrollActual - 370;
+        var width = $(window).width();
+        if (width <= 760) {
+            $('html, body').animate({ scrollTop: top }, 200);
+                       $('.error_cuenta_cont').show();
+                       $('.error_cuenta_cont').addClass('animate__animated animate__shakeIn');
+        }
+        else {
+            $('#s4-workspace').animate({ scrollTop: top }, 200);
+                        $('.error_cuenta_cont').show();
+                       $('.error_cuenta_cont').addClass('animate__animated animate__shakeIn');
+        }
+    }
+    
+}
+
+
+
+
+
+// esto en ambiente local
+else{
+
+    var scrollActual = $('html').scrollTop();
+    if (scrollActual != undefined) {
+        var top = spanElement.offset().top - 100 ;
+        // alert(scrollActual);
+        var width = $(window).width();
+        $('html, body').animate({ scrollTop: top }, 200);
+    }
+
+}
+   
+  
+}
+  
+            //scroll
+            
+         }else{
+            // alert('Seleccionó cuenta');
+            $('.error_cuenta_cont').hide();
+            $('.error_cuenta_cont').removeClass('animate__animated animate__shakeIn');
+          };
+     });
+
+
+     if(error.length > 0){
+        //  alert('alert');
+        opciones.css('display', 'none');
+        pageTitle.addClass('active');
+     }else if(exito.length > 0){
+        opciones.css('display', 'none');
+        exitoTitle.css('display', 'block');
+        pageTitle.addClass('active');
+     }
+
+     asesorAyuda.change(function(){
+     
+         if($(this).is(':checked')){
+             chkAsesor.prop('checked', true);
+             divAsesor.show();
+             divAsesor.addClass('animate__animated animate__fadeInleft');
+         }else{
+            chkAsesor.prop('checked', false);
+            divAsesor.hide();
+             divAsesor.removeClass('animate__animated animate__fadeInleft');
+         }
+     });
+
+     $('.option_zone').click(function(){
+    for (var i = 0, length = selected_option.length; i < length; i++) {
+        if (selected_option[i].checked) {
+
+        var selected_optionVal = selected_option[i].value;
+   
+        break;
+        }
+        }
+        
+         
+         switch(selected_optionVal){
+        
+            case 'CUENTA2':
+                selectCuentas.val('CAV');
+            break;
+        
+            case 'APV':
+            selectCuentas.val('CCV');
+            break;
+        }
+     });
+
+
+            var select = document.getElementById('dllCuentasVoluntarias').querySelectorAll('option');
+        //    alert(select.length);
+            if(select.length == 3){
+        
+                vistaDosCuentas.show();
+            }else if(select.length == 1){
+                // alert ('no tiene cuentas');
+                vistaSinCuentas.show();
+                $('.cpl_body').addClass('no_cuentas_mode');
+                $('.ayuda_asesor').hide();
+            }
+            else{
+        
+                if(select[1].value == 'CCV'){
+                    // alert('contrata cuenta 2' );
+                    vistaConAPV.show();
+                }
+                else{
+                    // alert('contrata apv');
+                    vistaConCuenta2.show();
+                }
+            }
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

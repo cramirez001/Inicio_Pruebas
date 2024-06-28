@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Repositorio Git -->
+    <link rel="stylesheet" href="../../../Assets/Globals/css/cpl-Styles.css" />
+    <link
+      rel="stylesheet"
+      href="../../../Assets/Customs/biometria/css/custom.css"
+    />
+    <!-- Repositorio Git -->
+
+    <!-- máquina virtual -->
+    <!-- <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/Globals/css/cpl-Styles.css"/>
+    <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/Customs/biometria/css/custom.css" /> -->
+    <!-- máquina virtual -->
+
+    <!-- Desarrollo, QA y Producción -->
+    <!-- <link rel="stylesheet"href="/Style%20Library/Assets/Globals/css/cpl-Styles.css"/>
+    <link rel="stylesheet"href="/Style%20Library/Assets/Customs/biometria/css/custom.css"/> -->
+    <!-- Desarrollo, QA y Producción -->
+  </head>
+
+  <body>
+    <div class="cpl_body">
+      <div class="cpl_container mw_1100 margin_top_big">
+        <div class="center_div center_text loader">
+          <div class="margin_bottom_small">
+            <div class="lds-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <h1 class="t-extraDarkGray">Procesando la información</h1>
+          <p class="loading_text">
+            Espera unos momentos, estamos asegurando la validación de tus datos.
+            <br />
+          </p>
+          <div
+            class="cpl_alert_bar center_div alert_delay"
+            style="visibility: hidden"
+          >
+            <strong
+              >La validación está tardando más de lo normal. Estamos analizando
+              los datos biométricos para darte la mayor seguridad.</strong
+            >
+            <br />
+            (Tiempo de espera estimado: 10 minutos)
+          </div>
+        </div>
+
+        <div class="center_div center_text timeOut" style="display: none">
+          <div class="center_div max_w_150">
+            <img
+              src="../../../Assets/Globals/img/alerts/alert_timeout.png"
+              alt="tiempo_de_espera_agotado"
+              width="100%"
+            />
+          </div>
+          <h1 class="t-extraDarkGray">Se agotó el tiempo de espera</h1>
+          <a
+            href="#"
+            class="cpl_btn center_div mw_300 aqua secondary margin_top_medium"
+            >Volver a intentar</a
+          >
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      var timeOutBox = document.getElementsByClassName("timeOut")[0];
+      var loaderBox = document.getElementsByClassName("loader")[0];
+      var loadingText = document.getElementsByClassName("loading_text")[0];
+      var alertDelay = document.getElementsByClassName("alert_delay")[0];
+
+      function timeOut(time, time2) {
+        var msg = 0;
+
+        function msgTimeOut() {
+          setTimeout(function () {
+            if (msg == 0) {
+              loadingText.innerHTML =
+                "Este proceso suele tardar cerca de <strong> 5 minutos</strong>";
+              loadingText.classList.add(
+                "animate__animated",
+                "animate__fadeInUp"
+              );
+              loadingText.addEventListener("animationend", () => {
+                loadingText.classList.remove(
+                  "animate__animated",
+                  "animate__fadeInUp"
+                );
+              });
+
+              msg = 1;
+            } else {
+              loadingText.innerHTML =
+                "Espera unos momentos, estamos asegurando la validación de tus datos.";
+              loadingText.classList.add(
+                "animate__animated",
+                "animate__fadeInUp"
+              );
+              loadingText.addEventListener("animationend", () => {
+                loadingText.classList.remove(
+                  "animate__animated",
+                  "animate__fadeInUp"
+                );
+              });
+
+              msg = 0;
+            }
+            msgTimeOut();
+          }, 4000);
+        }
+ msgTimeOut();
+setTimeout(function () {
+         loadingText.style.display = "none";
+          alertDelay.style.visibility = "visible";
+          alertDelay.classList.add("animate__animated", "animate__fadeInUp");
+          alertDelay.addEventListener("animationend", () => {
+            alertDelay.classList.remove(
+              "animate__animated",
+              "animate__fadeInUp"
+            );
+          });
+        }, time);
+
+        setTimeout(function () {
+         
+            window.location.href = "./time_out.html";
+
+        }, time2);
+      }
+
+      timeOut(26000, 45000);
+    </script>
+  </body>
+</html>

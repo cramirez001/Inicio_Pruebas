@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../Assets/Globals/css/cpl-Styles.css" />
+</head>
+
+<body class="cpl_body">
+    <!-- Defino si el usuario tiene cuentas o no  -->
+    <input type="hidden" value="1" class="consulta_cuentas" /><!-- No Tiene cuentas -->
+
+    <!-- Contenedor principal -->
+    <div class="cpl_container mw_800">
+
+
+
+
+        <!-- LINEA DE PASOS  -->
+        <div class="flex_row spacing_bottom_small">
+            <div class="cpl_col cpl_col_12 center_div  ">
+                <div class="steps-line">
+                    <a href="#" class="step completed">
+                        <div class="dot">1</div><span>Paso uno</span>
+                    </a>
+                    <a href="#" class="step completed active">
+                        <div class="dot">2</div><span>Paso dos</span>
+                    </a>
+                    <a href="#" class="step ">
+                        <div class="dot">3</div><span>Paso tres</span>
+                    </a>
+                    <a href="#" class="step ">
+                        <div class="dot">4</div><span>Paso cuatro</span>
+                    </a>
+                    <a href="#" class="step ">
+                        <div class="dot">5</div><span>Paso Cinco</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- FIN LINEA DE PASOS -->
+
+
+
+        <!-- TIPO DE DEPOSITO  -->
+        <div class="flex_row">
+            <div class="cpl_col cpl_col_12 spacing_bottom_small">
+                <h2 class="t-blue center_text">Tipo de depósito</h2>
+                <div class="cpl_flex_form">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 input_wrap radio_wrap center_cont_row">
+                           
+                            <div class="cpl_input_radio">
+                                <input id="0" checked type="radio" name="1" value="cuentaBancaria"
+                                    onclick="showWithRadio(this, 'tipoSolicitante')"><span
+                                    class="checkradio"></span><label for="0">
+                                    <p>Cuenta bancaria</p>
+                                </label>
+                            </div>
+                            <div class="cpl_input_radio">
+                                <input id="1" type="radio" name="1" value="valeVista"
+                                    onclick="showWithRadio(this, 'tipoSolicitante')"><span
+                                    class="checkradio"></span><label for="1">
+                                    <p>Vale vista</p>
+                                </label>
+                            </div>
+                        
+                            <!-- <span class="f_error">Selecciona una opción</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN TIPO DE DEPOSITO -->
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+        <!-- WEBPART -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+
+        <!-- OCULTO SIEMPRE AL CARGAR -->
+        <!-- FORMULARIO AGREGAR CUENTA -->
+        <div class="account_form vista2" style="display: none;">
+            <div class="flex_row center_div mw_400 spacing_bottom_medium">
+                <div class="cpl_col cpl_col_12">
+                    <h2 class="t-blue center_text">Datos de cuenta</h2>
+                    
+                    <!-- CAMPOS AGREGAR CUENTA -->
+                    <div class="cpl_flex_form spacing_bottom_medium">
+                        <div class="flex_row">
+                            <div class="cpl_col cpl_col_12 input_wrap select_wrap">
+                    <!-- Error para: agregar cuenta cuando no tiene cuentas -->
+                    <div class="cpl_alert_bar alert_error spacing_bottom_small">
+                        <p class="center_text">Tuvimos problemas al agregar la cuenta.<br>Inténtalo nuevamente. </p>
+                    </div>
+                    <!-- Fin Error -->
+                                <label class="label_l"><span>Banco</span></label>
+                                <select name="" id="" class="cpl_input">
+                                    <option value="" selected disabled hidden>Selecciona un banco</option>
+                                    <option value="1">Banco Estado</option>
+                                    <option value="2">Banco Falabella</option>
+                                    <option value="3">Banco Santander</option>
+                                    <option value="4">Banco BCI</option>
+
+                                </select>
+                                <!-- <span class="f_error">Ingresa un email</span> -->
+                            </div>
+                            <div class="cpl_col cpl_col_12 input_wrap select_wrap">
+                                <label class="label_l"><span>Tipo de cuenta</span></label>
+                                <select name="" id="" class="cpl_input tipo_cuenta_select">
+                                    <option value="" selected disabled hidden>Selecciona un tipo de cuenta</option>
+                                    <option value="1">Cuenta Corriente</option>
+                                    <option value="2">Cuenta Vista</option>
+                                    <option value="ctaRut">Cuenta Rut</option>
+                                </select>
+                                <!-- <span class="f_error">Ingresa un email</span> -->
+                            </div>
+                            <div class="cpl_col cpl_col_12 input_wrap ">
+                                <label class="label_l"><span>Número de cuenta</span></label>
+                                <input type="text" class="cpl_input">
+                                <span class="f_error">Ingresa un email</span>
+                            </div>
+                            <div class="cpl_col cpl_col_12 cuenta_rut_alert" style="display: none;">
+                                <div class="cpl_alert_bar">
+                                    <p class="center_text"><strong>Tu Cuenta Rut rechazará el pago si:</strong></p>
+                                    <ul class="cpl_list">
+                                        <li class="">
+                                            <p>Excede los <strong>$2.000.000</strong> mensuales en la cuenta</p>
+                                        </li>
+                                        <li class="">
+                                            <p>Excede un saldo mayor a <strong>$3.000.000</strong> en la cuenta</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN CAMPOS AGREGAR CUENTA -->
+                    <!-- BOTONES AGREGAR CUENTA -->
+                    <div class="cpl_col cpl_col_s_6 boton_cancelar_sin_cuentas vista2" style="display: none;">
+                        <!-- Este botón oculta el comprobante y muesta el formulario -->
+                        <a class="cpl_btn aqua secondary"
+                            onclick="show_hidden(this, '.vista1', '.vista2, .vista3')">Cancelar
+                            1</a>
+                    </div>
+                    <div class="cpl_col cpl_col_s_6 boton_validar_cuenta vista2" style="display: none;">
+                        <!-- Este botón consulta el servicio para validar si la cuenta existe -->
+                        <a href="develop_messages/develop_message2.html" class="cpl_btn aqua load">Ingresar<span
+                                class="cpl_icon icon-spinner"></span></a>
+                    </div>
+                    <!-- FIN BOTONES AGREGAR CUENTA -->
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN FORMULARIO AGREGAR CUENTA -->
+
+
+
+
+        <!-- MOSTRAR DESPUES DE CONSULTAR SERVICIO -->
+        <!-- Confirmar cuenta ingresada -->
+        <div class="account_summary vista3" style="display: none;">
+            <div class="flex_row center_div mw_800 spacing_bottom_small">
+                <div class="cpl_col cpl_col_12">
+                    <h2 class="t-blue center_text">Datos de la cuenta</h2>
+                    <!-- Tabla resumen de cuenta -->
+                    <table class="table_resumen responsive_table one_column">
+                        <tbody>
+                            <tr class="table_action">
+                                <td>
+                                    <div class="flex_row mw_300 center_div">
+                                        <!-- BOTON EDITAR -->
+                                        <div class="cpl_col cpl_col_6">
+                                            <a class="cpl_btn small aqua editar_datos center_div mw_150"
+                                                onclick="show_hidden(this, '.vista1', '.vista1, .vista3')">
+                                                Cancelar
+                                            </a>
+                                        </div>
+                                        <!-- BOTON EDITAR-->
+                                        <!-- BOTON EDITAR -->
+                                        <div class="cpl_col cpl_col_6">
+                                            <a class="cpl_btn small aqua editar_datos center_div mw_150"
+                                                onclick="show_hidden(this, '.vista2', '.vista1 , .vista3')">
+                                                Editar datos
+                                            </a>
+                                        </div>
+                                        <!-- BOTON EDITAR-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cpl_dato">
+                                        <p>
+                                            Numero de cuenta
+                                        </p>
+                                    </div>
+                                    <div class="cpl_valor">
+                                        <p>
+                                            965578988
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cpl_dato">
+                                        <p>
+                                            Tipo de cuenta
+                                        </p>
+                                    </div>
+                                    <div class="cpl_valor">
+                                        <p>
+                                            Cuenta Corriente
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cpl_dato">
+                                        <p>
+                                            Banco
+                                        </p>
+                                    </div>
+                                    <div class="cpl_valor">
+                                        <p>
+                                            Banco Estado
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Alerta cuenta no encontrada -->
+                    <div class="flex_row" class="alert_cuenta_no_validada" style="display: none;">
+                        <div class="cpl_col cpl_col_12">
+                            <div class="cpl_alert_bar error spacing_bottom_small">
+                                <p class="center_text"><strong>No pudimos validar la existencia de esta cuenta</strong>
+                                </p>
+                                <p class="small-text center_text">
+                                    Esto puede deberse a un dato mal ingresado o que la cuenta es muy nueva. <br>
+                                </p>
+                            </div>
+                            <h4 class="t-blue center_text">Si deseas continuar con esta cuenta acepta las siguientes
+                                declaraciones:</h4>
+                        </div>
+                    </div>
+                    <!-- Fin Alerta cuenta no encontrada -->
+                    <!-- Declaraciones -->
+                    <div class="cpl_flex_form spacing_bottom_medium">
+                        <div class="flex_row center_cont_row">
+                            <!-- Declaración cuenta unipersonal -->
+                            <div
+                                class="cpl_col cpl_col_6 input_wrap cpl_input_checkbox declaración_cuenta_propia spacing_top_small">
+                                <label class="cpl_checkbox">
+                                    <input id="ChkValidar" type="checkbox"
+                                        name="ctl00$ctl48$g_205663df_8f33_4c30_b971_d78e987c1919$ChkValidar" />
+                                    <span class="cpl_checkmark"></span>
+                                </label>
+                                <p class="spacing_bottom_small">
+                                    Declaro que esta cuenta está a mi nombre y es unipersonal, en caso contrario el giro
+                                    podría ser rechazado
+                                </p>
+                                <span class="f_error" style="display: none;">Debes aceptar la declaración</span>
+                            </div>
+                            <!-- Fin Declaración cuenta unipersonal -->
+                            <!-- Declaración cuenta no validada-->
+                            <div style="display: none;"
+                                class="cpl_col cpl_col_6 input_wrap cpl_input_checkbox declaración_cuenta_no_existente spacing_top_small">
+                                <label class="cpl_checkbox">
+                                    <input id="ChkValidar" type="checkbox"
+                                        name="ctl00$ctl48$g_205663df_8f33_4c30_b971_d78e987c1919$ChkValidar" />
+                                    <span class="cpl_checkmark"></span>
+                                </label>
+                                <p class="spacing_bottom_small">
+                                    Declaro que deseo utilizar esta cuenta a pesar de no ser validada su existencia.
+                                </p>
+                                <span class="f_error" style="display: none;">Debes aceptar la declaración</span>
+                            </div>
+                            <!-- Declaración cuenta no validada-->
+
+                        </div>
+                    </div>
+                    <!-- Fin Declaraciones -->
+                </div>
+            </div>
+            <!-- fin flex row -->
+        </div>
+        <!-- Fin Confirmar cuenta ingresada -->
+        <!-- MOSTRAR DESPUES DE CONSULTAR SERVICIO  -->
+
+
+
+        <!-- OCULTAR CUANDO NO TENGA CUENTAS AL CARGAR -->
+        <!--LISTADO DE CUENTAS Y BOTÓN AGREGAR -->
+        <div class="listado_cuentas vista1">
+            <div class="flex_row">
+                 <!-- TABLA CUENTAS -->
+                <div class="cpl_col cpl_col_12 spacing_bottom_medium">
+                    <h2 class="t-extraDarkGray">Cuentas bancarias recientes</h2>
+                   
+                    <!-- Errores para: Cargar cuentas, eliminar cuenta, agregar cuenta -->
+                    <div class="cpl_alert_bar alert_error spacing_bottom_small" style="display: none;">
+                        <p class="center_text">Tuvimos problemas cargando tus cuentas recientes. </p>
+                    </div>
+                    <div class="cpl_alert_bar alert_error spacing_bottom_small" style="display: none;">
+                        <p class="center_text">No se pudo eliminar cuenta, inténtalo nuevamente. </p>
+                    </div>
+                    <div class="cpl_alert_bar alert_error spacing_bottom_small" style="display: none;">
+                        <p class="center_text">
+                            <p class="center_text">Tuvimos problemas al agregar la cuenta, inténtalo nuevamente. </p>
+                        </p>
+                    </div>
+                    <!-- Fin Errores   -->
+                    <div class="cpl_realTable_cont">
+                       
+                        <table class="cpl_realTable responsive_table selectable_row">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>N° Cuenta</th>
+                                    <th>Tipo cuenta</th>
+                                    <th>Banco</th>
+                                   
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="check">
+                                        <label class="cpl_checkbox">
+                                            <input id="ChkValidar" type="radio"
+                                                name="ctl00$ctl48$g_205663df_8f33_4c30_b971_d78e987c1919$ChkValidar" />
+                                            <span class="cpl_checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>233691001</td>
+                                    <td>Cuenta Corriente</td>
+                                    <td>Banco Estado </td>
+                                   
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="check">
+                                        <label class="cpl_checkbox">
+                                            <input id="ChkValidar" type="radio"
+                                                name="ctl00$ctl48$g_205663df_8f33_4c30_b971_d78e987c1919$ChkValidar" />
+                                            <span class="cpl_checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>233691001</td>
+                                    <td>Cuenta Corriente</td>
+                                    <td>Banco Estado </td>
+                                    
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <span class="f_error">Debes seleccionar algo</span> -->
+                    </div>
+                </div>
+                <!-- FIN TABLA CUENTAS -->
+
+                <!-- MOSTRAR SIEMPRE AL CARGAR PASO  -->
+                <!-- BOTÓN AGREGAR CUENTA -->
+                <div class="cpl_col cpl_col_12 margin_top_small">
+
+                    <div class="vista1">
+                        <div class="flex_row">
+                            <div class="cpl_col cpl_col_12 mw_350 float_right spacing_bottom_medium vista1">
+                                <a href="#" class="cpl_btn aqua agregar_cuenta_btn aqua secondary small"
+                                    onclick="show_hidden(this, '.vista2', '.vista1' )">Usar nueva cuenta
+                                    <span class="cpl_icon icon-add"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN BOTÓN AGREGAR CUENTA -->
+            </div>
+        </div>
+         <!-- FIN LISTADO DE CUENTAS Y BOTÓN AGREGAR -->
+
+
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+        <!-- FIN WEBPART -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+
+
+
+
+
+
+
+        <!-- MOSTRAR SIEMPRE AL CARGAR PASO  -->
+        <!-- MAIL DE CONFIRMACIÓN Y MENSAJES RECORDATORIOS -->
+        <div class="mail_y_mensajes vista1">
+            <div class="flex_row spacing_bottom_medium">
+                <div class="cpl_col cpl_col_12">
+                    <h2 class="t-extraDarkGray ">Email de confirmación</h2>
+                    <p class="small-text ">A este email enviaremos el comprobante del giro realizado</p>
+                    <div class="cpl_flex_form">
+                        <div class="flex_row">
+                            <div class="cpl_col cpl_col_12 input_wrap mw_400 ">
+
+                                <input type="text" class="cpl_input mail_de_confirmacion" placeholder="Ingresar mail">
+                                <span class="f_error" style="display: none;">Ingresa un email</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="spacing_top_medium"><strong>Recuerda:</strong></p>
+                    <ul class="cpl_list">
+                        <li>
+                            <p class="small-text">
+                                El éxito o rechazo de un depósito será confirmado por AFP Capital a través de un correo
+                                electrónico
+                                en un plazo de hasta 2 horas.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p class="small-text">
+                                Si tu depósito es rechazado, será derivado a retiro por medio de vale vista en Banco
+                                Santander
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- FIN MAIL DE CONFIRMACIÓN Y MENSAJES RECORDATORIOS -->
+
+
+
+
+        <!-- MOSTRAR SIEMPRE AL CARGAR PASO  -->
+        <!-- BOTONES DEL PASO -->
+        <div class="flex_row spacing_bottom_medium">
+            <div class="cpl_col cpl_col_12 center_div mw_400">
+                <div class="flex_row">
+
+
+                    <div class="cpl_col cpl_col_s_6 boton_atras vista1">
+                        <!-- Este botón nos lleva al paso anterior del flujo -->
+                        <a href="paso-2.html" class="cpl_btn aqua secondary">Atrás</a>
+                    </div>
+
+
+
+
+                    <div class="cpl_col cpl_col_s_6 boton_siguiente vista1">
+                        <!-- Este botón nos lleva al paso siguiente del flujo -->
+                        <a class="cpl_btn">Siguiente</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN BOTONES DEL PASO -->
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Fin Contenedor principal -->
+
+
+
+
+
+
+
+
+
+    <!-- Modal de eliminación cuenta-->
+    <div class="cpl_modal center_modal alerta_eliminar">
+        <div class="modal_box">
+            <div class="close close_action"></div>
+            <div class="modal_cont">
+                <h2 class="blue center_div center_text">¿Estás seguro que quieres eliminar la cuenta?</h2>
+                <p class="center_div center_text spacing_bottom_small">Esta acción no se puede deshacer</p>
+                <div class="flex_row">
+                    <div class="cpl_col cpl_col_s_6">
+                        <a class="cpl_btn aqua secondary">Cancelar</a>
+                    </div>
+                    <div class="cpl_col cpl_col_s_6">
+                        <a class="cpl_btn aqua ">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal de eliminación cuenta -->
+
+
+
+
+
+
+
+
+
+    <script src='../../../Assets/Globals/js/jquery.js'></script>
+    <script src='../../../Assets/Globals/js/globals.js'></script>
+    <script src='../../../Assets/Globals/js/validacion_cuentas_bancarias.js'></script>
+    <script src="../../../Assets/Globals/js/js/modal.js"></script>
+</body>
+
+</html>

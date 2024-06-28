@@ -1,0 +1,230 @@
+.border{
+    border: solid 1.5px map-get($colors, 'lightGray' )!important
+  }
+
+     // attr range
+     @include attrRange(border){
+      border: solid 1.5px map-get($colors, 'lightGray' )!important
+         }   
+
+
+.border_top{
+    border-top: solid 1.5px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_top){
+        border-top: solid 1.5px map-get($colors, 'lightGray' )!important
+           }   
+
+  
+
+  .border_bottom{
+    border-bottom: solid 1.5px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_bottom){
+        border-bottom: solid 1.5px map-get($colors, 'lightGray' )!important
+           }   
+  
+  .border_left{
+    border-left: solid 1.5px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_left){
+        border-left: solid 1.5px map-get($colors, 'lightGray' )!important
+           }   
+
+  .border_right{
+    border-right: solid 1.5px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_right){
+        border-right: solid 1.5px map-get($colors, 'lightGray' )!important
+           }   
+
+@each $class, $value in $colors{
+    
+    .border_#{$class}{
+      border: solid 1.5px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_#{$class}){
+          border: solid 1.5px $value!important
+             }   
+  
+    .border_top_#{$class}{
+      border-top: solid 1.5px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_top_#{$class}){
+          border-top: solid 1.5px $value!important
+             }   
+  
+    .border_bottom_#{$class}{
+      border-bottom: solid 1.5px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_bottom_#{$class}){
+          border-bottom: solid 1.5px $value!important
+             }   
+    
+    .border_left_#{$class}{
+      border-left: solid 1.5px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_left_#{$class}){
+          border-left: solid 1.5px $value!important
+             }   
+  
+    .border_right_#{$class}{
+      border-right: solid 1.5px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_right_#{$class}){
+          border-right: solid 1.5px $value!important
+             }   
+  
+    .border_none{
+      border:0!important;
+    }
+
+         // attr range
+         @include attrRange(border_none){
+          border:0!important;
+             }   
+    
+  }
+
+// bordes superiores a 1 
+
+@for $i from 2 through 5 {
+    
+
+  .border_#{$i}{
+    border: solid #{$i}px map-get($colors, 'lightGray' )!important
+  }
+
+     // attr range
+     @include attrRange(border){
+      border: solid #{$i}px map-get($colors, 'lightGray' )!important
+         }   
+
+
+.border_#{$i}_top{
+    border-top: solid #{$i}px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_top){
+        border-top: solid #{$i}px map-get($colors, 'lightGray' )!important
+           }   
+
+  
+
+  .border_#{$i}_bottom{
+    border-bottom: solid #{$i}px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_bottom){
+        border-bottom: solid #{$i}px map-get($colors, 'lightGray' )!important
+           }   
+  
+  .border_#{$i}_left{
+    border-left: solid #{$i}px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_left){
+        border-left: solid #{$i}px map-get($colors, 'lightGray' )!important
+           }   
+
+  .border_#{$i}_right{
+    border-right: solid #{$i}px map-get($colors, 'lightGray' )!important
+  }
+
+       // attr range
+       @include attrRange(border_right){
+        border-right: solid #{$i}px map-get($colors, 'lightGray' )!important
+           }   
+
+@each $class, $value in $colors{
+    
+    .border_#{$i}_#{$class}{
+      border: solid #{$i}px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_#{$class}){
+          border: solid #{$i}px $value!important
+             }   
+  
+    .border_#{$i}_top_#{$class}{
+      border-top: solid #{$i}px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_top_#{$class}){
+          border-top: solid #{$i}px $value!important
+             }   
+  
+    .border_#{$i}_bottom_#{$class}{
+      border-bottom: solid #{$i}px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_bottom_#{$class}){
+          border-bottom: solid #{$i}px $value!important
+             }   
+    
+    .border_#{$i}_left_#{$class}{
+      border-left: solid #{$i}px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_left_#{$class}){
+          border-left: solid #{$i}px $value!important
+             }   
+  
+    .border_#{$i}_right_#{$class}{
+      border-right: solid #{$i}px $value!important
+    }
+
+         // attr range
+         @include attrRange(border_right_#{$class}){
+          border-right: solid #{$i}px $value!important
+             }   
+  
+    .border_#{$i}_none{
+      border:0!important;
+    }
+
+         // attr range
+         @include attrRange(border_none){
+          border:0!important;
+             }   
+    
+  }
+
+}
+
+
+  .border_radius_3{
+    @include radius_3
+  }
+  .border_radius_6{
+    @include radius_6
+  }
+  .border_radius_12{
+    @include radius_12
+  }
+  

@@ -1,0 +1,807 @@
+.steps-line{
+
+
+    position: relative;
+    @include disp(flex); 
+    @include geneBrow(flex-direction, row);
+     @include geneBrow(align-items, baseline);
+    margin-left: auto; margin-right: auto;
+    @include geneBrow(justify-content, space-between);
+    // padding-bottom: 25px;
+    
+    
+
+
+    width: 100%;
+    // max-width: 120px;
+
+//     &:after{
+//     content: '';
+//     height: 2px;
+//     width: 100%; 
+//     background-color: map-get($colors, "lightGray");
+//     position: absolute;
+//     top:3px;
+
+    
+// }
+  .step{
+
+   @include disp(flex); 
+   @include geneBrow(flex-direction, column);
+   @include geneBrow(flex, 1);
+   @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, center);
+    cursor: pointer;
+
+
+  
+    position: relative;
+    width: 100%; 
+   padding: 6px;
+    // border-radius: 50%;
+    z-index: 3;
+    color: map-get($colors, "lightGray");
+    font-weight: 700;
+
+    
+   span{
+     width: 100%; 
+
+     bottom: -10px; 
+     
+
+     font-weight: 600; 
+     margin-top: 5px; 
+     left: 0; 
+     bottom: 0; 
+     text-align: center; 
+     line-height: 115%;
+     color: map-get($colors, "lightGray");
+    }
+
+    .text{
+        // border: solid 1px map-get($colors, 'ex-lightGray' );
+        background-color: map-get($colors, 'white' );
+        width: 100%;
+        padding: 10px;
+        margin-top: 0px;
+        border-radius: 6px;
+
+    }
+@include sdMax{
+     span{ display: none; }
+}
+&.completed{
+    z-index: 3;
+}
+   &.completed  span{ color: map-get($colors, 'aqua' ); text-align: center; }
+
+    .dot{
+        position: relative;
+         width: 30px; 
+         height: 30px;
+        background-color:#fff;
+        color: map-get($colors, "lightGray");;
+        border: solid 4px map-get($colors, "lightGray");
+        
+        @include geneBrow(border-radius, 50%);
+        font-family: $fontCorp;
+        
+
+
+          @include disp(flex); 
+  @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, center);
+    z-index: 3;
+
+    
+
+        
+
+    }
+    
+    &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 15px);
+        right: 50%;
+        height: 2px;
+        background-color: map-get($colors, "lightGray");
+        z-index: -1;
+        top:20px;
+       
+    }
+    &:first-child:after {
+        display: none;
+    }
+    &.completed:after{
+        background-color: map-get($colors, "aqua");
+    }
+
+    &.active:after{
+        background-color: map-get($colors, "aqua");
+    }
+
+    &.preactive:after{
+        background-color: map-get($colors, "blue");
+        border-color: map-get($colors, 'blue' );
+    }
+
+  
+
+    &:first-child  .dot:after {
+    
+    width: 50%; right: 0;
+}
+
+// &:last-child > .dot:after {
+ 
+//     width: 50%; left: 0;
+// }
+
+
+    &.completed .dot{ 
+    //     border-color: map-get($colors, "aqua");
+      
+    // color:map-get($colors, "aqua");
+
+    -webkit-transition: all 200ms ease-in;
+-moz-transition: all 200ms ease-in;
+-ms-transition: all 200ms ease-in;
+-o-transition: all 200ms ease-in;
+transition: all 200ms ease-in;
+
+    background-color: map-get($colors, 'aqua' );
+    color:#fff;
+    border-color: map-get($colors , 'aqua' );
+    font-weight: 900;
+    
+    }
+    &.active .dot{
+        
+            background-color: map-get($colors, 'aqua' );
+            color:#fff;
+            border-color: map-get($colors , 'aqua' );
+        
+            
+    }
+
+    &.preactive .dot{
+        
+        background-color: map-get($colors, 'white' );
+        color:map-get($colors , 'blue' );
+        border-color: map-get($colors , 'blue' );
+    
+        
+}
+
+    &.active span{
+        color: map-get($colors , 'aqua' );
+    }
+
+    &.preactive span{
+        color: map-get($colors , 'blue' );
+    }
+
+    &.completed:hover{
+        span{
+         color:   map-get($colors, 'lightAqua' );
+        }
+        .dot{
+          
+            background-color: map-get($colors, 'lightAqua' );
+            border-color: map-get($colors, 'lightAqua' );
+        color:#fff;
+     
+        }
+    }
+   
+}
+
+
+
+
+&.small{
+    max-width: 250px;
+    .dot{
+     width: 10px; 
+        height: 10px;
+        }
+
+        span{display: none}
+  
+}
+&.responsive_step_line{
+    
+
+   
+    @include sdMax{
+
+     
+        .step{
+        span{ display: block; }
+        }
+   }
+    @include mdMax{
+        margin: 0 auto;
+        float: none!important;
+        display: table;
+        width: auto;
+        @include geneBrow(flex-direction, column);
+
+
+
+    .step{
+
+        width: auto;
+        @include geneBrow(flex-direction, row);
+
+        .dot{
+            @include geneBrow(flex, 0 0 30px);
+        }
+        span{
+            text-align: left;
+            padding-left: 10px;
+            margin: 0!important;
+        }
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            right: auto;
+            left:20px;
+            height: 100%;
+            background-color: map-get($colors, "lightGray");
+            z-index: -1;
+            top:50%;
+           
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &:first-child:after {
+            display: block;
+        }
+    }
+
+
+}
+}
+
+
+&.resumen{
+
+    .tag{
+        padding: 3px; border-radius: 30px; 
+        padding-bottom: 5px;
+        margin-top: 3px;
+        text-transform: uppercase;
+
+        &.completed{
+            background-color: map-get($colors, 'green' );
+            color: map-get($colors,'white' )
+        }
+
+        &.active{
+            background-color: map-get($colors, 'aqua' );
+            color: map-get($colors,'white' )
+        }
+    }
+    .step{
+
+    &.completed{
+    z-index: 3;
+}
+   &.completed  {
+
+   .dot{
+        
+        background-color: map-get($colors, 'green' );
+        border-color: map-get($colors, 'green' );
+
+
+    }
+       
+    span{ color: map-get($colors, 'green' ); text-align: center; }
+}
+
+   
+
+}
+
+}
+}
+
+
+.waterfall_steps{
+
+    .step{
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        float: left;
+
+        .number{
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            z-index: 1;
+            .dot{            
+            width: 25px;
+            height: 25px;
+            font-family: $fontCorp;
+            font-weight: 900;
+            color: map-get($colors, 'white' );
+            background-color: map-get($colors, 'blue' );
+            border-radius: 50%;
+            @include disp(flex);
+            @include geneBrow(justify-content, center);
+            @include geneBrow(align-items, center);
+            margin: 0 auto;
+            z-index: 99;
+            position: relative;
+        }
+
+
+           
+
+            &:after{
+                content:'';
+                z-index: 0;
+                position: absolute;
+                top: 13px;
+                height: 1px;
+                background-color: map-get($colors, 'lightGray' );
+                left: 0; right: 0;
+            }
+
+
+
+
+        }
+    }
+}
+
+
+.vertical_stepline{
+    //    > div{ @include disp(flex);}
+            .step{ 
+                // &:last-child{
+                    
+                //    .dot{
+                //        &:before{ height:0; display: none;}
+                 
+                //    }
+                // }
+                position: relative;
+                padding-bottom: 60px;
+                @include disp(flex);
+                // @include geneBrow(align-items, center);
+                .text{padding-left: 10px;
+                 
+                
+                }
+    
+                .img{
+                    width: 70px;
+                    @include geneBrow(flex, 0 0 70px);
+                    @include disp(flex);
+                    @include geneBrow(justify-content, center);
+                    position: relative;
+                    
+                    img{
+                        width: 100%;
+                        @include geneBrow(flex, 0 0 100%);
+                        @include geneBrow(flex-shrink, 0);
+                        @include geneBrow(align-self, flex-start);
+                        z-index: 99;
+                        margin-top: -10px;
+    
+    
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                    width: 1.5px;
+    
+                    height: calc(100% + 69px);
+                    background-color: map-get($colors, "lightGray" );
+                    
+                    @include geneBrow(flex, 0 0 2px);
+                    left: 50%;
+                    margin-left: -1px;
+                    }
+                 
+    
+    
+                }
+                .dot{
+                    position: relative;
+                    width: 12px;
+                    @include geneBrow(flex, 0 0 12px);
+                    @include disp(flex);
+                    @include geneBrow(justify-content, center);
+                // @include geneBrow(align-items, center);
+                    &:after{
+                        content: '';
+                        position: absolute;;
+                    width: 10px;
+                    height: 10px;
+                    top:10px;
+                    background-color: map-get($colors, "lightGray" );
+                    border-radius: 50%;
+                    left: 50%;
+                    margin-left: -5px
+                    
+                    
+                    }
+                   
+                    &:before{
+                        content: '';
+                        position: absolute;
+                    width: 1.5px;
+                   top:10px;
+                    height: calc(100% + 69px);
+                    background-color: map-get($colors, "lightGray" );
+                    
+                    @include geneBrow(flex, 0 0 2px);
+                    left: 50%;
+                    margin-left: -1px;
+                    }
+
+
+                    .dot_number{
+                        &.active{
+                            background-color: map-get($colors, 'aqua' );
+                            color: map-get($colors, 'white' );
+                            border-color: map-get($colors, 'aqua' );
+                        }
+                        &.preactive{
+                            background-color: map-get($colors, 'white' );
+                            color: map-get($colors, 'blue' );
+                            border-color: map-get($colors, 'blue' );
+                        }
+                     span{
+                        font-weight: 900!important;
+                     }
+                        position: relative;
+                         width: 30px; 
+                         height: 30px;
+                        background-color:#fff;
+                       
+                        color: map-get($colors, "lightGray");;
+                        border: solid 2px map-get($colors, "lightGray");
+                        z-index: 99;
+                        
+                        @include geneBrow(border-radius, 50%);
+                        font-family: $fontCorp;
+                        
+                
+                
+                          @include disp(flex); 
+                  @include geneBrow(align-items, center);
+                    @include geneBrow(justify-content, center);
+                    z-index: 3;
+                
+                    
+                
+                        
+                
+                }
+    
+    
+                }
+               
+    
+                &:last-child{
+                    .img:before{
+                      display: none;
+                    }
+                }
+             }
+        }
+
+
+.steps-numbers{
+    font-size: 14px;
+    position:relative;
+    padding: 5px;
+    text-align: center; 
+       @include disp(flex); 
+    @include geneBrow(flex-direction, row);
+    @include geneBrow(justify-content, center);
+    .numbers{
+    @include disp(flex); 
+    @include geneBrow(flex-direction, row);
+    @include geneBrow(align-items, center);
+    
+.number{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 100%;
+   
+
+ }   
+    .current{
+        @include disp(flex); 
+        @include geneBrow(align-items, center);
+        color: map-get($colors, "blue");
+      
+        padding-left: 10px;
+        
+
+text-align: left;
+        position: relative;
+      
+      width: auto;
+      &:after{
+            
+             
+        color: map-get($colors, "lightGray");
+        content:'/'; position: relative;  
+        font-size: 30px;
+    text-align: center;
+    margin-left: 4px;
+    font-weight: 900;
+   
+         
+         }
+     
+
+
+        .number{ 
+   
+             position:relative;
+             margin-left: 6px;
+             line-height: 100%;
+             
+            }
+    }
+    .steps{
+        padding-left: 3px;
+        padding-right: 10px;
+
+        width: auto;
+       color: map-get($colors, "lightGray");
+    }
+
+    }
+
+
+
+
+    
+}
+
+
+.vertical_steps {
+
+    //hijos
+  
+    .step {
+  
+      position: relative;
+      padding-left: 35px !important;
+      float: left;
+      width: 100%;
+  
+      //hijos
+  
+      h2{
+          text-align: left !important;
+      }
+  
+      .dot {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 23px;
+        width: 27px;
+        height: 27px;
+        border: solid 4px map-get($colors, "blue");
+        border-radius: 50%;
+        background-color: map-get($colors, "ex-lightGray");
+        @include disp(flex);
+        @include geneBrow(justify-content, center);
+        @include geneBrow(align-items, center);
+        font-family: $fontCorp;
+        font-size: 1.1rem;
+        color: map-get($colors, "blue");
+        font-weight: 900;
+        z-index: 1;
+  
+        @include mdMax {
+          left: 50%;
+          z-index: 9;
+          top: -13px;
+          margin-left: -14.5px;
+        }
+      }
+  
+      .cont {
+        -webkit-transition: all 400ms ease-in-out;
+        -moz-transition: all 400ms ease-in-out;
+        -ms-transition: all 400ms ease-in-out;
+        -o-transition: all 400ms ease-in-out;
+        transition: all 400ms ease-in-out;
+        // overflow: hidden;
+  
+        z-index: 1;
+        // border: solid 1px map-get($colors, 'gray' );
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: map-get($colors, "white");
+  
+        .open_details {
+          display: none;
+        }
+  
+        .img_d {
+          margin-top: -20px !important;
+        }
+        .detail {
+          margin-top: 15px;
+        }
+  
+        h2,
+        h3 {
+          margin-bottom: 0 !important;
+          max-width: calc(100% - 50px);
+        }
+        .img {
+          display: none;
+        }
+        @include mdMax {
+          padding: 15px;
+          .img {
+            display: block;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+          }
+  
+          h2,
+          h3 {
+            margin-bottom: 0 !important;
+          }
+  
+          //   .open_details{
+  
+          //     top: -28px;
+          //     right: 0;
+          //     left: 50%;
+          //     margin-left: -12.5px;
+          // }
+        }
+  
+        &::after {
+          content: "";
+          position: absolute;
+          left: 13px;
+          z-index: 0;
+          border-left: solid 1.5px map-get($colors, "blue");
+          top: 0px;
+          bottom: -20px;
+        }
+      }
+  
+      //modificadores
+  
+      &--force_last {
+        .cont:after {
+          height: 45px;
+        }
+      }
+  
+      &--en_curso {
+        .dot {
+          border: solid 4px map-get($colors, "aqua");
+          background-color: map-get($colors, "aqua");
+          color: map-get($colors, "white");
+        }
+        .cont {
+          background-color: map-get($colors, "aqua");
+          .open_details {
+            background-color: map-get($colors, "aqua") !important;
+            border: solid 1.5px map-get($colors, "white");
+            color: map-get($colors, "white");
+          }
+        }
+      }
+  
+      //pseudo
+  
+      &:nth-child(1) {
+        .cont:after {
+          top: 45px !important;
+        }
+      }
+  
+      &:last-child {
+        .cont:after {
+          height: 45px;
+        }
+      }
+  
+     //medias   
+  
+      @include mdMax {
+        padding-left: 0 !important;
+        .cont:after {
+          border: 0;
+        }
+        .text {
+          padding-right: 0px;
+        }
+        .img {
+          display: none;
+          img {
+            margin: 0 auto;
+            float: none !important;
+            max-width: 166px;
+            display: table;
+          }
+        }
+      }
+  
+    }
+  
+    //modificadores
+  
+    &--hide_details {
+      .step{
+      .open_details {
+        -webkit-transition: all 400ms ease-in-out;
+        -moz-transition: all 400ms ease-in-out;
+        -ms-transition: all 400ms ease-in-out;
+        -o-transition: all 400ms ease-in-out;
+        transition: all 400ms ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        border: solid 1.5px map-get($colors, "gray");
+        background-color: map-get($colors, "white");
+        border-radius: 50%;
+        color: map-get($colors, "gray");
+        font-weight: 900;
+      }
+  
+      &.active {
+        -webkit-transition: all 0ms ease-in-out;
+        -moz-transition: all 0ms ease-in-out;
+        -ms-transition: all 0ms ease-in-out;
+        -o-transition: all 0ms ease-in-out;
+        transition: all 0ms ease-in-out;
+  
+        // background-color:  map-get($colors, 'white' );
+  
+        // border: solid 1.5px map-get($colors, 'lightGray' );
+  
+        .open_details {
+          transform: rotate(180deg);
+          background-color: map-get($colors, "aqua") !important;
+          border: solid 1.5px map-get($colors, "aqua");
+          color: map-get($colors, "white");
+        }
+      }
+  
+      .cont {
+        .detail {
+          display: none;
+        }
+        .open_details {
+          display: block;
+        }
+      }
+    }
+  }
+  
+    //pseudo
+  }
+  

@@ -1,0 +1,9 @@
+// links
+a{
+    color: map-get($colors, "aqua");
+    text-decoration: underline;
+    cursor: pointer ;
+    font-size: $s_p;
+
+    
+}

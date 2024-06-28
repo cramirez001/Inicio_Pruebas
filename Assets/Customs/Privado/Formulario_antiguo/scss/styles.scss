@@ -1,0 +1,217 @@
+// Aquí van nuestros estilos personalizados
+.content-form-gral .btn-fix{
+    // display: none!important;
+}
+
+
+h2{
+    @include define_h2;
+    span{
+        font-size: inherit!important
+    }
+}
+
+// #ctl00_ctl48_g_9b4b1bec_818d_4414_95da_b9a62ed87d88_valIngresoMensaje{display: none!important;}
+
+.f_error{ float: left; width: 100%;}
+
+.content-form-gral+div{
+    display: none;
+}
+.btn_enviar{
+    margin-left: auto;
+    #enviar_2{
+        float: right!important;
+    }
+}
+.box-input2{
+    .f_error{
+        width: 100%;
+        float: left;
+        color: map-get($colors, 'red' ) ;
+    }
+    p{
+        float: left;
+    }
+    .txtMensaje{
+        width: 100%!important;
+        max-width: 100%!important;
+        min-height: 300px!important;
+        &.error{
+            border-color: map-get($colors, 'red' );
+            background-color: map-get($colors, 'extraLightRed' );
+        }
+    }
+.txtMensaje, select
+{
+
+
+
+
+  @include geneBrow(box-sizing, border-box);
+  @include geneBrow(border-radius, 3px);
+  font-size: $s_input;
+  font-weight: 500;
+  color: map-get($colors, "blue") !important;
+  padding: 9px !important;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: $fontCorp;
+  height: auto;
+  margin-bottom: 0px;
+  display: block;
+  background-color: map-get($colors, 'extraLightGray' )!important;
+
+  line-height: 130%!important;
+
+  border: 2px solid map-get($colors, "lightGray");
+  background-color: white;
+  // max-height: 43px;
+
+
+
+  margin-top: 5px!important;
+
+
+  &:focus {
+    border: 2px solid map-get($colors, "aqua");
+    background-color: white;
+    outline: 0px;
+    color: map-get($colors, "blue");
+  }
+
+
+}
+
+
+
+
+
+select{
+    padding-right: 40px!important;
+    background-image:
+    linear-gradient(45deg, transparent 50%, map-get($colors, 'darkGray') 50%),
+    linear-gradient(135deg, map-get($colors, 'darkGray') 50%, transparent 50%),
+      linear-gradient(to right, map-get($colors, 'lightGray'), map-get($colors, 'lightGray'));
+    background-position:
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 10px) calc(1em + 2px),
+      calc(100% - 31px) 7px;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2px 1.5em;
+    background-repeat: no-repeat;
+
+    &:focus{
+        background-image:
+        linear-gradient(45deg, transparent 50%, map-get($colors, 'aqua') 50%),
+        linear-gradient(135deg, map-get($colors, 'aqua') 50%, transparent 50%),
+        linear-gradient(to right, map-get($colors, 'aqua'), map-get($colors, 'aqua'));    
+    }
+
+}
+}
+.content-form-gral .box-form-gral{ margin-top: 30px;}
+.box-form-gral ol{padding: 0!important}
+.content-form-gral .box-form-gral label{
+    width: 100%!important;
+    min-width: 100%!important;
+
+    span{
+        color: map-get($colors, 'extraDarkGray' );
+        font-size: $s2;
+        font-family: $fontCorp2!important;
+
+    }
+}
+.box-input2{
+    width: 100%!important;
+    min-width: 100%!important;
+
+  
+}
+
+#ctl00_ctl48_g_9b4b1bec_818d_4414_95da_b9a62ed87d88_DivDisclaimer{
+    margin-top: 10px;
+    border-top: solid 1px map-get($colors, 'lightGray' );
+    padding-top: 0px;
+    padding-bottom: 40px;
+    border-bottom: solid 1px map-get($colors, 'lightGray' );
+    margin-bottom: 10px;
+    @include define_p;
+}
+
+// disclaimer adjuntos
+#divDisclaimerDinamico{
+    font-size: 12px!important;
+    color: map-get($colors, 'extraDarkGray' )!important;
+    li{
+        color: map-get($colors, 'extraDarkGray' )!important;
+    }
+
+}
+
+
+// botón adjuntar documento
+.cpl_btn.input_cont{
+    margin-top: 0!important;
+    padding: 5px !important;
+    font-size: $s2!important;
+    margin-bottom: 4px;
+    padding-left: 12px!important;
+    padding-right: 12px!important;
+
+      
+    background-color: transparent!important;
+    color: map-get($colors, 'aqua' )!important;
+    border-color: map-get($colors, 'aqua' )!important;
+
+    &:hover{
+        background-color: map-get($colors, 'lightAqua' )!important;
+        color: map-get($colors, 'white' )!important;
+        border-color: map-get($colors, 'lightAqua' )!important;
+    }
+
+    svg{
+       fill: map-get($colors, 'aqua' );
+    }
+}
+
+
+h2.ms-webpart-titleText span{
+    @include define_h1;
+}
+
+
+
+//tamaño de fuentes
+
+.box-input2, .content-form-gral, .content-gral-der-generico, .box-form-gral span
+{
+    font-size: 17px!important;
+    line-height: 130%!important;
+
+    @include mdMax{
+        font-size: 16px!important;
+    }
+    
+}
+
+.content-gral-der-generico .bajada-gen p{
+    font-size: inherit!important;
+    color: map-get($colors, 'extraDarkGray' )!important;
+}
+
+// alert correo actual
+.content-gral-der-generico .bajada-gen > div {
+    border-radius: 6px;
+    font-size: initial!important;
+    background-color: map-get($colors, 'extraLightAqua' );
+}
+
+.content-form-gral, .content-gral-der-generico{
+    font-family: $fontCorp2;
+}

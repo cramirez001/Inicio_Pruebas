@@ -1,0 +1,680 @@
+.cpl_realTable_cont{
+    //  padding: 3px;
+
+   position: relative;
+   float: left;
+   width: 100%;
+
+ @include mdMax{
+  //  padding: 10px;
+  //  background-color: map-get($colors, 'ex-lightGray' );
+ }
+  
+  
+   > .f_error {
+
+     text-align: center;
+    color: map-get($colors, "red") !important;
+    line-height: 99%;
+    border-radius: 6px;
+    position: relative;
+    top: 1px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: right;
+    border: 1px solid map-get($colors, "red");
+    right: 3px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+  }
+  
+
+  
+  // LA TABLA V2
+  // LA TABLA VERSIÓN 2________________________________________________________________________________________________________________
+  .cpl_realTableV2, .cpl_realTable{
+    @include md{
+      border: solid 2px map-get($colors, 'lightGray' );
+      border-radius: 6px;
+    }
+    -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    
+  //   -webkit-box-shadow:inset 0 0 0 2px #333;
+  // box-shadow:inset 0 0 0 2px #333;
+  //   border-radius: 20px;
+  //   overflow: hidden;
+    // margin-top: 20px;
+
+
+  
+   &.resumen{
+   
+        tr{
+          .cpl_estado{text-align: right!important; font-weight: 600!important;}
+          td:first-child{
+            border-right: 0!important;
+          }
+          td:last-child{
+            border-left: 0!important;
+            p{
+              text-align: right;
+            }
+          }
+        }
+      
+    }
+  
+    thead {
+    // tr{   background-color: map-get($colors, 'ex-lightGray' );}
+    }
+     
+    tr {
+      // &:nth-child(even) {background:map-get($colors, "ex-lightGray")}
+    @include geneBrow(transition, all 500ms ease-out);
+    background-color: map-get($colors, "white");
+    border: 0;
+    text-align: center;
+    border-bottom: solid 1px map-get($colors, 'lightGray' )!important;
+    // border: solid 1px map-get($colors, 'lightGray' )!important;
+    // &:hover {
+    // color: map-get($colors, "blue");
+    // border-top-color: map-get($colors, "blue");
+    // background-color: white;
+    // }
+  
+    .th_movil {
+      display: none;
+      // width: 100%;
+      max-width: 50%;
+      padding-right: 20px;
+
+      font-weight: 400!important;
+      margin-right: auto;
+  
+      
+    
+    }
+  
+  
+    td,
+    th {
+      font-family: $fontCorp2!important;
+     line-height: 130%;
+     border: 0;
+     text-align: left;
+     border: solid 1px map-get($colors, "lightGray");
+     padding: 10px;
+    
+     vertical-align:middle!important;
+     width: auto!important;
+     p{
+       margin: 0!important;
+     }
+   }
+  
+  
+   th {
+    vertical-align: top!important;
+    font-weight: 700;
+
+    // border: solid 2px map-get($colors, "lightGray") ;
+  
+    border-bottom: 3px solid map-get($colors, "lightGray");
+    background-color:  map-get($colors, "extraLightGray");
+    color: map-get($colors, "extraDarkGray");
+  }
+  
+  
+  
+   td{
+     color: map-get($colors, 'extraDarkGray' );
+
+
+  
+    //  overflow: hidden;
+    .input_wrap{
+      margin-top: 12px;
+      margin-bottom: 1px;
+      .f_error {
+     
+        white-space: nowrap;
+        margin-bottom: 0;
+        text-align: center;
+        width: auto;
+        
+    }
+    }
+    &.saldo{
+      text-align: right;
+  
+      span{
+         display: block;
+         width: 100%;
+         text-align: right;
+      }
+    }
+    &.check{
+      right: 0;
+   
+      input{margin-right: -12px;}
+    }
+  @include md{
+    &.btn{
+      width: 1px;
+    }
+    &.check{
+       width: 1px!important;
+        label{
+         margin: 0 auto!important; float: none;
+       }
+    }
+    }
+  
+  
+  }//fin td
+  
+  
+  &.total{ 
+
+  border: solid 2px map-get($colors, "lightGray");
+  // background-color: map-get($colors, 'ex-lightGray' );
+
+  
+   td{ border:0; background-color: transparent!important; color:map-get($colors, 'blue')} 
+   > td:last-child{
+        font-weight: 700!important;
+    }
+  
+  // .th_movil{display: none;}
+  
+  // td{width: 50%;}
+  
+  // .cpl_number{text-align: right!important;}
+  
+  } // TR TOTAL
+  } // fin tr
+  
+  
+  .table_pagination{
+    background-color: map-get($colors, 'ex-lightGray' );
+  }
+  
+  
+    tfoot tr{
+  
+      background-color: map-get($colors, 'ex-lightGray' );
+        
+  
+          td{
+           border:0!important;
+         
+       
+        }
+    }
+  
+  @include mdMax{
+    tfoot tr th{
+      
+    }
+  }
+  
+  
+  
+  // LA TABLA RESPONSIVA___________________________________________
+  &.responsive_table{
+    @include mdMax{
+    border: 1;
+    span.indexTable { //?????
+      display: none;
+    }
+  
+    .cpl_estado {
+      float: right !important;
+      span {
+        max-width: 100% !important;
+      }
+    }
+  
+   tbody{ .th_movil {
+      display: block;
+      // @include geneBrow(align-self, flex-start);
+      float: left;
+      text-align: left;
+     
+  
+    }
+  
+  
+  
+  }
+
+  &.no_th_movil{
+    tbody{ 
+      .th_movil {
+      display: none;
+    }
+
+    td{
+      text-align:left;
+    }
+
+  
+  }
+
+
+  }
+  
+    .table_pagination{
+      margin: 0;
+      background-color: transparent;
+      border: 0;
+      td{
+        border: 0;
+        background-color: transparent;
+      }
+      td:first-child{
+        border-bottom: 0;
+      }
+      @include mdMax{
+        td{ display: table-cell!important;
+        
+        }
+      }
+    }
+  
+    tfoot{
+      tr{
+      
+        @include disp(flex);
+        @include geneBrow(justify-content, space-between);
+        margin-top: 20px!important;
+        border: solid 2.5px map-get($colors, 'ex-lightGray' )!important;
+       
+  
+  
+        td{
+         
+          border: 0;
+        }
+      }
+    }
+  
+  tbody tr {
+    &.tr_prevent_responsive{
+      display: table-row;
+      margin-top: -1px;
+     td:first-child {border-bottom: 0; padding-left: 10px;}
+   
+    }
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+    // margin-top: 20px;
+  
+    float: left;
+    border: solid 2.5px map-get($colors, 'lightGray');
+    border-top: 0!important;
+    &:last-child{
+      margin-bottom: 0
+    }
+    &:first-child{
+      margin-top: 0
+    }
+  
+  
+    &.total{ 
+  background-color:transparent;
+
+
+  
+    @include disp(flex);
+    @include geneBrow(justify-content, space-between);
+    @include geneBrow(align-items, center);
+  
+  .th_movil{display: none}
+  
+   td{ border:0!important; background-color: transparent!important; color:map-get($colors, 'blue');} 
+   > td:last-child{
+      font-weight: 700!important;
+      
+     
+   }
+    } // TR TOTAL
+    
+  
+  }// fin tr
+  
+  thead {
+    display: none;
+  th{
+  
+    display: inline-block;
+    width: 100%;
+   
+  
+    
+  }
+  }
+  
+  
+  
+  
+  
+  
+  
+  tbody td {   
+ 
+    vertical-align: text-top;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid map-get($colors, 'lightGray');
+    text-align:right;
+    @include disp(flex);
+
+    @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, flex-end);
+    &.visible_th{
+      .th_movil{
+        display: block!important;
+      }
+    }
+
+
+    &:nth-child(2){
+      border-top: 0;
+    }
+    // &:first-child  {  
+       
+    //     border-top:0;
+  
+    //     font-weight: 700;
+   
+    // }
+  
+  
+  
+  } // fin td
+
+
+  td{
+    @include disp(flex);
+    @include geneBrow(align-items,center);
+  
+    &:first-child{
+      background-color: map-get($colors, 'extraLightGray' );
+      // border-top: 2px solid map-get($colors, 'lightGray' )!important;
+      border-bottom: 1px solid map-get($colors, 'lightGray' )!important;
+    }
+  
+    &.td_group{
+      @include mdMax{
+        background-color: map-get($colors, 'ex-lightGray' );
+      }
+    }
+  }
+
+  tbody tr:first-child{
+  td:first-child{
+    border-top: 2px solid map-get($colors, 'lightGray' )!important;
+    
+  }
+  }
+
+
+
+  
+  
+  
+  
+  
+    span.indexTable {
+    float: left;
+    display: block;
+    font-weight: 900;
+ 
+    z-index: 999;
+    margin-bottom: 1px;
+    padding: 10px;
+    color: map-get($colors, "blue");
+    border-bottom: solid 3px map-get($colors, "blue");
+    text-align: left;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+    } //FIN mdMax
+  
+  } //FIN TABLA RESPONSIVA
+  
+  
+  
+  
+  
+  
+  
+  // LA TABLA CON ITEMS SELECCIONABLES
+  &.selectable_row{
+  
+     .switch_td, td {
+      // opacity: .3;
+      .th_movil{max-width: 100%;}
+  
+      .input_wrap{
+        &.percentage_wrap{
+          &:after{
+            // bottom: 30px;
+            top: 16px;
+        }
+      }
+    
+      input{
+        pointer-events:none;
+        // margin: 0;
+        padding: 0;
+  
+      }
+    }
+    
+    }
+  .selected_row{
+    background-color: map-get($colors, 'extraLightAqua')!important;
+  
+    .switch_td {
+      opacity: 1;
+  
+     
+  
+      input{
+        pointer-events:visible;
+      }
+    
+    }
+  }
+  
+  @include mdMax{
+  &.responsive_table{
+    td {   
+  
+      &:first-child  {  
+          padding-left: 40px;
+      }
+      & + td{
+        // border-top: 0;
+      }
+    &.check{
+       width: auto!important;
+      position: absolute!important;
+      top: -3px; left: 8px;
+      border: 0;
+      padding-left: 0px;
+      // height: 100%;
+      // @include geneBrow(align-items, center!important);
+      // @include geneBrow(justify-content, flex-start!important);
+  
+      label, .cpl_input_radio, .cpl_radio 
+      .cpl_input_check, .cpl_checkbox{
+        margin-right: auto;
+        margin-top: 5px;
+        align-self: auto;
+      }
+     
+        // label.cpl_checkbox{
+        //    margin: 0!important;
+        // }
+        .th_movil{
+         display: none;
+        }
+    
+    
+      }
+      &.check:first-child {
+      border: none;
+      // padding-left: 0;
+      & + td {  
+        
+        padding-left: 40px;
+        border-bottom: solid 2px map-get($colors, 'blue');
+        color: map-get($colors, "blue");
+        font-weight: 700;
+        // .th_movil{
+        // display: none;
+        // color: map-get($colors, 'blue');}
+  
+        // & + td{
+        //   border-top:0;
+          
+        // }
+  
+    }
+    
+    }
+    } // fin td
+    }
+    }
+  
+  
+  
+  
+
+  
+  }// FIN TABLA CON ITEMS SELECCIONABLES
+  
+  
+  
+  }//FIN TABLA
+  
+  // LA TABLA V2
+  
+  &.external_search  {
+   
+  
+    .dataTables_length, .dataTables_info{
+      display: none;
+    }
+  
+    
+  }
+  
+  
+  
+  
+  }//real table cont
+  
+  .paginate_cont .pages,
+   .paginate_button {
+    float: left;
+    padding: 13px;
+    cursor: pointer;
+    border-radius: 7px;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: white;
+    display: table;
+  }
+  
+   .paginate_cont .pagina {
+    padding: 13px;
+  }
+  
+   .paginate_button.current,
+   .paginate_cont .page_active {
+    background-color: map-get($colors, "blue");
+    color: white;
+    border-radius: 4px;
+  }
+  
+  
+  
+  
+  .ellipsis {
+    float: left;
+    margin-top: 34px;
+  }
+  
+  .dataTables_filter label {
+    font-weight: 600;
+    width: 50%;
+    color: map-get($colors, "extraDarkGray");
+    float: left;
+    margin-top: 14px;
+    /* border: solid 2px white; */
+  }
+  
+  .external_search .dataTables_filter label {
+    display: none;
+  
+    .dataTables_length{
+      display: none;
+    }
+  }
+  
+   .dataTables_filter input {
+    margin-top: 7px;
+  }
+  
+    
+  
+   /*.cpl_input {
+    font-weight: 400;
+  }*/
+  
+  
+  .total_box{
+    padding: 20px!important;
+    text-align: right;
+    span{
+      
+      
+      text-align: right;
+      line-height: normal;
+      display: block;
+      width: 100%;
+      &:first-child{
+    
+      }
+      &:nth-child(2){
+      
+      }
+  
+    }
+  }
+  
+  
+  

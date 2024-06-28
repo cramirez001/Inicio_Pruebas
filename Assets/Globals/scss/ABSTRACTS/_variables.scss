@@ -1,0 +1,353 @@
+// Variables Queries
+// $devices: ("sd", "md", "ld", "xld");
+$deviceSd: 540px;
+$deviceIncrease: 220;
+$devices: (
+  start: 0,
+  sd: $deviceSd,
+  //small devices
+  md: $deviceSd + $deviceIncrease,
+  //medium devices
+  ld: $deviceSd + $deviceIncrease * 2,
+  //large devices
+  xld: 3000px,
+  //extra large devices
+  // end: 3000px,
+  //extra large devices
+);
+
+
+//Key Colors
+$colors: (
+  // BLUES
+ 
+  // variantes:
+  "extraDarkBlue":    #001950,
+  "darkBlue":         #002678,
+  "blue":             #0033A0,
+  "lightBlue":        #8099CF,
+  "extraLightBlue":   #D9E0F1,
+  //REDS
+  "extraDarkRed":     #7B2130,
+  "darkRed":          #B93148,
+  "red":              #F64260,
+  "lightRed":         #FBA0AF,
+  "extraLightRed":    #FEE3E7,
+  //YELLOWS
+  "extraDarkYellow":  #A86F18,
+  "darkYellow":       #DFC125,
+  "yellow":           #E3E829,
+  "lightYellow":      #F1F494,
+  "extraLightYellow": #FBFCDF,
+  //GREENS
+  "extraDarkGreen":   #115933,
+  "darkGreen":        #19854D,
+  "green":            #22B267,
+  "lightGreen":       #90D8B3,
+  "extraLightGreen":  #DEF3E8,
+  //AQUAS
+  "extraDarkAqua":    #005764,
+  "darkAqua":         #008295,
+  "aqua":             #00aec7,
+  "lightAqua":        #80D7E3,
+  "extraLightAqua":   #D9F3F7,
+
+  //GRAYS
+  "extraDarkGray":    #35363a,
+  "darkGray":         #73767E,
+  "gray":             #abb0b2,
+  "lightGray":        #d0d6d9,
+  "extraLightGray":   #F5F6F6,
+  "ex-lightGray":     #F5F6F6,
+
+
+
+  "white": #ffffff,
+
+
+
+);
+
+//iconos
+$iconos: (
+  "icon-add": "\e900",
+  "icon-alert": "\e901",
+  "icon-alert-fill": "\e902",
+  "icon-arrow-down": "\e903",
+  "icon-arrow-left": "\e904",
+  "icon-arrow-right": "\e905",
+  "icon-arrow-up": "\e906",
+  "icon-asesoria": "\e907",
+  "icon-cartola": "\e908",
+  "icon-certificados": "\e909",
+  "icon-check": "\e90a",
+  "icon-check-fill": "\e90b",
+  "icon-claves": "\e90c",
+  "icon-clock": "\e90d",
+  "icon-close": "\e90e",
+  "icon-full-arrow-down": "\e90f",
+  "icon-full-arrow-down-fill": "\e910",
+  "icon-full-arrow-left": "\e911",
+  "icon-full-arrow-left-fill": "\e912",
+  "icon-full-arrow-right": "\e913",
+  "icon-full-arrow-right-fill": "\e914",
+  "icon-full-arrow-up": "\e915",
+  "icon-full-arrow-up-fill": "\e916",
+  "icon-goal": "\e917",
+  "icon-money-bag": "\e918",
+  "icon-money-hand": "\e919",
+  "icon-only-check": "\e91a",
+  "icon-search": "\e91b",
+  "icon-spinner": "\e91c",
+  "icon-star": "\e91d",
+  "icon-star-fill": "\e91e",
+  "icon-target": "\e91f",
+  "icon-transacciones": "\e920",
+  "icon-wallet": "\e921",
+  "icon-attach": "\e922",
+  "icon-img": "\e923",
+  "icon-frozen": "\e924",
+  //Pack 2
+  "icon-calendar": "\e900",
+  "icon-calendar-fill": "\e901",
+  "icon-caution": "\e902",
+  "icon-caution-fill": "\e903",
+  "icon-cellphone": "\e904",
+  "icon-cellphone-fill": "\e905",
+  "icon-close-circle": "\e906",
+  "icon-close-circle-fill": "\e907",
+  "icon-mail": "\e908",
+  "icon-mail-fill": "\e909",
+  "icon-notification": "\e90a",
+  "icon-notification-fill": "\e90b",
+  "icon-telephone": "\e90c",
+  "icon-telephone-fill": "\e90d",
+  "icon-trash": "\e90e",
+  "icon-trash-fill": "\e90f",
+  "icon-whatsapp": "\e910",
+  "icon-whatsapp-fill": "\e911",
+  "icon-place": "\e912",
+  "icon-place-fill": "\e913",
+  "icon-down": "\e914",
+  "icon-left": "\e915",
+  "icon-left-right": "\e916",
+  "icon-right": "\e917",
+  "icon-up": "\e918",
+  "icon-biometria": "\e919",
+  "icon-check-list": "\e91a",
+  "icon-check-list-fill": "\e91b",
+  // "icon-close": "\e91c",
+  "icon-reload": "\e91d",
+  "icon-send": "\e91e",
+  "icon-send-fill": "\e91f",
+  "icon-telephone-message": "\e920",
+  "icon-telephone-message-fill": "\e921",
+  "icon-home": "\e922",
+  "icon-home-fill": "\e923",
+
+
+  // ARROW PACK
+
+  "icon-arrow_down": "\e900",
+  "icon-arrow_left": "\e901",
+  "icon-arrow_left_right": "\e902",
+  "icon-arrow_negative": "\e903",
+  "icon-arrow_positive": "\e904",
+  "icon-arrow_right": "\e905",
+  "icon-arrow_up": "\e906",
+  "icon-arrow_up_down": "\e907",
+  "icon-neutral": "\e908"
+
+
+
+
+);
+
+//Font
+
+$fontCorp: "FSJoey", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+$fontCorp2: "Barlow", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+$iconFont: "icomoon", "roboto", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+$iconFontPack2: "icomoonPack2", "roboto", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+$iconArrowPack: "icomoonArrowPack", "roboto", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+
+// Sizes rem
+$sizeRem: (
+  s_xs: 0.8rem,
+  s_s: 0.9rem,
+  s_1: 1rem,
+  s_2: 1.1rem,
+  s_3: 1.2rem,
+  s_4: 1.3rem,
+  s_5: 1.4rem,
+  s_6: 1.5rem,
+  s_7: 1.6rem,
+  s_8: 1.7rem,
+  s_9: 1.8rem,
+  s_10: 1.9rem,
+  s_11: 2rem,
+  s_12: 2.1rem,
+);
+
+
+
+// Sizes em
+$unitsEm: (
+
+
+  'x01':  0.1em,
+  'x02':  0.2em,
+  'x03':  0.3em,
+  'x04':  0.4em,
+  'x05':  0.5em,
+  'x06':  0.6em,
+  'x07':  0.7em,
+  'x08':  0.8em,
+  'x09':  0.9em,
+  'x10': 1.0em,
+  'x11': 1.1em,
+  'x12': 1.2em,
+  'x13': 1.3em,
+  'x14': 1.4em,
+  'x15': 1.5em,
+  'x16': 1.6em,
+  'x17': 1.7em,
+  'x18': 1.8em,
+  'x19': 1.9em,
+  'x20': 2.0em,
+  'x21': 2.1em,
+  'x22': 2.2em,
+  'x23': 2.3em,
+  'x24': 2.4em,
+  'x25': 2.5em,
+  'x26': 2.6em,
+  'x27': 2.7em,
+  'x28': 2.8em,
+  'x29': 2.9em,
+  'x30': 3.0em,
+  
+
+);
+
+
+$fontRange:(
+
+  "1": 0.8em,
+  "2": 0.9em,
+  "3": 1.0em,
+  "4": 1.1em,
+  "5": 1.2em,
+  "6": 1.3em,
+  "7": 1.4em,
+  "8": 1.5em,
+  "9": 1.6em,
+  "10": 1.7em,
+  "11": 1.8em,
+  "12": 1.9em,
+
+);
+
+$s1: map-get($fontRange, "1"); //s_xs
+$s2: map-get($fontRange, "2"); //s_s
+$s3: map-get($fontRange, "3"); //s_1
+$s4: map-get($fontRange, "4"); //s_2
+$s5: map-get($fontRange, "5"); //s_3
+$s6: map-get($fontRange, "6"); //s_4
+$s7: map-get($fontRange, "7"); //s_5
+$s8: map-get($fontRange, "8"); //s_6
+$s9: map-get($fontRange, "9"); //s_7
+$s10: map-get($fontRange, "10"); //s_8
+$s11: map-get($fontRange, "11"); //s_9
+$s12: map-get($fontRange, "12"); //s_10
+
+
+$spacingRange:(
+  
+  "fs_1": 0.8em,
+  "fs_2": 0.9em,
+  "fs_3": 1.0em,
+  "fs_4": 1.1em,
+  "fs_5": 1.2em,
+  "fs_6": 1.3em,
+  "fs_7": 1.4em,
+  "fs_8": 1.5em,
+  "fs_9": 1.6em,
+  "fs_10": 1.7em,
+  "fs_11": 1.8em,
+  "fs_12": 1.9em,
+
+  "none":       0,
+  "tiny":       3px,
+  "extraSmall": 5px,
+  "small":      15px,
+  "medium":     35px,
+  "large":      55px,
+  "big":        75px,
+
+
+
+
+
+);
+
+// agregare las unidades en px al map
+@function gMap($range){
+  $map:();
+  @for $i from 0 through $range {
+    $map2:(
+      $i: #{$i}px,
+    );
+   $map: map-merge($map, $map2);
+  }
+  $map: map-merge($map, $spacingRange);
+  @return $map;
+}
+
+// en este caso definiré 200
+$spacingRange: gMap(200);
+
+
+
+
+
+$headings: (
+  'h1': map-get($fontRange, "12"),
+  'h2': map-get($fontRange, "8"),
+  'h3': map-get($fontRange, "6"),
+  'h4': map-get($fontRange, "5"),
+);
+
+$paragraphs: (
+  'normal_text' :      map-get($fontRange,  "3"),
+  'small_text' :       map-get($fontRange,  "2"),
+  'extra_small_text' : map-get($fontRange,  "1"),
+);
+
+
+
+
+// publicas
+//dependientes
+
+
+$s_h1: map-get($headings, "h1");
+$s_h2: map-get($headings, "h2");
+$s_h3: map-get($headings, "h3");
+$s_h4: map-get($headings, "h4");
+$s_input: map-get($paragraphs, "normal_text");
+$s_p:  map-get($paragraphs, "normal_text");
+
+
+//padding
+$padding_base: 16px;
+$directions: (top, bottom, left, right);
+
+
+
+//devices
+
+// .w-{
+//  &#{map-keys($devices, md )}{
+//      background: #333;
+//  }
+// }

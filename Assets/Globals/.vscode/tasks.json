@@ -1,0 +1,43 @@
+// Sass configuration
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+
+   {    
+       "label": "COMPILAR",
+       "type": "shell",
+       "dependsOn": ["Sass Compile", "Sass Compile and deliver", "Sass Compile extend"],
+       "group": {
+           "kind": "build",
+           "isDefault": true
+         }
+   },
+      {
+          "label": "Sass Compile",
+          "type": "shell",
+          "command": "sass scss/MAIN/main.scss:css/cpl-Styles.css",
+          "group": "build"
+      },
+      {
+          "label": "Sass Compile and deliver",
+          "type": "shell",
+          "command": "sass scss/MAIN/main.scss:../../Pages/landing-www.afpcapital.cl/css/cpl-Styles.css",
+          "group": "build"
+       
+   },
+   {
+         "label": "Sass Compile extend",
+         "type": "shell",
+         "command": "sass scss/MAIN/main_extend.scss:css/extend_css.css",
+         "group": "build"
+         
+    
+},
+  ]
+
+}
+
+
+

@@ -1,0 +1,147 @@
+//  TITULO:
+//  - Encabezado con Icono
+
+//  DETALLE:
+//  - Este elemento esta asociado el diseño del encabezado de las paginas. 
+//    compuesto de titulo + icono + parrafo
+
+/*Header + iconos*/
+
+
+.cpl_page_title{
+	
+	@include disp(flex); 
+	@include geneBrow(flex-direction, column);
+	@include geneBrow(align-items, center);
+	@include geneBrow(justify-content, center);
+	width: 100%;
+	margin-bottom:10px;
+
+
+
+	img{width: 90px; height: 100%; order: 0}
+
+	>div{
+		order:1;
+	}
+
+	h1{ 
+
+		
+		
+		@include disp(inline-flex); 
+		
+		margin-bottom: 0!important; padding-bottom: 4px; border-bottom: solid 3px map-get($colors, "blue"); margin-top: 10px; 
+		
+	
+	
+	}
+	p{margin-top: 10px; color: map-get($colors, "blue")!important; max-width: 600px; width: 100%}
+
+
+
+	
+	}
+	
+
+.cpl_page_intro {
+		width: 100%;
+		margin-bottom: 20px;
+		float: left;
+		margin-bottom: 15px;
+		position: relative;
+		margin-top: 30px;
+
+		 h1 {
+			width: 100% !important;
+			display: inline-block !important;
+			position: relative !important;
+			padding-bottom: 5px !important;
+			border-bottom: solid 3px #0033a0 !important;
+			width: auto !important;
+			// float: left !important;
+			margin: 0 !important;
+		
+		}
+
+		.cpl_col {
+			padding-bottom: 0;
+		}
+
+		.info p {
+			color: #0033a0 !important;
+			margin-top: 10px !important;
+			font-weight: 400;
+			margin-bottom: 10px !important;
+		}
+
+		.page_icon {
+			width: 40px;
+			float: left;
+			margin-top: -15px;
+		}
+
+		.des {
+			text-align: left;
+			position: relative;
+			padding: 0;
+		}
+
+		.info {
+			display: inline-block;
+			font-size: inherit!important;
+		}
+
+		&.img .info {
+			width: calc(96% - 80px);
+			padding-right: 10px;
+		}
+
+		img {
+			position: absolute;
+			height: 100%;
+			bottom: 0;
+			right: 0;
+			top: 0;
+			max-height: 80px;
+		}
+
+	
+
+	.back_page {
+		background-image: url(../images/iconos/white/png/arrow-left.png);
+ 		background-repeat: no-repeat;
+ 		background-size: 20px;
+ 		background-position-y: center;
+ 		margin-top: 10px;
+ 		border-radius: 40px;
+ 		border: solid 1px map-get($colors, "aqua");
+ 		background-color: map-get($colors, "aqua");
+ 		font-weight: 400;
+ 		color: white;
+ 		padding: 7px;
+ 		z-index: 99;
+ 	
+ 		float: left;
+ 		width: auto;
+ 		padding-left: 30px;
+ 		padding-right: 30px;
+ 		line-height: 100%;
+	}
+
+@include mdMax { 
+	 &.img .info {
+	    width: 100%;
+	    padding-right: 0;
+	  }
+	  .des img {
+	    display: none;
+	  }
+	  .des {
+	    max-width: 100%;
+	  }
+}
+
+} //FIN cpl_page_intro
+
+/*FIn Header + iconos*/

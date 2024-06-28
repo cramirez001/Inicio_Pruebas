@@ -1,0 +1,7 @@
+@import '../../../scss/A_MASTERCLASS/masterclass.scss';
+@import '../../../scss/ABSTRACTS/variables';
+@import '../../../scss/ABSTRACTS/mixins';
+#{$masterClass}{
+@import './styles.scss';
+}
+

@@ -1,0 +1,66 @@
+// Enviar y descargar
+.enviar_descargar{
+
+    float: left;
+    .input_wrap{
+      display: block;
+      @include md{
+    //   padding-left: 30px;
+    //   padding-right: 30px;
+  
+     
+    }
+   
+       
+      
+    }
+    .descargar, .enviar{
+        padding-left: 30px;
+padding-right: 30px;
+width: 50%;
+float: left;
+@include mdMax{
+    width: 100%;
+    padding:0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+}
+    .descargar{
+        
+      border-right: solid 1.5px map-get($colors, 'lightGray' );
+      @include mdMax{
+        border-bottom: solid 1.5px map-get($colors, 'lightGray' );
+        border-right: 0;
+      }
+      .cpl_btn{max-width: 300px; margin: 0 auto; float: none;}
+    }
+    .enviar{
+    
+        
+      .input_wrap{
+        width: calc(100% - 90px);
+        float: left;
+        margin: 0;
+        margin-right: 5px;
+
+        // .f_error{ 
+        //     top: calc(100% - 15px);
+        // }
+        
+
+        &.btn_wrap{
+            width: 80px;
+            float: left;
+            margin: 0;
+            border-radius:  50px  !important;
+      
+          }
+      }
+
+  
+   
+  
+    }
+  }
+  // Fin Enviar y descargar

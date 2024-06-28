@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../../../Assets/Globals/css/cpl-Styles.css">
+      <link rel="stylesheet" href="../../../Assets/Customs/Publico/Formulario/css/custom.css">
+      <title>Document</title>
+      <script src="../../../Assets/Globals/js/jquery.js"></script>
+   </head>
+   <body>
+      <div class="cpl_body page_formulario">
+         <div class="cpl_container padding_top_medium">
+            <div class="flex_row">
+               <div class="cpl_col cpl_sidebar margin_bottom_small">
+                  <ul class="menu_lateral">
+                     <a  href="./nueva_consulta.html">
+                        <li>Escríbenos</li>
+                     </a>
+                     <a class="active"  href="./solicitudes-reclamos(inicio) - copia.html">
+                        <li>Estado de reclamos o consultas</li>
+                     </a>
+                  </ul>
+               </div>
+               <div class="cpl_col cpl_bodybar ">
+                  <div class="cpl_flex_form flex_row">
+                     <div class="cpl_col cpl_col_12">
+                        <h2 class="t-extraDarkGray md_center_text sd_center_text">Tipo de solicitud que deseas consultar</h2>
+                     </div>
+                     <div class="cpl_col cpl_col_12 input_wrap  select_wrap ">
+                        <select name="" id="" class="cpl_input max_w_300 md_center_div sd_center_div align_self_start">
+                           <option value="todas">Seleccione</option>
+                           <option value="reclamos">Reclamos</option>
+                           <option value="consultas">Consultas</option>
+                           <option value="inicio de trámite">Inicio de trámite</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- <div class="cpl_col cpl_col_12 resultados">
+                     <div class="cpl_realTable_cont  external_search">
+                     
+                         <div class="flex_row">
+                     
+                             <div class="cpl_col cpl_col_12">
+                                 <table
+                                     class="cpl_realTable responsive_table  table table-striped table-bordered table-sm tabla_solicitudes"
+                                     cellspacing="0" width="100%">
+                                     <thead>
+                                         <tr>
+                                             
+                                             <th class="th-sm">N° Solicitud</th>
+                                          
+                                             <th class="th-sm">Fecha de Solicitud</th>
+                                             <th class="th-sm">Fecha de Respuesta</th>
+                                             <th class="th-sm">Estado de solicitud</th>
+                                             <th></th>
+                                         </tr>
+                                     </thead>
+                                     <tbody>
+                                         <tr >
+                                            
+                                             <td class="movil_head"><span>344566</span></td>
+                                            
+                                             <td nowrap><span>28/01/2019</span></td>
+                                             <td nowrap><span>02/02/2019</span></td>
+                                             <td nowrap>
+                                                 <div class="cpl_estado terminado"><span>Terminado</span></div>
+                                             </td>
+                                             <td nowrap>
+                                                 <a href="./detalle_reclamo.html" class="cpl_btn small aqua secondary">DETALLE</a>
+                                             </td>
+                                         </tr>
+                                   
+                                         
+                                        
+                                        
+                                     </tbody>
+                                 </table>
+                             </div>
+                             <div class="paginate cpl_col cpl_col_12"></div>
+                         </div>
+                     </div>
+                     </div> -->
+                  <!-- <div class="cpl_col cpl_col_12 no_results border_lightGray border_radius_6 padding_medium">
+                     <h3 class="center_text">No hay resultados</h3>
+                     <p class="center_text">No se encontraron solicitudes de este tipo en los ultimos <strong>(numMeses) Meses</strong></p>
+                     </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="../../../Assets/Globals/js/globals.js"></script>
+      <script>
+         $(document).ready(function () {
+             oTable = $('.tabla_solicitudes').DataTable(
+                 {
+         
+                     "pageLength": 15,
+                     "language": { "search": "Buscar en cambio de fondos", "searchPlaceholder": "" }
+                 }
+             );   //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+             $('.tabla_solicitudes_search').keyup(function () {
+                 oTable.search($(this).val()).draw();
+             });
+         
+         
+         });
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,77 @@
+// Aquí van nuestros estilos personalizados
+&.clave_seguridad{
+    .card{
+        width: 100%!important;
+        background:  no-repeat right 10px bottom -40px;
+        background-size: 140px auto;
+    border-radius: 10px;
+    padding: 30px!important;
+    width: 100% !important;
+
+    
+    
+
+        &.mail{
+            background-image: url(../../../Globals/img/envio_codigo_verificacion/EMAIL_bckgnd.png);
+        }
+
+        &.sms{
+            background-image: url(../../../Globals/img/envio_codigo_verificacion/SMS_bckgnd.png);
+        }
+        .check{
+            margin-right: 5px;
+        }
+        @include sdMax{
+            padding: 15px!important; 
+            background:  no-repeat right 10px bottom -15px;
+            background-size: 70px auto;
+          
+            padding-bottom: 50px!important;
+            .cont {
+                p{
+                    text-overflow: ellipsis;
+                    white-space: nowrap; 
+                    max-width: 200px;
+                    overflow: hidden;
+
+                }
+            }
+            
+        }
+    }
+
+    .tooltip_box{
+    width: 100%;
+    background-color: map-get($colors, 'extraLightGray' );
+    display: none;
+    padding: 20px;
+    border-radius: 6px;
+    float: none;
+    margin-top: 15px;
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+span.tooltip{
+    width: 100%!important;
+    display: block;
+}
+
+.tooltip_box:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid map-get($colors, 'extraLightGray' );;
+    top: -10px;
+    left: 50%;
+    margin-left: -8px;
+    
+}
+
+}

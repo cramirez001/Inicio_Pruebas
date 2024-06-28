@@ -1,0 +1,107 @@
+.tab_buttons{
+    //    border-bottom: solid 2px map-get($colors, 'aqua' );
+    float: left;
+    width: 100%;
+    position: relative;
+    // @include disp(flex);
+    // @include geneBrow(justify-content, space-between);
+    margin-bottom: 30px;
+    @include disp(flex);
+ 
+
+
+    a{
+        @include disp(flex);
+        @include geneBrow(flex, 1);
+        @include geneBrow(flex-direction, column);
+        @include geneBrow(align-items, center);
+        @include geneBrow(justify-content, center);
+float: left;
+text-decoration: none!important;
+margin-left: -2px;
+ 
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+color: map-get($colors, 'aqua' )!important;
+.cpl_icon{
+    font-size: $s6!important;
+}
+p{
+font-weight: 600!important;
+
+color: map-get($colors, 'aqua' )!important;
+@include mdMax{
+    font-size: $s1!important;
+}
+}
+        padding: 9px; 
+        @include mdMax{
+            padding: 4px;
+        }
+        border: solid 2px map-get($colors, 'lightGray'); 
+        // background-color:  map-get($colors, 'ex-lightGray'); 
+        
+       
+        font-size: 1.2rem;
+        font-weight: 400;
+
+        text-align: center;
+
+        &:first-of-type{
+            border-radius: 6px 0 0 6px  ;
+        }
+
+        &:nth-last-of-type(1){
+            margin-right: 0;
+            
+                border-radius: 0 6px 6px 0 ;
+            
+        }
+
+
+&:hover{
+    background:  map-get($colors, 'extraLightAqua'); 
+    // color: map-get($colors, 'aqua' )!important;
+    // border-color: map-get($colors, 'aqua'); 
+    border: solid 2px map-get($colors, 'aqua'); 
+    z-index: 9;
+    color: map-get($colors, 'aqua' )!important;
+   
+    p{
+        font-weight: 600!important;
+        
+        
+        color: map-get($colors, 'aqua' )!important;
+        }
+}
+        &.active{
+            background:  map-get($colors, 'blue'); 
+             border-color: map-get($colors, 'blue'); 
+             position: relative;
+             color: map-get($colors, 'white' )!important;
+             p{
+                font-weight: 600!important;
+                
+                color: map-get($colors, 'white' )!important;
+            }
+             &:after{
+                 content:'';
+                 position: absolute;
+                   width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-top: 16px solid map-get($colors, 'blue');
+   
+      bottom:-10px;
+      left:50%;
+      margin-left: -15px;
+
+             }
+        }
+    }
+
+}

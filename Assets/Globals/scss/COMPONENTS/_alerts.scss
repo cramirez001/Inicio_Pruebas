@@ -1,0 +1,382 @@
+//  TITULO:
+//  - Mensajes de alerta
+
+//  DETALLE:
+//  - contenedores en varios estados aprobado, precaucion y rechazado.
+
+/*Alertas*/
+
+@mixin alertMobile{
+    padding-top: 50px!important;
+    padding-left: 15px!important;
+   
+   
+        &:before{
+            width: 100%;
+            top: 0;
+            bottom: auto;
+            left: 0;
+            height: 40px;
+        }
+
+        &:after{
+    
+                            top: 4px;
+                            left: 50%;
+                            margin-left: -20px;
+                    
+            }
+} 
+
+.cpl_alert {
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 10px;
+    line-height: 120%;
+    font-family: $fontCorp2;
+    padding: 10px;
+    float: left;
+    position: relative;
+    width: 100%;
+    background-color: #e59013;
+    padding-left: 55px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    color: white;
+
+    &:after {
+        content: "";
+        font-family: $iconFont;
+        border-radius: 3px 0   0px 3px;
+        position: absolute;
+        width: 45px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #d4881a;
+        background-image: url(/_catalogs/masterpage/Kit-Ui-CPL/img/alert.png);
+        background-size: 65% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 12px
+    }
+
+    a {
+        color: #fff !important;
+        text-decoration: underline !important;
+    }
+
+    &.small {
+        
+        padding-left: 40px;
+
+        &:after {
+            width: 30px;
+        }
+    }
+    
+} // FIN cpl_alert
+
+.cpl_success {
+  background-color: #6ac259;
+  color: white;
+    
+    &:after {
+        background-color: #59b048;
+        background-image: url(/_catalogs/masterpage/Kit-Ui-CPL/img/check.png)!important;
+    }
+}
+
+.cpl_error {
+    background-color: #d93c56;
+    color: white;
+
+    &:after {
+        background-color: #bc3349;
+        background-image: url(/_catalogs/masterpage/Kit-Ui-CPL/img/alert.png)!important;
+    }
+}
+
+
+
+
+@include mdMax { 
+  .cpl_alert {
+    
+  }
+}
+
+@include sdMax {
+  .cpl_alert {
+    
+  }
+}
+
+/*FIn Alertas*/
+
+.cpl_message{
+border-radius: 3px;
+padding: 10px!important;
+}
+
+
+
+.cpl_alert_bar{
+
+
+    
+    // text-align: center;
+
+    border-radius: 3px!important;
+    margin-top: 10px;
+   
+    line-height: 120%;
+    font-family: $fontCorp2;
+    padding: 15px!important;
+
+    float: left;
+    position: relative;
+    width: 100%;
+
+    border: solid 2px map-get($colors, 'yellow' );
+
+
+    
+ 
+
+    padding-left: 55px!important;
+ 
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+
+    overflow: hidden;
+
+
+
+    background-color: map-get($colors, 'extraLightYellow');
+
+    color: map-get($colors, 'extraDarkYellow');
+    h1,h2,h3,h4,p, span{
+        color: map-get($colors, 'extraDarkYellow')!important;
+        
+    }
+    // @include shadow;
+
+
+  
+
+ 
+
+
+
+
+
+
+
+    .cpl_btn{
+        border-color: #fff!important;
+        background-color: transparent;
+        color: #fff!important;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .title{ font-weight: 700!important;
+        font-family: $fontCorp!important;
+        
+        
+    }
+
+    // h1,h2,h3,h4,p, span{
+    //     color:map-get($colors, 'drakGray')!important;
+    // }
+
+    >*{
+    
+        
+        line-height: 115%;
+        max-width: 100%;
+        margin: 0 auto!important;
+        margin-bottom: 4px!important;
+    }
+
+    &:before{
+        content: '';
+        width: 40px;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left: 0;
+        background-color: map-get($colors, 'yellow');
+    }
+
+
+    
+    &:after{
+        content: map-get($iconos, 'icon-alert');
+        text-align: center;
+        font-family: $iconFont;
+        position: absolute;
+        left:5px;
+        width: 30px;
+        color:#fff;
+        font-size: 28px;
+        top: calc(50% - 17px);
+        font-family: $iconFontPack2!important;
+        content: map-get($iconos, 'icon-caution');
+        background-color: map-get($colors, 'yellow');
+        color:  map-get($colors, 'extraDarkYellow')!important;;
+        background-image: none; 
+    }
+
+
+    @include mdMax{
+        @include alertMobile
+    }
+
+
+    &.force_responsive, &.mobile_style{
+    
+    }
+
+    &.small {
+        font-size: $s2;
+            
+            padding: 8px;
+            padding-left: 55px;
+    
+
+        &:after {
+             font-size: 18px;
+             top: calc(50% - 9px);
+        }
+    }
+
+
+
+
+
+// ALERT ERROR__________________________
+        &.alert_error {
+ border-color: map-get($colors, 'red');
+    background-color: map-get($colors, 'extraLightRed');
+    color: map-get($colors, 'red');
+    // border: solid 1px map-get($colors, 'darkRed');
+
+    h1,h2,h3,h4,p, span{
+        color: map-get($colors, 'darkRed')!important;
+        
+    }
+
+    &:before {
+    background-color: map-get($colors, 'red');
+    }
+
+    &:after {
+        font-family: $iconFont!important;
+        color: map-get($colors, 'white' )!important;
+        content: map-get($iconos, 'icon-alert');
+        background-color: map-get($colors, 'red');
+        color: #FFF;
+        background-image: none;
+    }
+}
+
+
+
+
+
+    // ALERT info__________________________
+    &.alert_info {
+        border-color: map-get($colors, 'aqua');
+        background-color: map-get($colors, 'extraLightAqua');
+        color: map-get($colors, 'darkAqua');
+     
+
+        h1,h2,h3,h4,p, span{
+            color: map-get($colors, 'darkAqua')!important;
+            
+        }
+
+        &:before {
+        background-color: map-get($colors, 'aqua');
+        }
+
+        &:after {
+            font-family: $iconFont!important;
+            color: map-get($colors, 'white' )!important;
+            content: map-get($iconos, 'icon-alert');
+            background-color: map-get($colors, 'aqua');
+            color:  map-get($colors, 'white')!important;;
+            background-image: none;
+        }
+    }
+
+
+
+
+
+// ALERT succsess__________________________
+&.alert_success {
+    border-color: map-get($colors, 'green');
+    background-color: map-get($colors, 'extraLightGreen');
+    color: map-get($colors, 'darkGreen');
+ 
+
+    h1,h2,h3,h4,p, span{
+        color: map-get($colors, 'darkGreen')!important;
+    }
+
+    &:before {
+    background-color: map-get($colors, 'green');
+    }
+
+    &:after {
+        font-family: $iconFont!important;
+        color: map-get($colors, 'white' )!important;
+        content: map-get($iconos, 'icon-check');
+        background-color: map-get($colors, 'green');
+        color: #FFF;
+        background-image: none;
+    }
+
+    
+}
+
+
+.alert_box{}
+
+// &.gray_bg{ background: map-get($colors, 'extraLightGray' )!important;
+//     border: 0!important;
+// color: map-get($colors, 'extraDarkGray' )!important;
+
+// &.alert_error{
+// h1,h2,h3,h4,p, span{
+//     color: map-get($colors, 'extraDarkGray')!important;
+// }
+// }
+
+// &.alert_info{
+// h1,h2,h3,h4,p, span{
+//     color: map-get($colors, 'extraDarkGray')!important;
+// }
+// }
+
+// &.alert_caution{
+// h1,h2,h3,h4,p, span{
+//     color: map-get($colors, 'extraDarkGray')!important;
+// }
+// }
+
+// &.alert_success{
+// h1,h2,h3,h4,p, span{
+//     color: map-get($colors, 'extraDarkGray')!important;
+// }
+// }
+
+// }
+
+
+}
+

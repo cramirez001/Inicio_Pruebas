@@ -1,0 +1,26 @@
+// tab menu
+.cpl_tab_menu{
+    @include disp(flex);
+    @include geneBrow(flex-direction, row);
+    
+    width: 100%;
+
+    .tab{
+      cursor: pointer;
+      
+       padding: 1px; 
+       text-align: center;
+       @include geneBrow(flex, 1);
+       color: map-get($colors, 'lightGray'); 
+       &:hover{
+       color: map-get($colors, 'blue'); 
+    //    border-bottom: solid 2px map-get($colors, 'blue');  
+       }
+       &.active{
+           border-bottom: solid 2px map-get($colors, 'blue');  
+           color: map-get($colors, 'blue'); 
+           font-weight: 600;
+       }
+    }
+
+}

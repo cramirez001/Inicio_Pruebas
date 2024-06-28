@@ -1,0 +1,92 @@
+// Aquí van nuestros estilos personalizados
+
+
+#divAsesor h4{
+    display: block!important;
+}
+
+.card_contrata{
+    border: solid 2px map-get($colors, 'lightGray' )!important;
+    background-color: map-get($colors, 'extraLightGray' );
+    .card_cont{
+        // padding-top: 10px!important;
+    }
+
+    img{ max-width: 150px;}
+
+    @include mdMax{
+        img{ max-width: 120px; margin-bottom: 20px; display: none;}
+    h1,h2,h3{
+     text-align: center!important;
+    }
+}
+}
+.option_zone{
+    margin-bottom: 40px;
+.wrap_cajas{
+    .caja.cpl_input_radio{
+        height: 100%;
+        overflow: visible!important;
+        cursor: initial;
+        border-style: dashed!important;
+        padding-bottom: 40px!important;
+   
+
+        &, &:hover{
+        border-color: map-get($colors, 'lightGray' )!important;
+        background-color: map-get($colors, 'white' )!important;
+    }
+
+    
+     
+
+
+        p{margin-bottom: 0!important;}
+        // h3{color: map-get($colors, 'aqua' )!important}
+        .cpl_btn{
+            margin-top: 10px !important;
+            /* width: 140px !important; */
+            /* left: 50%; */
+            margin-left: -70px;
+            bottom: -6px;
+            position: absolute;
+            /* left: 0; */
+            right: -2px;
+            width: calc(100% + 4px);
+            min-width: calc(100% + 4px);
+            border-radius: 0 0 6px 6px!important;
+            
+        
+        }
+
+        &.active{
+            padding-bottom: 20px!important;
+            cursor: pointer;
+            border-style: solid!important;
+            .cpl_btn, .cpl_btn:hover{
+                background-color: map-get($colors, 'extraLightGray' )!important;
+               
+                border-color: map-get($colors, 'lightGray' )!important;
+                color: map-get($colors, 'gray' )!important;
+                display: none!important;
+            }
+            &:hover{
+                background-color: map-get($colors, 'extraLightAqua' )!important;
+                border-color: map-get($colors, 'lightAqua' )!important;
+            }
+        }
+
+       
+    }
+.contrata{
+    // border-style: dashed!important;
+    border-color: map-get($colors, 'lightGray' )!important;
+    background-color: map-get($colors, 'extraLightGray' )!important;
+    .cont{margin-left: 0!important;}
+    @include mdMax{
+        p, h3{text-align: center!important;}
+        .cpl_btn{margin: 0 auto; float: none;}
+    }
+}
+}
+}

@@ -1,0 +1,227 @@
+// list
+.cpl_list {
+  padding-left: 16px !important;
+  
+  list-style: disc;
+  // margin-block-start: 0px;
+  // margin-block-end: 0px;
+    li {
+      margin-bottom: 10px;
+      &::marker {
+        font-weight: 900 !important;
+        font-family: $fontCorp;
+      }
+    }
+  
+  
+
+ 
+    //lateral menu
+    &.lateralMenu {
+      padding-left: 0px;
+      list-style: none;
+      li {
+        margin: 0;
+        -webkit-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        -ms-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
+        transition: all 200ms ease-in;
+  
+        padding: 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+        border-bottom: solid 1px map-get($colors, "lightGray");
+  
+        p {
+          margin: 0;
+        }
+        @each $class, $value in $colors {
+          &.t-#{$class} {
+            color: $value !important;
+            p {
+              color: $value !important;
+            }
+            border-bottom: solid 1px $value !important;
+          }
+  
+          &:hover {
+            background-color: map-get($colors, "extraLightAqua");
+          }
+        }
+      }
+    }
+  
+    //Nav ((((evaluar eliminar))))
+  
+    &.nav {
+      @include disp(flex);
+      width: 100%;
+      list-style: none;
+      @include geneBrow(flex, 0 0 1);
+  
+      @include geneBrow(align-items, center);
+      @include geneBrow(flex-wrap, wrap!important);
+      // @include geneBrow (flex-wrap, nowrap!important);
+  
+      a {
+        li {
+          padding: 7px;
+          margin: 4px;
+          border: solid 1px map-get($colors, "lightGray") !important;
+          border-radius: 40px;
+          margin-bottom: 0;
+  
+          p {
+            margin: 0 !important;
+          }
+        }
+        // &:last-child{
+        //   li{
+        //     border-right: 0!important;
+        //   }
+        // }
+        &:hover {
+          li {
+            background-color: map-get($colors, "blue");
+            border-color: map-get($colors, "blue") !important;
+            p {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  
+    //Nav
+    // _____________________________________lista con imagenes ________________________________________
+  
+    &.imgList {
+      padding-left: 0px;
+      list-style: none;
+      li {
+        margin: 0;
+        -webkit-transition: all 400ms ease-in;
+        -moz-transition: all 400ms ease-in;
+        -ms-transition: all 400ms ease-in;
+        -o-transition: all 400ms ease-in;
+        transition: all 400ms ease-in;
+        @include disp(flex);
+        width: 100%;
+        @include geneBrow(flex, 0 0 1);
+  
+        @include geneBrow(align-items, center);
+        @include geneBrow(flex-wrap, wrap!important);
+        @include geneBrow(flex-wrap, nowrap!important);
+        border: 1px solid transparent !important;
+        border-radius: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+  
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+          margin: 0 !important;
+        }
+        img {
+          width: 70px;
+          margin-right: 10px;
+          @include geneBrow(flex-shrink, 0);
+        }
+  
+        &.destacado_blue {
+          background-color: map-get($colors, "blue");
+  
+          p {
+            color: map-get($colors, "white") !important;
+          
+            font-weight: 600 !important;
+          }
+          &:hover {
+            background-color: map-get($colors, "lightBlue");
+          }
+        }
+      }
+  
+      @each $class, $value in $colors {
+        &.t-#{$class} {
+          li.destacado_blue {
+            background-color: map-get($colors, "blue");
+  
+            p {
+              color: map-get($colors, "white") !important;
+            }
+            &:hover {
+              background-color: map-get($colors, "lightBlue");
+            }
+          }
+  
+          a li:hover {
+            border: 1px solid map-get($colors, "blue") !important;
+            border-radius: 100px;
+         
+  
+  
+          }
+  
+          li {
+            color: $value !important;
+            padding: 15px;
+            p,
+            h1,
+            h2,
+            h3,
+            h4 {
+              color: $value !important;
+            }
+            border-bottom: 0;
+            
+          }
+        }
+      }
+    }
+  }
+
+
+  .img_list{
+    padding: 0!important;
+    li{
+        border-bottom: 1px solid map-get($colors, 'lightGray' );
+        padding-top: 10px;
+        padding-bottom: 10px;
+        float: left;
+        @include disp(flex);
+        @include geneBrow(justify-content, center);
+        @include geneBrow(align-items, center);
+        width: 100%;
+        &:last-child{
+          border-bottom: 0;
+        }
+  
+        .text{
+          h1,h2,h3,h4,p{
+            margin: 0!important;
+          }
+  
+          width: calc(100% - 100px);
+          float: left;
+        }
+  
+        .img{
+          float: left;
+            max-width: 120px ;
+            width: 100%;
+            float: left;
+  
+            img{width: 100%;}
+  
+        
+        }
+  
+    }
+  }
+  // fin  list
+  

@@ -1,0 +1,309 @@
+@use 'sass:math';
+
+ .cpl_notification_cont {
+    -webkit-transition: all 700ms ease-out;
+    -moz-transition: all 700ms ease-out;
+    -ms-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    position: relative;
+    display: none;
+    max-width: 1200px;
+    height: auto;
+    top: 5px;
+    bottom: 50px;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+
+  
+  @media screen and (max-width: 1280px) {
+     .cpl_notification_cont {
+      max-width: 960px;
+    }
+  }
+  
+   .current {
+    display: block;
+  }
+  
+   .cpl_notification {
+    /* -webkit-transition: all 300ms ease-out;
+   -moz-transition: all 300ms ease-out;
+   -ms-transition: all 300ms ease-out;
+   -o-transition: all 300ms ease-out;
+   transition: all 300ms ease-out; */
+    background-color: #0033a0;
+    opacity: 1;
+    padding: $padding_base;
+
+    position: absolute;
+    border-top: solid 2px #002a82;
+    width: 100%;
+    float: left;
+  }
+  
+   .cpl_notification_cont .notification_numb {
+    -webkit-transition: all 3000ms ease-out;
+    -moz-transition: all 3000ms ease-out;
+    -ms-transition: all 3000ms ease-out;
+    -o-transition: all 3000ms ease-out;
+    transition: all 3000ms ease-out;
+    color: #e3e829;
+    display: inline-block;
+    font-weight: 700;
+    font-size: $s9;
+    text-align: left;
+  }
+  
+   .cpl_notification .notification_icon,
+   .cpl_notification .notification_action,
+   .cpl_notification .notification_text {
+    float: left;
+    position: relative;
+  }
+  
+   .cpl_notification .notification_icon {
+    width: 15%;
+  }
+  
+   .notificaciones_txt,
+   .notification_more {
+    font-size: $s2;
+  }
+  
+   .notification_numb {
+    line-height: 14px;
+  }
+  
+   .cpl_notification .notification_icon img {
+    width: 66px;
+  }
+  
+   .cpl_notification .notification_text {
+    width: calc(70% - 30px);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+   .cpl_notification .notification_action {
+    width: 30%;
+    float: right;
+    max-width: 250px;
+  }
+  
+   .cpl_notification {
+    display: none;
+  }
+  
+   .cpl_notification.current {
+    display: block;
+    position: relative;
+  }
+  
+   .cpl_notification .content img {
+    width: 30px;
+    float: left;
+  }
+  
+   .cpl_notification_cont .notification_desplegar {
+    display: none;
+    width: 100%;
+    padding: 7px;
+    position: relative;
+    top: 0px;
+    z-index: 0;
+    color: white;
+    text-align: right;
+    background-color: #002a82;
+  }
+  
+   .cpl_notification h3 {
+    margin: 0;
+    color: white;
+    font-size: $s9;
+    margin-bottom: 10px;
+  }
+  
+   .cpl_notification_cont .notification_more {
+    color: #e3e829;
+    cursor: pointer;
+    border: solid #e3e829 1px;
+    border-radius: 12px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 30px;
+    font-weight: 500;
+    max-height: 30px;
+    padding-left: 15px;
+    margin-left: 5px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+   .cpl_notification p {
+    color: white !important;
+    // font-size: 17px;
+    margin-bottom: 0;
+  }
+  
+   .cpl_notification .cpl_btn {
+    margin-bottom: 0;
+  }
+  
+   .cpl_notification span {
+    color: white;
+    font-weight: 700;
+  }
+  
+   .cpl_notification .content {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+   .cpl_notification .cpl_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    // background-image: url(../images/close-a.png);
+    background-size: 50% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  @include mdMax{
+     .cpl_notification p {
+      // font-size: 14px;
+    }
+    //  .cpl_notification .cpl_btn {
+    //   padding: 6px;
+    // // font-size: 16px!important;
+   
+    // }
+     .cpl_notification .notification_text {
+      width: 100%;
+    }
+
+
+  
+    
+     .cpl_notification .notification_action {
+      margin: 0 auto;
+      width: 100%;
+      float: none;
+      margin: 0 auto;
+      display: table;
+    }
+     .cpl_notification .content img {
+      width: 20px;
+      display: table;
+      float: none;
+      margin: 0 auto;
+    }
+  }
+// Nuevo home______________________________________________________________________________
+  .notification_wp_cont{
+    .cpl_notification_cont{
+    top:0;
+    margin-bottom: 0px;
+    max-width: 100%;
+
+   
+    
+ 
+    @include mdMax{
+      .notification_action{width: 100%; max-width: 300px;}
+    }
+  }
+    .cpl_notification{
+      background-color: white;
+      margin-bottom: 3px;  @include geneBrow(border-radius, 6px);
+      border: 0;
+      border: solid 1px map-get($colors , 'blue' );
+
+   
+      // padding-top: 16px;
+      // padding-bottom: 16px;    
+      p, span{
+        color: map-get($colors , 'blue' )!important;
+        
+
+      }
+
+ .cpl_close {
+       
+        top: 4px;
+        right: 4px;
+        width: 24px;
+        height: 24px;
+        background-image: none;
+        background-size: 50% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: map-get($colors , 'blue' );
+        &:after{
+          content: '\e90e';
+          font-family: $iconFont;
+          position: absolute;
+          font-size: $s7;
+          font-weight: 700;
+        }
+      }
+      
+
+    }
+    .notification_desplegar{
+      color:map-get($colors, 'blue' )
+    }
+    .notification_desplegar{
+      background-color: transparent;
+    }
+    .notification_numb{
+      color:map-get($colors, 'blue' )
+    }
+    .notification_more {
+      background-color: map-get($colors, 'blue' );
+      color: #fff;
+      cursor: pointer;
+      border: solid map-get($colors, 'blue' ) 1px;
+    }
+    .notification_,.notification_action{width: auto;}
+    .notification_action{
+      flex: 0 0 200px;
+    }
+    .content{
+      margin: 0 auto;
+    width: 90%;
+    @include geneBrow(flex-direction, row);
+    // display: flex;
+    @include disp(flex);
+    max-width:900px ;
+    @include geneBrow(justify-content, normal);
+    @include geneBrow(align-items, center)
+    }
+    @include mdMax{
+      .content{
+        @include disp(block);
+        @include geneBrow(flex-direction, column)
+    
+      
+      }
+    }
+    p, img{margin-bottom: 0!important;
+    @include mdMax{
+      padding-bottom:
+      math.div($padding-base, 2);
+     
+    }
+}
+
+    
+
+    
+  }

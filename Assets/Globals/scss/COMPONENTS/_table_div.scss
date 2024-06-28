@@ -1,0 +1,277 @@
+
+
+.cpl_table_cont{
+    .cpl_table {
+        border: 1px solid map-get($colors, 'lightGray');
+        border-collapse: collapse;
+        margin: 0 auto;
+        padding: 0px;
+        table-layout: fixed;
+        min-width: 100%;
+    
+    th {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid map-get($colors, 'lightGray');
+        background: map-get($colors, 'ex-lightGray');
+        color: map-get($colors, 'extraDarkGray');
+        font-weight: bold;
+        text-align: center;
+        border-bottom: solid 3px map-get($colors, 'blue' )!important;
+        
+    }
+     td {
+        padding: 8px;
+        border: 1px solid map-get($colors, 'lightGray');
+        vertical-align: middle;
+    }
+    
+     tr {
+        background-color: map-get($colors, 'white');
+        color: map-get($colors, 'extraDarkGray');
+        text-align: center;
+    }
+     .mobile-head {
+        display: none;
+    }
+     .show-on-mobile {
+        display: none;
+    }
+    .td_saldo{
+        text-align: right;
+    }
+    .td_fondo{
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+    }
+
+    .tr_foot{
+    
+        background-color: map-get($colors, 'ex-lightGray' );
+        margin-top: 20px;      
+      
+        td{
+         border:0!important;
+         background-color: transparent;
+         
+         
+    
+       
+     
+      }
+    
+    }
+    
+    
+    .tr_foot{
+    &.tr_total{
+        td{
+            &:last-child{
+    font-weight: 700;
+    border: solid 1px map-get($colors, 'lightGray' )!important;
+    text-align: right!important;
+    }
+    &:first-child{
+          text-align: right;      
+    }     
+              
+        }
+    }
+    }
+    
+    
+    
+    
+    
+    }
+    
+    @include md{
+    .cpl_table{
+        tr{
+            .td_rowspan{
+            
+            &:not(:first-child){
+                  display: none;
+            }
+        }
+    }
+    }
+    
+    
+    }
+    @include mdMax {
+    
+        // padding: 8px;
+        // background-color: map-get($colors, 'ex-lightGray');
+        // border-radius: 6px;
+    
+        .cpl_table {
+    
+        &.responsive{
+     
+            border: 1px solid map-get($colors, 'lightGray');
+            border-collapse: collapse;
+            margin: 0 auto;
+            padding: 0px;
+            table-layout: fixed;
+            min-width: 100%;
+            border: 0;
+    
+    
+            .td_fondo{
+               
+                .cpl_fondo{
+                    float: right;
+    
+                    p{
+                        color: map-get($colors, 'blue' )!important;
+                    }
+                }
+            }
+            
+    
+        .td_head{
+            margin-top: 20px;
+            // padding-top: 30px;
+            border-top: solid 3px map-get($colors, 'blue' )!important;
+    
+        }
+    
+    
+            .set_td{
+                //  width: calc( 100% - 40px);
+                //  margin-left: 20px;
+                //  margin-right: 20px;
+                background-color: map-get($colors, 'ex-lightGray' );
+            }
+       
+    
+            .in_set_td{
+               padding-left: 15px;
+              
+            //    border-bottom: 0;
+            //    width: calc( 100% - 40px);
+            //    margin-left: 20px;
+            //    margin-right: 20px;
+            }
+    
+            .td_check{
+                padding-top: 20px!important;
+                border-bottom: 0;
+                justify-content: flex-start;
+            }
+    
+    
+            .td_title{
+                background-color: map-get($colors, 'lightGray' )!important;
+                color: map-get($colors , 'blue' );
+                .mobile-head {
+                    color: map-get($colors, 'blue' );
+                }
+            }
+    
+            .cpl_checkbox .cpl_checkmark{
+                border: solid 1px  map-get($colors, 'white' )!important;
+            }
+    
+    
+         
+     
+        td {
+            padding: 8px;
+            border: 1px solid map-get($colors, 'lightGray');
+            display: block;
+            text-align: right;
+            width: 100%\9;
+            float: left\9;
+            float: left;
+            width: 100%;
+            background-color: map-get($colors, 'white' );
+    
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        
+    
+         
+        }
+    
+    
+    
+    
+      
+        tr {
+            background-color: map-get($colors, 'white');
+            text-align: right;
+            border: 0;
+        }
+    
+    
+    
+        .tr_foot{
+    
+            background-color: map-get($colors, 'ex-lightGray' );
+            margin-top: 20px;   
+            float: left;
+            width: 100%; 
+            border-top: solid 3px map-get($colors, 'gray' )!important;  
+    
+            &.tr_total{
+                td{
+                    width: 50%;
+                    float: left;
+                    &:first-child{
+                      text-align: left;
+                    }
+                    &:last-child{
+                        border: 0!important;
+                        text-align: right!important;
+                        display: block;
+                        font-weight: 700;
+                        
+                      }
+                }
+            }
+          
+            td{
+             border:0!important;
+             background-color: transparent;
+             font-weight: 700!important;
+    
+             
+        
+           
+         
+          }
+        
+        }
+        
+    
+    
+    
+         tr:first-child {
+            display: none;
+        }
+         tr {
+            display: block;
+        }
+         td:not(:first-child) {
+            border-top: 0px;
+        }
+         .mobile-head {
+            // font-weight: bold;
+            color: map-get($colors, 'extraDarkGray');
+            float: left;
+            text-align: left;
+            display: block;
+        }
+         .show-on-mobile {
+            display: block;
+        }
+    }
+    }
+    
+    }
+    }

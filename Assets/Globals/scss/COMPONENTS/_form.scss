@@ -1,0 +1,1319 @@
+label {
+    font-family: $fontCorp2 !important;
+    color: map-get($colors, "extraDarkGray");
+    font-size: $s_p;
+    // font-weight: 500 !important;
+    line-height: 135% !important;
+  }
+
+
+// __Flex form__
+
+//contenedor flex form
+.cpl_flex_form {
+
+  width: 100%;
+  // @include geneBrow (flex-wrap, nowrap!important);
+
+
+
+
+
+
+
+//Input Wrap
+.input_wrap {
+  @include disp(flex);
+  @include geneBrow(flex-direction, column);
+  @include geneBrow(align-items, flex-end);
+  @include geneBrow(justify-content, flex-end);
+  position: relative;
+  margin-bottom: 20px;
+
+  label{
+    // font-family: $fontCorp
+    // ;
+  }
+
+// label input
+label, label.label_l, p{
+  min-height: auto;
+  position: relative;
+  // line-height: 90%;
+  width: 100%;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 2px;
+  // font-family: $fontCorp;
+
+
+
+  
+  p, span {
+    // line-height: 111% !important;
+    width: 100%;
+    position: relative;
+    bottom: 1px !important;
+    font-size: $s_p;
+    font-weight: 500 !important;
+    color: map-get($colors, "extraDarkGray") !important;
+    float: left;
+    margin: 0 !important;
+    font-family: $fontCorp2!important;
+    font-weight: 600!important;
+  }
+  
+    }
+
+    
+
+// fin label input    
+
+
+&.textarea_wrap{
+  @include disp(block);
+
+  .cpl_input{
+    max-width: 100%!important;
+    resize:vertical;
+  }
+}
+
+ 
+// Radio wrap
+&.radio_wrap, &.checkbox_wrap{
+    @include geneBrow (justify-content, auto);
+		@include geneBrow (flex-wrap, wrap);
+    @include geneBrow(flex-direction, row);
+    @include geneBrow(justify-content, normal);
+		>*{
+			@include geneBrow (flex, 0 0 1);
+		}
+
+
+  }
+// Fin Radio wrap
+
+
+
+// Campo Porcentaje_________________________________________________________________________________________________________________________________________ 
+    &.percentage_wrap{
+      &:after{
+        position: absolute;
+        // left: 87px;
+        right: -2px!important;
+        left: auto!important;
+        text-align: left;
+        font-weight: 500!important;
+    
+   
+        bottom: 14px;
+        // top: 16px;
+        width: 30px;
+        // background-color: #333;
+        font-family: $fontCorp;
+        color: map-get($colors , 'drakGray' );
+        content: '%';
+        z-index: 9; 
+    }
+
+    .cpl_input {
+      padding-right: 40px!important;
+      background-image:
+        linear-gradient(45deg, transparent 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, transparent 50%),
+        linear-gradient(to right, map-get($colors, 'lightGray'), map-get($colors, 'lightGray'));
+      background-position:
+        calc(100% - 10px) calc(1em + 2px),
+        calc(100% - 5px) calc(1em + 2px),
+        calc(100% - 31px) 7px;
+      background-size:
+        5px 5px,
+        5px 5px,
+        2px 1.5em;
+      background-repeat: no-repeat;
+    }
+    
+    .cpl_input:focus {
+      background-image:
+      linear-gradient(45deg, transparent 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, transparent 50%),
+      linear-gradient(to right, map-get($colors, 'aqua'), map-get($colors, 'aqua'));     
+    }
+    
+    }
+// Campo Porcentaje_________________________________________________________________________________________________________________________________________     
+
+ 
+// Campo Selección_________________________________________________________________________________________________________________________________________ 
+    &.select_wrap{
+
+
+      .cpl_input {
+        padding-right: 40px!important;
+        background-image:
+        linear-gradient(45deg, transparent 50%, map-get($colors, 'darkGray') 50%),
+        linear-gradient(135deg, map-get($colors, 'darkGray') 50%, transparent 50%),
+          linear-gradient(to right, map-get($colors, 'lightGray'), map-get($colors, 'lightGray'));
+        background-position:
+          calc(100% - 15px) calc(1em + 2px),
+          calc(100% - 10px) calc(1em + 2px),
+          calc(100% - 31px) 7px;
+        background-size:
+          5px 5px,
+          5px 5px,
+          2px 1.5em;
+        background-repeat: no-repeat;
+      }
+      
+      select.cpl_input:focus {
+        background-image:
+        linear-gradient(45deg, transparent 50%, map-get($colors, 'aqua') 50%),
+        linear-gradient(135deg, map-get($colors, 'aqua') 50%, transparent 50%),
+        linear-gradient(to right, map-get($colors, 'aqua'), map-get($colors, 'aqua'));     
+      }
+
+
+    }
+// Campo Selección_________________________________________________________________________________________________________________________________________     
+
+
+
+  
+    &.search_wrap {
+      @include geneBrow(flex-direction, row);
+      .searching {
+        position: fixed;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 100%;
+        left: auto;
+        right: auto;
+        text-align: center;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: map-get($colors, "blue");
+        font-weight: 900;
+        overflow: hidden;
+        display: none;
+        z-index: 9999999;
+
+        &.active_searching {
+          @include disp(flex!important);
+          @include geneBrow(flex-wrap, wrap);
+          @include geneBrow(flex-direction, column);
+          @include geneBrow(justify-content, center);
+        }
+      }
+
+      
+
+      .cpl_input {
+        width: calc(100% - 105px)!important;
+        margin-right: 5px;
+        float: left;
+        
+      }
+
+      
+      .cpl_btn {
+        content: 'Buscar';
+        width: 100px;
+        margin-top: 0 !important;
+        float: left;
+
+      }
+      .f_error{
+        right: 110px;
+      }
+
+
+      &.without_btn{
+        .cpl_input {
+          width: 100%!important;
+          // margin-right: 5px;
+         
+          
+        }
+        .f_error{
+          right: 7px;
+        }
+      }
+
+      @include mdMax {
+        
+        
+       
+
+       
+      }
+      .cpl_icon {
+        // animation-duration: 3s;
+        // animation-name: loadingRotation;
+        // animation-iteration-count: infinite;
+        // font-size: 34px;
+        // animation-direction: alternate;
+      }
+    }
+    .cpl_btn {
+      margin-bottom: 0 !important;
+    }
+
+
+
+
+    // PREFIJOS____________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+ &.telMovil input,
+ &.telFijo input{
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(to right, rgb(208, 214, 217), rgb(208, 214, 217));
+    background-position: calc(32% - 20px) calc(1em + 2px),calc(32% - 15px) calc(1em + 2px),54px 7px;
+    background-size: 5px 5px, 5px 5px, 2px 1.5em;
+    background-repeat: no-repeat;
+    padding-left: 64px!important;
+}
+
+
+
+
+
+&.telMovil:before,
+&.telFijo:before {
+    position: absolute;
+    left: 12px;
+    text-align: left;
+    bottom: 14px;
+    width: 50px;
+    font-family: $fontCorp;
+    color: map-get($colors, 'darkGray' );
+    z-index: 1;font-weight: 500!important;
+    font-family: $fontCorp;
+}
+ &.telMovil:before{ content: '+56 9'; }
+ &.telFijo:before{ content: '+56 2'; }
+
+
+
+
+// PREFIJOS____________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+           
+  /*********** spinner start *************/
+    
+  &.number_wrap{
+
+
+    
+
+    input[type=number] {
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+    
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+    
+    
+   
+  
+    
+    
+    button {
+      outline:none;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+      margin: 0;
+      position: relative;
+    }
+    
+     button:before,
+    button:after {
+      display: inline-block;
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 2px;
+      background-color: #212121;
+      transform: translate(-50%, -50%);
+    }
+  button.plus:after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    
+
+
+
+
+  }
+      /*********** number wrap *************/
+  }
+  // fin input wrap
+
+
+
+
+
+
+
+
+  label {
+    margin-top: 27px;
+    padding-bottom: 3px!important;
+  }
+
+  .f_error {
+    
+    color: map-get($colors, "red") !important;
+    line-height: 99%;
+    text-align: left;
+    
+    margin-bottom: 10px;
+    position: absolute;
+    top: calc(100% - 5px);
+    border: 0;
+    border-top: 2px solid map-get($colors, "red");
+    right: 7px;
+    left: 7px;
+    // background: #ffffff;
+    border-radius: 0 0 3px 3px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $s2!important;
+    font-weight: 500!important;
+    width: calc(100% - 14px);
+        font-family: $fontCorp2;
+    }
+    
+    //   &:before{
+    //     content:'';
+    //     position: absolute;
+    //     width: 0;
+    //     height: 0;
+    //     top:-7px;
+    //     border-left: 7px solid transparent;
+    //     border-right: 7px solid transparent;
+    //     border-bottom: 7px solid map-get($colors, "red");
+
+    //    left: 5px;
+    // }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+ .cpl_input_check, .cpl_checkbox,   .cpl_input_radio {
+  margin-top: 10px !important;
+  margin-bottom: 30px!important;
+ }
+
+
+
+
+// ___Fin flex Form__
+
+
+
+  // campos con after en los col sd 6 debene tener la grafica pas pequeña
+
+
+
+
+
+// =====================================================
+// Este f error asigna los estilos de los errores de validacion que  estén fuera de un formulario
+//Es tambien la base del f_error
+// =====================================================
+.f_error {
+  white-space: wrap!important;
+  margin: 0 auto;
+
+
+   text-align: center;
+  color: map-get($colors, "red") !important;
+  line-height: 99%;
+  border-radius: 6px;
+  position: relative;
+  top: 1px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+//  display: none;
+  border: 2px solid map-get($colors, "red");
+ right: 0;
+  padding: 15px;
+
+
+  font-weight: 400;
+
+}
+
+
+
+// ======================================================== 
+// estos están fuera del flex form, ya que beneficiarios aun no usaba el flex_ form
+// =====================================================
+
+  // RADIO INPUT 
+
+ 
+  .cpl_input_radio, .cpl_radio {
+    @include disp(flex);
+
+    width: auto!important;
+    @include geneBrow(align-self, flex-start);
+    
+
+    float: left;
+    padding-left:5px!important;
+    padding-right: 10px!important;
+  
+
+    position: relative;
+    padding-left: 35px;
+   
+    cursor: pointer;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    label, .label_l {
+      width: auto;
+      padding-top: 4px;
+      margin: 0 !important;
+      p {
+        float: left;
+        width: auto;
+        margin-right: 0 !important;
+      }
+    }
+
+    
+
+
+
+    span {
+      top: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+ 
+
+  
+ input[type="radio"] {
+
+
+
+  opacity: 0;
+  cursor: pointer;
+
+  z-index: 2; 
+  background: #ccc;
+  border-radius: 6px;
+  float: left;
+  cursor: pointer;
+
+  width: 37px;
+  height: 37px;
+  margin: 0;
+  margin-right: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+
+}
+
+p{padding-left: 4px;}
+
+.checkradio, .check {
+  
+  z-index: 1;
+    position: relative!important;
+    
+    height: 25px!important;
+    width: 25px!important;
+    display: block;
+
+    @include geneBrow(flex, 0 0 25px);
+ 
+    background-color: map-get($colors, 'extraLightGray' );
+    border: solid 2px map-get($colors, 'lightGray' );
+    border-radius: 50%;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  
+  &:hover input ~ .checkradio,  &:hover input ~ .check {
+    background-color: map-get($colors, 'extraLightAqua' );
+  }
+  
+  input:checked ~ .checkradio,  input:checked ~ .check {
+    background-color: map-get($colors, 'white' );
+    border: solid 2px map-get($colors, 'aqua' );
+  }
+  
+  
+  input:checked ~ .checkradio:after, input:checked ~ .check::after{
+    display: block;
+  }
+  
+  .checkradio:after, .check:after {
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: map-get($colors , 'aqua' );
+  }
+
+}
+// FIN RADIO INPUT  
+
+
+
+
+
+
+
+// .cpl_checkbox {
+//   display: block;
+//   position: relative;
+
+//   cursor: pointer;
+
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   width: 25px !important;
+//   height: 25px !important;
+//   line-height: 0 !important;
+//   margin: 0 !important;
+// }
+
+// .cpl_checkbox input {
+//   position: absolute;
+//   opacity: 0;
+//   cursor: pointer;
+//   height: 25px;
+//   width: 25px;
+//   margin: 0;
+// }
+
+// .cpl_checkbox .cpl_checkmark {
+//   position: absolute!important;
+//   top: 0;
+//   left: 0;
+//   height: 25px;
+//   width: 25px;
+//   background-color: map-get($colors, "lightGray");
+//   border-radius: 3px;
+// }
+// .cpl_checkbox:hover input ~ .cpl_checkmark {
+//   background-color: map-get($colors, "extraLightAqua");
+// }
+
+// .cpl_checkbox input:checked ~ .cpl_checkmark {
+//   background-color: map-get($colors, 'red' );
+// }
+
+// .cpl_checkmark:after {
+//   content: "";
+//   position: absolute;
+//   display: none;
+// }
+
+// .cpl_checkbox input:checked ~ .cpl_checkmark:after {
+//   display: block;
+// }
+// .cpl_checkbox .cpl_checkmark:after {
+//   left: 9px;
+//   top: 5px;
+//   width: 6px;
+//   height: 12px;
+//   border: solid white;
+//   border-width: 0 3px 3px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+// .cpl_input_checkbox p {
+//   padding-left: 35px;
+// }
+
+
+
+
+
+ 
+  // CHECK INPUT 
+
+
+ 
+
+  .cpl_input_check, .cpl_checkbox {
+    @include disp(flex);
+
+    width: auto!important;
+    @include geneBrow(align-self, flex-start);
+    
+
+    float: left;
+    padding-left:5px!important;
+    padding-right: 10px!important;
+  
+
+    position: relative;
+    padding-left: 35px;
+   
+    cursor: pointer;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    label, .label_l {
+      width: auto;
+      padding-top: 4px;
+      margin: 0 !important;
+      p {
+        float: left;
+        width: auto;
+        margin-right: 0 !important;
+      }
+    }
+
+    
+
+
+
+    span, .cpl_checkmark {
+      top: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+ 
+
+  
+ input[type="checkbox"] {
+
+
+
+  opacity: 0;
+  cursor: pointer;
+
+  z-index: 2; 
+  background: #ccc;
+  border-radius: 6px;
+  float: left;
+  cursor: pointer;
+
+  width: 37px;
+  height: 37px;
+  
+  margin: 0;
+  margin-right: 5px;
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  float: left;
+
+}
+
+p{padding-left: 4px;}
+
+
+.checkbox, .cpl_checkmark, .check {
+
+  z-index: 1;
+  position: relative!important;
+    display: block;
+  height: 25px!important;
+  width: 25px!important;
+
+  @include geneBrow(flex, 0 0 25px);
+  background-color: map-get($colors, 'extraLightGray' );
+  border: solid 2px map-get($colors, 'lightGray' );
+  border-radius: 3px;
+
+  &:after {
+    
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+ .checkbox:hover, .cpl_checkmark:hover, .check:hover {
+  background-color: map-get($colors, 'extraLightAqua' );
+ 
+}
+
+input:checked ~ .checkbox, input:checked ~ .cpl_checkmark, input:checked ~ .check {
+  background-color: map-get($colors, 'aqua' );
+  border: solid 2px map-get($colors, 'aqua' );
+}
+
+
+input:checked ~ .checkbox:after, input:checked ~ .cpl_checkmark:after, input:checked ~ .check:after {
+  display: block;
+}
+
+.checkbox:after, .cpl_checkmark:after, .check::after {
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+}
+// FIN CHECK INPUT  
+
+
+//Custom select
+.custom_select_wrap{
+  
+  // .f_error{ font-size: 13px!important; display: none;}
+
+
+
+.custom_select{
+  @extend .cpl_input;
+  &.error{
+    border-color: map-get($colors, 'red' );
+  }
+  padding: 0!important;
+  height: 43px;
+
+.cpl_fondo{
+  padding: 0;
+  .fondo_icon{
+    padding: 0;
+    margin: 0;
+  }
+}
+  .selected{
+    padding-left: 7px;
+    height: 39px;
+   @include disp(flex);
+   @include geneBrow(align-items, center);
+  
+
+
+    padding-right: 40px!important;
+  }
+  @include sdMax{
+    background-image: linear-gradient(45deg, transparent 50%, #d0d6d9 50%),linear-gradient(135deg, #d0d6d9 50%, transparent 20%),linear-gradient(to right, #d0d6d9, #d0d6d9);
+      background-position: calc(100% - 10px) calc(1em + 2px),calc(100% - 5px) calc(1em + 2px),calc(100% - 1.3em) 0.5em;
+      .selected{
+      padding-right: 12px!important;
+    }
+  }
+  ul{ 
+     background: rgb(255, 255, 255);
+            border: 1px rgb(220, 220, 220) solid;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            width: calc(100% + 2px);
+    display: none;
+    position: absolute; 
+ 
+    padding: 0;
+    border-radius: 3px;
+    z-index: 99;
+    background-color: map-get($colors, 'white' );
+    list-style: none;
+    margin: 0;
+    left: -1px;
+    right: -1px;
+    top:-1px;
+    border:  solid 1px map-get($colors, 'lightGray' ); }
+    li{
+      padding-left: 5px;
+      padding-left: 5px;
+      height: 43px;
+      border-bottom: 1px solid map-get($colors, 'lightGray' );
+      @include disp(flex);
+      @include geneBrow(align-items, center);
+      width: 100%;
+      
+     
+   
+     
+      list-style: none;
+      
+      position: relative;
+      float: left;
+      &:last-child{ border: 0;}
+      
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+//Custom Select
+
+
+.img_add_ben img {
+  width: 60px;
+}
+
+
+
+.icon_check_edit {
+  background: url(../images/check.png) no-repeat 0 center / 20px auto
+    transparent;
+  padding-left: 30px !important;
+  float: left;
+}
+.cpl_alert.alert_btn p {
+  float: left;
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 4px 0 !important;
+}
+.cpl_alert.alert_btn .btn_blank {
+  background: transparent;
+  color: #fff;
+  padding: 4px !important;
+  border-color: #fff;
+  float: right;
+ 
+  font-weight: 100;
+  margin: 0;
+}
+
+
+.cpl_form {
+  .center_input {
+    @include disp(flex);
+    @include geneBrow(justify-content, center);
+    @include geneBrow(flex-direction, column);
+  }
+  .input_group {
+    padding: 0 !important;
+    > .cpl_col {
+      padding-bottom: 0;
+    }
+  }
+  p {
+    margin: 0 !important;
+    // text-align: center;
+  }
+  .disabled {
+    opacity: 0.7;
+  }
+  > .cpl_col {
+    padding-bottom: 0;
+  }
+  .cpl_col.cpl_no_padding > .cpl_col {
+    padding-bottom: 0;
+  }
+
+
+ 
+  &.collapse {
+  
+    .label_l {
+      margin-top: 20px;
+    }
+  }
+  .form_action {
+    float: right;
+  
+  }
+} //FIN cpl_form
+.cpl_cont_input {
+  max-width: 300px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 5px;
+  float: left;
+}
+// definicion cpl_input
+.cpl_input {
+  @include geneBrow(box-sizing, border-box);
+  @include geneBrow(border-radius, 3px);
+  font-size: $s_input;
+  font-weight: 500;
+  color: map-get($colors, "blue") !important;
+  padding: 9px !important;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: $fontCorp;
+  height: auto;
+  margin-bottom: 0px;
+  display: block;
+  background-color: map-get($colors, 'extraLightGray' )!important;
+
+  border: 2px solid map-get($colors, "lightGray");
+  background-color: white;
+  // max-height: 43px;
+  &:focus {
+    border: 2px solid map-get($colors, "aqua");
+    background-color: white;
+    outline: 0px;
+    color: map-get($colors, "blue");
+  }
+
+  &:disabled {
+    background-color: map-get($colors, "ex-lightGray");
+    opacity: 0.6;
+    color: map-get($colors, 'gray' )!important;
+
+  }
+ 
+
+  &.cpl_input_error{
+    border-color: map-get($colors, 'red' )!important;
+  }
+
+  &.cpl_input_ok{
+    // border-color: map-get($colors, 'green' )!important;
+    // position: relative;
+    
+  }
+}
+input[type="password"].cpl_input {
+  letter-spacing: 6px;
+  font-weight: 900;
+  &::placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+  &:-ms-input-placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+  &::-ms-input-placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+  &::-webkit-input-placeholder{
+  letter-spacing: normal;
+  font-weight: normal;
+  }
+  &:-moz-input-placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+  &::-moz-input-placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+}
+
+.cpl_input_pref {
+  display: flex;
+}
+
+.cpl_pref {
+  background: map-get($colors, "blue");
+  margin-bottom: 4px;
+  border-radius: 3px 0 0 3px;
+  @include disp(flex);
+  @include geneBrow(align-items, center);
+}
+.cpl_pref p {
+  padding: 0px 5px 0;
+  color: #fff !important;
+  font-weight: 600 !important;
+ 
+}
+
+.cpl_input_pref .cpl_input {
+  border-radius: 0 3px 3px 0;
+}
+
+.cpl_radio_group {
+  @include geneBrow(box-sizing, border-box);
+  @include geneBrow(border-radius, 3px);
+ 
+  color: map-get($colors, "extraDarkGray");
+  padding: 12px !important;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: $fontCorp;
+  padding: 11px;
+  height: auto;
+  margin-bottom: 4px;
+  display: block;
+}
+
+p.f_error,
+span.f_error {
+  color: map-get($colors, "red") !important;
+
+  margin-bottom: 10px;
+}
+.cpl_validate_error .cpl_input,
+.cpl_validate_error .cpl_input:focus,
+.cpl_input.error,
+.cpl_input.error:focus,
+.cpl_input.f_error,
+.cpl_input.f_error:focus {
+  @include geneBrow(transition, all 200ms ease-out);
+  border-color: map-get($colors, "red");
+  color: map-get($colors, "red");
+
+}
+.cpl_input.error:focus,
+.cpl_input.f_error:focus {
+  @include geneBrow(animation-duration, 3s);
+  @include geneBrow(animation-name, slidein);
+}
+.cpl_col label.error,
+.cpl_col label.f_error {
+  min-height: auto;
+}
+.cpl_col label.error,
+.cpl_col label.f_error,
+.validate_error_txt {
+  position: absolute;
+  width: auto;
+  background-color: #fff;
+  color: map-get($colors, "red");
+  padding-bottom: 3px;
+  padding: 2px;
+
+  z-index: 999;
+  bottom: calc(0% - 0.5em);
+  right: 5%;
+  font-weight: 400;
+  /*display: none;*/
+}
+.b-yellow,
+.b-blue,
+.b-aqua {
+  .cpl_input {
+    border: 1px solid #fff;
+  }
+}
+.b-extraLightAqua {
+  .cpl_input {
+    border: 1px solid #fff;
+    &:focus {
+      border: 1px solid map-get($colors, "blue");
+    }
+  }
+}
+
+select.cpl_input {
+  @include geneBrow(appearance, none);
+  background-image: url("../img/arrow-down.png");
+
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: auto 25%;
+  &::-ms-expand {
+    display: none;
+  }
+ 
+}
+.cpl_envia_descarga {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  // text-align: center;
+  min-height: 100px;
+
+
+
+  @include disp(flex);
+
+  @include geneBrow(justify-content, center);
+
+
+
+  .envia {
+    width: 50%;
+    // @include disp(flex);
+    // @include geneBrow(align-items, baseline);
+    flex-wrap: wrap;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    
+  }
+
+  .descarga {
+    width: 50%;
+    // @include disp(flex);
+    // @include geneBrow(justify-content, center);
+    // @include geneBrow(align-items, flex-end);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+   
+    .cpl_btn{
+      margin: 0 auto;
+      float: none;
+    }
+
+    @include md{
+      border-right: map-get($colors , 'lightGray' ) 1px solid;
+      
+    }
+  }
+}
+.send_mail {
+  label {
+    width: 100%;
+  }
+  .input_wrap{
+    width: calc(100% - 100px);
+    float: left;
+    position: relative;
+
+    .f_error{
+
+    color: map-get($colors, "red") !important;
+    line-height: 99%;
+    
+    margin-bottom: 10px;
+    position: absolute;
+    top: calc(100% - 5px);
+    border-top: 2px solid map-get($colors, "red");
+    // right: 3px;
+    // left: 3px;
+    // background: #ffffff;
+    border-radius: 0 0 3px 3px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+    font-weight: 400;
+    }
+  }
+  .cpl_input {
+   
+
+   border-right: 0;
+
+    border-radius: 50px 0 0 50px    ;
+  }
+  .cpl_btn {
+    width: 100px;
+    float: left;
+    border-radius: 0 50px 50px 0!important   ;
+  }
+}
+
+.clave_acceso {
+  letter-spacing: 6px;
+}
+.cpl_validate_error .validate_error_txt {
+  display: block;
+}
+// INICIO MEDIAS QUERIES
+
+@include md {
+  .cpl_col_divider {
+    border-right: 1px solid #e1e2e7;
+  }
+
+  .cpl_envia_descarga .descarga .cpl_btn {
+    max-width: 300px;
+    margin-bottom: 13px;
+  }
+}
+@include mdMax {
+  .cpl_envia_descarga {
+    @include geneBrow(flex-direction, column);
+    max-width: 300px;
+  }
+
+  .cpl_envia_descarga .envia {
+    width: 100%;
+    max-width: 450px;
+   
+  }
+  .cpl_envia_descarga .descarga {
+    width: 100%;
+    max-width: 450px;
+ 
+  }
+}
+@include xld {
+  .cpl_col_l_divider {
+    border-right: 1px solid #e1e2e7;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cpl_envia_descarga .envia {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .cpl_envia_descarga .descarga {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/*@media screen and (min-width: 0\0) {
+  select.cpl_input {
+    background-image: url("../index_files/arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: auto 25%;
+  }
+}*/
+/*FIn Formulario*/
+
+

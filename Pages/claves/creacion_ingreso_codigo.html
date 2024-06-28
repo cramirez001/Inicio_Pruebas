@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claves</title>
+    <!-- styles -->
+    <!-- Repositorio Git -->
+    <link rel="stylesheet" href="../../Assets/Globals/css/cpl-Styles.css"/>
+    <link rel="stylesheet" href="../../Assets/Customs/claves/css/custom.css"/>
+    <!-- Repositorio Git -->
+
+    <!-- máquina virtual -->
+    <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/Globals/css/cpl-Styles.css"/>
+    <link rel="stylesheet"href="http://www.afpcapital.cl/Style%20Library/Assets/Customs/claves/css/custom.css" />
+    <!-- máquina virtual -->
+
+    <!-- Desarrollo, QA y Producción -->
+    <link rel="stylesheet"href="/Style%20Library/Assets/Globals/css/cpl-Styles.css"/>
+    <link rel="stylesheet"href="/Style%20Library/Assets/Customs/claves/css/custom.css"/>
+    <!-- Desarrollo, QA y Producción -->
+    <!-- styles -->
+
+    <script src="http://www.afpcapital.cl/Style%20Library/Assets/Globals/js/jquery.js"></script>
+  </head>
+  <body>
+    <div class="cpl_body clave_seguridad">
+      <div class="cpl_container">
+        <div class="flex_row">
+          <div class="cpl_col cpl_col_12">
+            <!-- Vista 2 -->
+
+            <!-- title -->
+            <div class="flex_row">
+              <div class="cpl_col cpl_col_12 cpl_flex_form">
+                <h2 class="t-extraDarkGray center_text">
+                  Ingreso de código de verificación
+                </h2>
+                <p class="center_text">
+                  Por favor ingresa el código de verificación enviado por SMS al
+                  número<b>+569****89</b>
+                </p>
+
+                <!-- <p class="center_text">
+                  Por favor ingresa el código de verificación enviado tu
+                  correo <b>rodolfo@molina.cl</b>
+                </p> -->
+
+                <div class="flex_row margin_top_medium max_w_350 center_div">
+                  <div class="cpl_col cpl_col_12 input_wrap">
+                    <input
+                      type="text"
+                      class="cpl_input"
+                      placeholder="Escribe aquí el codigo SMS"
+                    />
+                    <span class="f_error"
+                      >El código ingresado no es correcto</span
+                    >
+                  </div>
+                  <div class="cpl_col cpl_col_12">
+                    <a href="retiroFondos-paso2.html" class="cpl_btn"
+                      >Continuar</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex_row cpl_col_12">
+                  <div class="cpl_col cpl_col_12">
+                    <span
+                      class="tooltip t-aqua ayuda ayuda-1 center_text margin_top_small"
+                      data-tooltip-content="#info_Ayuda1"
+                      >¿No recibiste el código?</span
+                    >
+                    <div class="tooltip_box">
+                      <p id="segundos" class="margin_bottom_small"></p>
+                      <input
+                        id="solicitudCodigo"
+                        type="submit"
+                        class="cpl_btn mw_250 center_div small secondary aqua"
+                        disabled="true"
+                        value="volver a enviar"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- fin botones -->
+              </div>
+            </div>
+            <!-- fin title -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://www.afpcapital.cl/Style%20Library/Assets/Globals/js/globals.js"></script>
+    <script type="text/javascript">
+      let t = 15;
+      let i = setInterval(function () {
+        if (t <= 0) {
+          clearInterval(i);
+          document.getElementById("segundos").innerHTML = ``;
+          document.getElementById("solicitudCodigo").disabled = false;
+          console.log(t);
+        } else {
+          document.getElementById(
+            "segundos"
+          ).innerHTML = `Si no recibiste el código, podrás solicitar uno nuevo dentro de <b>${t} segundos</b>`;
+          document.getElementById("solicitudCodigo").disabled = true;
+          console.log(t);
+        }
+        t -= 1;
+      }, 1000);
+
+      $(document).ready(function () {
+        $(".ayuda").click(function () {
+          $(".tooltip_box").hide();
+          $(this).next(".tooltip_box").show();
+        });
+      });
+    </script>
+  </body>
+</html>

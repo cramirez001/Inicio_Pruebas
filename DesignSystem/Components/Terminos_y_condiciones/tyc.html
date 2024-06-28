@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona</title>
+<link rel="stylesheet" href="../../../css_sass(r_r)/css/cpl-Styles.css">
+<script src="../../../css_sass(r_r)/js/jquery.js"></script>
+
+</head>
+<body>
+
+    <div class="cpl_body">
+       
+        <div class="cpl_container">
+            
+            <div class="flex_row">
+                <div class="cpl_col cpl_col_12">
+                    <!-- cajas -->
+                </div>
+            </div>
+
+
+       
+
+
+            <br>
+
+         <div class="co_terms_wrap center_div">
+            <div class="co_terms ELD_terms ">
+                <div class="co_terms_status animate__animated animate__flipInY"></div>
+                <div class="co_terms_centerArea">
+                    <p class="terms_message">Antes de continuar debes leer y aceptar los<br> <a onclick="BuenosModales('nuevoModal')">términos y condiciones aquí</a></p>
+                    <p class="terms_message message_agree">Has aceptado los términos y condiciones. <br> <a onclick="BuenosModales('nuevoModal')">Volver a leer aquí</a></p>
+                 
+                </div>
+           
+            </div>
+               <span class="f_error terms_error">Debes aceptar para continuar</span>
+            </div>
+
+
+            
+            
+        </div>
+
+
+            <!-- Modal Central -->
+            <div class="cpl_modal center_modal  nuevoModal">
+                <div class="modal_box mw_600 " >
+                  <div class="close close_action"></div>
+                  
+                  <div class="modal_cont ">
+                    <div class="flex_row center_div">
+                        <div class="cpl_col cpl_col_12  padding_top_medium padding_bottom_medium">
+                            <h2>Términos y condiciones</h2>
+                            <p>
+        
+                                <strong>1 </strong> Esta solicitud lo faculta a mantener el valor en pesos del saldo que usted tenga a la fecha de la solicitud de su pensión y hasta que ésta sea concedida, rechazada o usted desista de pensionarse. El valor en pesos del saldo será fijado de acuerdo con la fecha del traspaso a cuenta corriente.
+                                <br><br>
+                                <strong>2 </strong> Con esta solicitud, su saldo no presentará variaciones positivas ni negativas durante el período antes mencionado, dado que se mantendrá en la Cuenta Corriente del Fondo de Pensión.
+                                <br><br>
+                                <strong>3 </strong> Las potenciales pérdidas de rentabilidad positiva por elegir congelar su saldo son asumidas íntegramente y con pleno uso de sus facultades por el solicitante al momento de suscribir este traspaso. Además, tengo en cuenta que, durante el período antes mencionado, no podrá realizar las siguientes acciones:
+                                <br><br>
+                                <strong>- </strong> Traspaso a otra AFP
+                                <br><br>
+                                <strong>- </strong>Suscribir pago en exceso
+                                <br><br>
+                                <strong>-</strong> Suscribir cambio en distribución de fondo
+                                <br><br>
+                                <strong>- </strong> Aplicar cambio etario
+                                <br><br>
+                                <strong>- </strong> Suscribir retiro de APV
+                                <br><br>
+                                <strong>- </strong> Recibir cartola mensual
+                                <br><br>
+                                <strong>4 </strong>El traspaso a cuenta corriente se efectuará al cuarto día hábil desde la suscripción de este formulario. La opción establecida en este formulario nace a propósito de la norma de carácter general número 264 de la Superintendencia de Pensiones, de fecha 21 de abril del 2020.</p>
+                        </div>
+                    </div>
+        
+        
+        
+        
+                    
+                   
+            
+                 
+                   
+                       
+        
+        
+            
+        
+                    
+                  </div>
+                  <div class="agree_buttons">
+                  <div class="flex_row center_div d-flex padding_top_small padding_20 ">
+                    <div class="cpl_col cpl_col_6 md_order_2 sd_order_2">
+                                                <div class="cpl_btn secondary red mw_300 close_action center_div no_agree_terms_ELD">no todavía <span class="cpl_icon icon-close-circle pack2 "></span></div>
+                                            </div>
+                    <div class="cpl_col cpl_col_6 md_order_1 sd_order_1">
+                                                <div class="cpl_btn green mw_300 close_action center_div agree_terms_ELD">Aceptar términos <span class="cpl_icon icon-check"></span> </div>
+                                            </div>
+                                        </div> 
+                </div>
+            </div>
+              </div>
+               <!-- Fin Modal Central -->
+
+    </div>
+    <!-- <script src="../../css-sass(r_r)/js/globals.js"></script> -->
+<script src="../../../css_sass(r_r)/js/modal.js"></script>
+<script>
+  var buttonELD =  document.getElementsByClassName('agree_terms_ELD')[0];
+  var buttonNoYedELD =  document.getElementsByClassName('no_agree_terms_ELD')[0];
+  var ELDterms =  document.getElementsByClassName('ELD_terms')[0];
+  var termsError = document.getElementsByClassName('terms_error')[0];
+//   var agreeButtons =  document.getElementsByClassName('agree_buttons')[0];
+
+  buttonELD.onclick = function(){
+    ELDterms.classList.add('agree');
+    ELDterms.classList.add('animate__animated');
+    ELDterms.classList.add('animate__flipInX');
+    termsError.style.display = 'none';
+    // agreeButtons.style.display = 'none';
+  };
+
+  buttonNoYedELD.onclick = function(){
+    ELDterms.classList.remove('agree');
+    ELDterms.classList.remove('animate__animated');
+    ELDterms.classList.remove('animate__flipInX');
+    // agreeButtons.style.display = 'none';
+    termsError.style.display = 'block';
+  };
+
+
+</script>
+</body>
+</html>

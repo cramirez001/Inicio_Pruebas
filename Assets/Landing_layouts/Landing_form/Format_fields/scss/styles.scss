@@ -1,0 +1,256 @@
+
+/* Asignaremos los nuevos estilos de campos a los viejos */
+
+
+.comunicaciones_formulario_contacto{
+    float: left!important;
+    top: -20px!important;
+    position: relative;
+}
+
+.tel_cod_num.mr10.cod_area{ display: none;}
+
+
+div[id*="CampoTelefonoMovil"]{
+    position: relative;
+}
+
+div[id*="CampoTelefonoMovil"]::before{
+    content: '+56 9'; 
+    position: absolute;
+    left: 12px;
+    text-align: left;
+    bottom: 14px;
+    width: 50px;
+    font-family: $fontCorp;
+    color: map-get($colors, 'darkGray' );
+    z-index: 1;font-weight: 500!important;
+    font-family: $fontCorp;
+}
+
+.inp_con.inp_fono.numValidarMovil.valNumerico{
+    width: 100%!important;
+    padding-left: 50px;
+    margin-left: 0!important;
+}
+
+div[id*="CampoTelefonoMovil"] input{
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(to right, rgb(208, 214, 217), rgb(208, 214, 217));
+    background-position: calc(32% - 20px) calc(1em + 2px),calc(32% - 15px) calc(1em + 2px),54px 7px;
+    background-size: 5px 5px, 5px 5px, 2px 1.5em;
+    background-repeat: no-repeat;
+    padding-left: 64px!important;
+}
+
+.afiemp_izq{width: 100%!important;
+  
+
+}
+.lab_con.vacio{
+    display: none;
+}
+.btn_ama{
+    width: 100%;
+    margin: 0!important;
+    margin-bottom: 10px;
+}
+.limpiar{
+    margin-top: 25px!important;
+    text-align: center!important;
+    width: 100%!important;
+}
+.comunicaciones_formulario_contacto{
+left: 0!important;
+}
+.btn_ama .center_am{
+    @include geneBrow(box-sizing, border-box);
+		@include geneBrow(border-radius, 100px!important);
+		
+		padding: 9px !important;
+		margin: 0;
+		position: relative;
+		float: left;
+		width: 100%;
+		font-family: $fontCorp!important;
+		height: auto;
+		margin-bottom: 4px;
+		display: block;
+	    @include geneBrow(transition, all 200ms ease-out);
+	    font-weight: 700;
+	    background-color: map-get($colors, "yellow")!important;
+	    border: solid 2px map-get($colors, "yellow")!important;
+	    color: map-get($colors, "blue");
+	    text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: $s_input!important ;
+		cursor: pointer !important;
+        background-image: none!important;
+        &:hover{
+       background-color: map-get($colors, "darkYellow")!important;
+       border: solid 2px map-get($colors, "darkYellow")!important;
+       }
+
+
+       margin-top: 10px!important;
+       margin-bottom: 10px!important;
+}
+
+ .btn_ama .right_am,  .btn_ama .left_am{
+    display: none!important;
+}
+
+.form_contacto{
+  
+    margin-top: 0px!important;
+}
+.form_contacto .fila_tit h3:first-child{ text-align: center; display: none;}
+.form_contacto textarea{
+min-height: 140px;
+}
+.form_contacto 
+input, .form_contacto select, .form_contacto textarea
+{
+  @include geneBrow(box-sizing, border-box);
+  @include geneBrow(border-radius, 3px);
+  font-size: $s_input;
+  font-weight: 500;
+  color: map-get($colors, "blue") !important;
+  padding: 9px !important;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: $fontCorp;
+  height: auto;
+  margin-bottom: 0px;
+  display: block;
+  background-color: map-get($colors, 'extraLightGray' )!important;
+
+  border: 2px solid map-get($colors, "lightGray");
+  background-color: white;
+  // max-height: 43px;
+  &:focus {
+    border: 2px solid map-get($colors, "aqua");
+    background-color: white;
+    outline: 0px;
+    color: map-get($colors, "blue");
+  }
+
+
+}
+.form_contacto select{
+    padding-right: 40px!important;
+    background-image:
+    linear-gradient(45deg, transparent 50%, map-get($colors, 'darkGray') 50%),
+    linear-gradient(135deg, map-get($colors, 'darkGray') 50%, transparent 50%),
+      linear-gradient(to right, map-get($colors, 'lightGray'), map-get($colors, 'lightGray'));
+    background-position:
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 10px) calc(1em + 2px),
+      calc(100% - 31px) 7px;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2px 1.5em;
+    background-repeat: no-repeat;
+
+    &:focus{
+        background-image:
+        linear-gradient(45deg, transparent 50%, map-get($colors, 'aqua') 50%),
+        linear-gradient(135deg, map-get($colors, 'aqua') 50%, transparent 50%),
+        linear-gradient(to right, map-get($colors, 'aqua'), map-get($colors, 'aqua'));    
+    }
+
+
+}
+
+.fila_con {
+    width: 100%;
+    float: left;
+    padding: 3px!important;
+    margin-bottom: 20px;
+    position: relative;
+    .validador2{
+        color: map-get($colors, "red") !important;
+        line-height: 99%;
+        text-align: left;
+        margin-bottom: 10px;
+        position: absolute;
+        top: calc(100% - 5px);
+        border: 0;
+        border-top: 2px solid map-get($colors, "red");
+        right: 7px;
+        left: 7px;
+        // background: #ffffff;
+        border-radius: 0 0 3px 3px;
+        padding: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: $s2!important;
+        font-weight: 500!important;
+        width: calc(100% - 14px);
+        font-family: $fontCorp2;
+        font-style: normal!important;
+    }
+}
+
+.fila_tit{
+    width: 100%;
+}
+
+.valNumerico{
+    width: calc(100% - 85px)!important; float: left; margin-left: 5px!important;
+}
+
+.cod_area{
+    width: 80px!important; float: left;
+}
+
+.txta_contacto{
+    margin-left: 0!important;
+}
+
+
+#tabsForm{
+    margin: 0!important;
+}
+
+div[id*="CampoEmail"]{
+width: 100%;
+}
+
+.lab_con{
+    width: 100%!important;
+    font-weight: 600;
+    font-size: $s_input;
+    margin-bottom: 2px;
+    padding-bottom: 3px;
+}
+
+div[id*="CampoEmail"] .inp_mail{
+width: calc(65% - 15px);
+}
+div[id*="CampoEmail"] .inp_server_mail{
+    width: calc(35% - 15px);
+}
+div[id*="CampoEmail"] span.arroba{
+    width: 30px;
+    font-size: 30px!important;
+}
+div[id*="CampoEmail"] label{
+    width: 100%;
+}
+
+div[id*="CampoMensaje"] textarea{
+max-width: 100%!important;
+resize:vertical;
+width: 100%!important;
+}
+
+
+

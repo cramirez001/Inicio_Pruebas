@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.afpcapital.cl/Style%20Library/Assets/Globals/css/cpl-Styles.css">
+    <!-- DESA, QA & PROD -->
+    <!-- <link rel="stylesheet" href="/Style%20Library/Assets/Globals/css/cpl-Styles.css">  -->
+    
+    <script src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/js/jquery.js"></script>
+
+
+</head>
+
+<body>
+    <div class="cpl_body">
+
+        <div class="cpl_container mw_800">
+
+
+            <div class="flex_row">
+                <div class="cpl_col cpl_col_12 margin_bottom_small">
+                    <h2 class="center_text">
+                        Validación de identidad para traspaso
+                    </h2>
+                    <p class="center_text">
+                        Necesitamos validar tu identidad para poder continuar con el traspaso
+                    </p>
+
+
+                </div>
+            </div>
+
+            <div class="flex_row">
+                <div class="cpl_flex_form">
+                    <div class="cpl_col cpl_col_12 mw_350 center_div input_wrap">
+                        <label for=""><span>Rut</span></label>
+                        <input class="cpl_input" type="text">
+                        <span class="f_error">Completar campo</span>
+                    </div>
+
+
+                    <div class="cpl_col cpl_col_12 mw_350 center_div input_wrap">
+                        <label for=""><span>Número de documento</span></label>
+                        <input class="cpl_input" type="text">
+                        <span class="f_error">Completar campo</span>
+                    </div>
+
+                    <div class="cpl_col cpl_col_12 mw_350 center_div input_wrap">
+                        <a id="nuevomodal" class="center_text" onclick="BuenosModales('modalSerie')">
+                            <strong>
+                  ¿Donde puedo encontrar mi número de documento?
+                </strong>
+                        </a>
+                    </div>
+
+
+
+
+                    <div class="cpl_col cpl_col_12 mw_350 center_div input_wrap">
+                        <a href="" class="cpl_btn">Siguiente </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Central -->
+        <div class="cpl_modal center_modal modalSerie">
+            <div class="modal_box mw_600">
+                <div class="close close_action"></div>
+                <h2 class="center_text">Encuentra tu número de documento</h2>
+                <div class="modal_cont">
+                    <div class="flex_row">
+                        <div class="cpl_col cpl_col_12 margin_top_small">
+
+
+                            <div class="flex_row">
+                                <div class="cpl_col cpl_col_6">
+                                    <h3 class="center_text">Cédulas nuevas</h3>
+                                    <img src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/img/validacion_de_seguridad/cedulanueva.jpg" width="100%" alt="">
+                                </div>
+
+                                <div class="cpl_col cpl_col_6">
+                                    <h3 class="center_text">Cédulas antiguas</h3>
+
+                                    <img src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/img/validacion_de_seguridad/cedulaantigua.jpg" width="100%" alt="">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Modal Central -->
+            <script src="https://www.afpcapital.cl/Style%20Library/Assets/Globals/js/modal.js"></script>
+
+        </div>
+</body>
+
+</html>

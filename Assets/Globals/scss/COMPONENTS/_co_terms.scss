@@ -1,0 +1,121 @@
+.co_terms_wrap{
+    // max-width: 800px!important;
+    width: 100%!important;
+    position: relative;
+    .f_error{ 
+        padding: 0;
+        padding-top: 10px;
+        border-radius: 0;
+        border: 0;
+        border-top: 2px solid map-get($colors, 'red' );
+        width: 100%!important;
+    
+        left: 0;
+        
+    bottom: -26px !important;
+top: auto;
+        float: left;
+        right: 0;
+        display: none
+    
+    }
+}
+.co_terms{
+    @include disp(flex);
+    @include geneBrow(align-items, stretch);
+    @include geneBrow(justify-content, space-between);
+    @include geneBrow(flex-wrap, nowrap);
+    
+    padding: 20px;
+  
+    @include radius_6;
+    border: solid 2px map-get($colors, 'lightGray' );
+    background-color:  map-get($colors, 'extraLightGray' );
+    @include sdMax{
+        @include geneBrow(flex-direction, column);
+        .co_terms_status{
+            &::after{
+                         margin: 0 auto;
+            }
+        }
+    }
+    .f_error{width: 100%;}
+    .terms_message.message_agree{
+        display: none;
+    }
+    &.agree{
+        .terms_message{
+             display: none;
+        }
+
+        .co_terms_centerArea{width: 100%; }
+        
+        .terms_message.message_agree{
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        border-color: map-get($colors, 'green' );
+        background-color: map-get($colors, 'extraLightGreen' );
+        .co_terms_status{
+            &::after{
+                         content:'\e90b';
+                         color: map-get($colors, 'green' );
+            }
+        }
+
+        .co_terms_centerArea{
+
+            .terms_message{
+                color: map-get($colors, 'green' )!important;
+                // font-size: $s6!important;
+                font-weight: 600!important;
+             }
+                 
+              
+              }
+              
+    }
+    .co_terms_status{
+    
+        @include disp(flex);
+        
+        
+        @include geneBrow(align-items, center);
+         float: left;
+         padding-right: 10px;
+         &::after{
+             content:'\e902';
+             position: relative;
+             font-family: $iconFont!important;
+             color: map-get($colors, 'aqua' );
+             font-size: $s3;
+
+
+         }
+    }
+    .co_terms_centerArea{
+        @include disp(flex);
+        @include geneBrow(flex-direction, column);
+        
+        @include geneBrow(align-items, center);
+        width: 100%;
+        float: left;
+
+        .terms_message{
+            // @include define_h4;
+            font-size: $s8;
+            margin-bottom: 0!important;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+            font-weight: 600!important;
+            // color: map-get($colors, 'aqua' )!important;
+
+        }
+       
+    
+    }
+   
+}

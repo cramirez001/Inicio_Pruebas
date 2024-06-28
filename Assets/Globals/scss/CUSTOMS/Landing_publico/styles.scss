@@ -1,0 +1,183 @@
+
+&.page_landing_home{
+
+    
+    .co_cards.cards_options{
+     margin-top: -95px;
+
+    
+            .card{
+
+
+                img{
+                    display: table;
+                    margin: 0 auto;
+                    width: 75px;
+                   
+                }
+
+
+             
+
+                &:hover{
+                  
+                    -webkit-box-shadow: 0px 14px 40px -12px rgba(0,0,0,0.25);
+                    -moz-box-shadow: 0px 14px 40px -12px rgba(0,0,0,0.25);
+                    box-shadow: 0px 14px 40px -12px rgba(0,0,0,0.25);
+                    .card_footer{
+                    .cpl_btn.aqua{
+                        background-color:  #00aec7!important;
+                        border-color:  #00aec7!important;
+                        color: #fff!important;
+                    }
+                }
+                    
+                }
+            }
+     
+    }
+    .full_banner{
+        max-width: 900px;
+        border-radius: 6px; background-color: #fff;  padding: 20px;
+            
+            background-size: auto 100%;
+            background-position: bottom right -50px;
+            -webkit-box-shadow: 0px 14px 5px -12px rgba(0,0,0,0.25);
+            -moz-box-shadow: 0px 14px 5px -12px rgba(0,0,0,0.25);
+            box-shadow: 0px 14px 5px -12px rgba(0,0,0,0.25);
+            
+        @include mdMax{
+            max-width: 420px;
+            .cpl_btn{ margin-top: 10px;}
+            h4{text-align: center;}
+        }
+    }
+    p{font-size: 1.1rem!important;}
+    .small-text{font-size: 1rem!important;}
+    background-color: map-get($colors, 'ex-lightGray' );
+    @include mdMax{
+        .texto_fraude{
+            max-width: 420px;
+            h3{text-align: center;}
+        }
+        .footer{
+            p{text-align: center!important;}
+        }
+
+    }
+    .footer{ 
+
+        border-top: 1px solid map-get($colors, 'lightGray' );
+        margin-top: 40px;
+        padding-top: 20px;
+
+        
+    }
+    .header{
+
+        h1{
+            margin: 0;
+            margin-top: 10px;
+          
+
+
+        }
+      
+        @include mdMax{
+            h1{text-align: center;}
+       h4{text-align: center;}
+        }
+        .bienvenido{
+            @include mdMax{ order: 1;}
+        }
+        .logo{
+            height: 65px;
+            img{
+             height: 65px;  
+             float: left; 
+            }
+            @include mdMax{ order: 0;}
+        }
+
+    //  background-color: map-get($colors, 'yellow' );
+    //  background-image:  url('../img/home_landing/10bgslider-y.jpg'); 
+     background-repeat: no-repeat;
+     background-size:auto 100%;
+    //  height: 150px;
+    padding-bottom: 70px;
+
+
+    }
+    .options{
+  
+
+        a{ text-decoration: none}
+     
+//         .option{
+//             @include geneBrow(flex-shrink, 0);
+//             height: 100%;
+//             img{
+//                 width: 75px;
+//                 display: table;
+//                 margin: 0 auto;
+//             }
+//             p{max-width: 200px;}
+//             -webkit-transition: all 200ms ease;
+// -moz-transition: all 700ms ease;
+// -ms-transition: all 700ms ease;
+// -o-transition: all 700ms ease;
+// transition: all 700ms ease;
+//             .hoverBar{
+//                 -webkit-transition: all 200ms ease;
+// -moz-transition: all 200ms ease;
+// -ms-transition: all 200ms ease;
+// -o-transition: all 200ms ease;
+// transition: all 200ms ease;
+//                 width: 25px;
+//                 height: 3px;
+//                 margin: 0 auto;
+//                 background-color: map-get($colors, 'yellow' );
+//                 margin-top: 10px;
+//                 margin-bottom: 20px;
+              
+
+//             }
+//             &:hover{
+// -webkit-box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+// -moz-box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+// box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+// .hoverBar{
+//     background-color: map-get($colors, 'blue' );
+//     width: 45px;
+// }
+
+//             }
+//             padding: 20px;
+//             @include disp(flex);
+//             @include geneBrow(flex-direction, column);
+//             @include geneBrow(justify-content, space-between);
+//             max-width: 290px;
+//             margin: 0 auto;
+//             background-color: map-get($colors, 'white' );
+//             border-radius: 6px;
+
+//             background-size: 125px auto;
+//             min-height: 320px;
+//             background-repeat: no-repeat;
+//             background-position: bottom 10px right 10px;
+// //        
+            
+
+//             @include mdMax{ 
+
+//                 max-width: 420px;
+//                 min-height: 220px;
+//                 background-size: 100px auto;
+//                 background-position: bottom -10px right -10px;
+
+//             }
+
+//         }
+        
+    }
+}

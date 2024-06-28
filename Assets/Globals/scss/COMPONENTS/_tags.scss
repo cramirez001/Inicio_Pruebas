@@ -1,0 +1,13 @@
+//tags 
+.cpl_tag {
+    border-radius: 3px;
+    padding: 3px;
+    background-color: map-get($colors, "blue");
+    color: #fff;
+    
+    text-transform: uppercase;
+    display: inline-block;
+    padding-right: 6px;
+    padding-left: 6px;
+    text-align: center;
+  }

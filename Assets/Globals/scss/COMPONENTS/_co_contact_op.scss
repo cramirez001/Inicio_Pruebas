@@ -1,0 +1,142 @@
+.co_contact_op{
+    @include disp(flex);
+    @include geneBrow(flex-wrap, wrap);
+
+    @include geneBrow(align-items, flex-start);
+   @include md{
+    margin-left: -5px;
+    margin-right: -5px;
+    width: calc(100% + 10px);
+}
+
+    @include mdMax{
+        @include geneBrow(flex-direction, column);
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    a.co_contact_option{
+        text-decoration: none!important; 
+    }
+    a.co_contact_option:hover{
+        background-color: map-get($colors, 'blue' );
+        border-color: map-get($colors, 'blue' );
+
+        .context, .title, .cpl_icon{ color: map-get($colors, 'white' )!important;}
+    }
+    .co_contact_option{
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+        overflow: hidden;
+        position: relative;
+        @include geneBrow(flex, 1);
+        margin: 5px;
+        border-radius: 6px;
+        border: solid 1.5px map-get($colors, 'blue' );
+        padding: 20px;
+        @include disp(flex);
+        @include geneBrow(flex-wrap, wrap);
+        @include geneBrow(align-items, center);
+        cursor: pointer;
+        
+        @include mdMax{
+            width: 100%;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+
+        .cpl_close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 9;
+            font-size: $s8!important;
+            display: none;
+            font-weight: lighter;
+           
+        }
+        &.active{
+            .cpl_close{
+              display: block;  
+            }
+        }
+        
+&.op_whatsapp{
+    background-color: map-get($colors, 'green' );
+    border-color:map-get($colors, 'green' );
+    &:hover{
+        background-color: map-get($colors, 'darkGreen' );
+        border-color: map-get($colors, 'darkGreen' );
+    }
+    &.active{    background-color: map-get($colors, 'green' )!important;}
+    .context, .title, .cpl_icon{ color: map-get($colors, 'white' )!important;
+    }
+    p{ color: map-get($colors, 'white' )!important}
+    .cpl_btn{
+        background-color: map-get($colors, 'darkGreen' )!important;
+        border-color: map-get($colors, 'darkGreen' )!important;
+        color: map-get($colors, 'white' )!important;
+        margin-bottom: 20px!important;
+        &:hover{
+            background-color: map-get($colors, 'white' )!important;
+            border-color: map-get($colors, 'white' )!important;
+            color: map-get($colors, 'green' )!important;
+        }
+    }
+
+}
+
+        .co_contact_left_area{
+       padding-right: 10px;
+       .cpl_icon{
+           font-size: $s12!important;
+       }
+        }
+        .co_contact_right_area{}
+        .co_contact_detail{
+            --animate-duration: 0.3s;
+            display: none;
+            border-top: solid 1.5px map-get($colors, 'darkGreen' );
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .context{
+            font-size: $s_h3!important;
+            font-family: $fontCorp;
+            color: map-get($colors, 'blue' );
+
+        }
+        .title{
+            font-size: $s_h1!important;
+            font-family: $fontCorp!important;
+            font-weight: 600!important;
+            color: map-get($colors, 'blue' );
+
+        }
+
+        
+
+       
+    }
+
+    &.small{
+    .co_contact_option{
+      
+            .context{
+                font-size: $s_h4!important;
+              
+    
+            }
+            .title{
+                font-size: $s_h2!important;
+             
+    
+            }
+        }
+
+    }
+}

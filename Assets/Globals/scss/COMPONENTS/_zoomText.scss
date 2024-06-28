@@ -1,0 +1,14 @@
+.cpl_zoom_text{
+#text_zoom_increment{
+    font-size: 23px;
+    padding: 20px;
+    border: solid 1px map-get($colors, 'lightGray' );
+}
+#text_zoom_decrement
+{
+    font-size: 23px;
+    padding: 20px;
+    border: solid 1px map-get($colors, 'lightGray' );
+
+}
+}

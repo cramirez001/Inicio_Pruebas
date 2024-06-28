@@ -1,0 +1,21 @@
+@import "A_MASTERCLASS/masterclass.scss";
+
+@import "ABSTRACTS/_ABSTRACTS_dir";
+
+@import "BASE/_BASE_dir";
+
+@import "COMPONENTS/_COMPONENTS_dir";
+
+@import "LAYOUT/_LAYOUT_dir";
+
+@import "OTHERS/_OTHERS";
+
+@import "./PROPERTIES/_PROPERTIES_dir";
+
+@import "./animate2";
+
+// Exclusivo de este main
+
+@import "./extend.scss";
+
+

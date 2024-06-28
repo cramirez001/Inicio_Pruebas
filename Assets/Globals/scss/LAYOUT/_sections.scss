@@ -1,0 +1,37 @@
+.cpl_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    float: none;
+    padding: 15px;
+    // @include disp(flex!important);
+    // @include geneBrow(flex-direction, column!important);
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+  }
+
+.cpl_sidebar {
+  width: 100%;
+  max-width: 300px;
+  float: left;
+}
+
+.cpl_bodybar {
+  width: calc(100% - 320px);
+  float: left;
+  margin-left: 20px;
+}
+
+@include mdMax {
+  .cpl_sidebar,
+  .cpl_bodybar {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cpl_bodybar {
+    margin-left: 0;
+  }
+}
+
+
+

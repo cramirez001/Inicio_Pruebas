@@ -1,0 +1,39 @@
+// Sass configuration
+{
+   // See https://go.microsoft.com/fwlink/?LinkId=733558
+   // for the documentation about the tasks.json format
+   "version": "2.0.0",
+   "tasks": [
+
+    {    
+        "label": "COMPILAR",
+        "type": "shell",
+        "dependsOn": ["Sass Compile", "Sass Compile and deliver"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+          }
+    },
+       {
+           "label": "Sass Compile",
+           "type": "shell",
+           "command": "sass custom.scss:../../../css/customs/Landing_publico/custom.css --style compressed",
+           "group": "build"
+       },
+       {
+        "label": "Sass Compile and deliver",
+        "type": "shell",
+        "command": "sass custom.scss:../../../../Proyectos/landing-www.afpcapital.cl/css/customs/custom.css --style compressed",
+        "group": "build"
+        
+    },
+   ]
+}
+
+
+
+
+
+ 
+
+

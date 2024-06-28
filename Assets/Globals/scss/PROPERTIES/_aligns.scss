@@ -1,0 +1,69 @@
+//Centrar div
+.center_div {
+    margin: 0 auto!important;
+    float: none !important;
+  }
+   // attr range
+   @include attrRange(center_div){
+    margin: 0 auto!important;
+    float: none !important;
+    }  
+
+    //Centrar text
+.center_text {
+    text-align: center !important;
+}
+@include attrRange(center_text){
+  text-align: center !important;
+}
+ 
+//Centrar contenido
+.center_cont {
+    // @include geneBrow (flex, 0 0 100%);
+    @include disp(flex);
+    @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, center);
+    @include geneBrow(flex-wrap, wrap);
+    @include geneBrow(flex-direction, column);
+    > * {
+      @include geneBrow(flex, 0 0 1);
+    }
+    
+  }
+   // attr range
+  @include attrRange(center_cont){
+    @include disp(flex);
+    @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, center);
+    @include geneBrow(flex-wrap, wrap);
+    @include geneBrow(flex-direction, column);
+    > * {
+      @include geneBrow(flex, 0 0 1);
+    }
+  }  
+
+
+  .center_cont_row {
+    // @include geneBrow (flex, 0 0 100%);
+    @include disp(flex);
+    @include geneBrow(justify-content, center!important);
+    @include geneBrow(align-items, center!important);
+    @include geneBrow(flex-wrap, wrap);
+    @include geneBrow(flex-direction, row);
+    > * {
+      @include geneBrow(flex, 0 0 1);
+    }
+  }
+     // attr range
+    @include attrRange(center_cont_row){
+    // @include geneBrow (flex, 0 0 100%);
+    @include disp(flex);
+    @include geneBrow(justify-content, center!important);
+    @include geneBrow(align-items, center!important);
+    @include geneBrow(flex-wrap, wrap);
+    @include geneBrow(flex-direction, row);
+    > * {
+      @include geneBrow(flex, 0 0 1);
+    }
+      }  
+

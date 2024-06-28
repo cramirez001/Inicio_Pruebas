@@ -1,0 +1,906 @@
+//cpl_input
+        .cpl_input {
+            @include geneBrow(box-sizing, border-box);
+            @include geneBrow(border-radius, 3px);
+            font-size: $s_input;
+            font-weight: 500;
+            color: map-get($colors, "blue") !important;
+            padding: 9px !important;
+            margin: 0;
+            position: relative;
+            float: left;
+            width: 100%;
+            font-family: $fontCorp;
+            height: auto;
+            margin-bottom: 0px;
+            display: block;
+            background-color: map-get($colors, 'extraLightGray' )!important;
+          
+            border: 2px solid map-get($colors, "lightGray");
+            background-color: white;
+            // max-height: 43px;
+            &:focus {
+              border: 2px solid map-get($colors, "aqua");
+              background-color: white;
+              outline: 0px;
+              color: map-get($colors, "blue");
+            }
+          
+            &:disabled {
+              background-color: map-get($colors, "ex-lightGray");
+              opacity: 0.6;
+              color: map-get($colors, 'gray' )!important;
+          
+            }
+           
+          
+            &.cpl_input_error{
+              border-color: map-get($colors, 'red' )!important;
+            }
+          
+            &.cpl_input_ok{
+              // border-color: map-get($colors, 'green' )!important;
+              // position: relative;
+              
+            }
+          }
+//cpl_input
+  //password
+  input[type="password"].cpl_input {
+    letter-spacing: 6px;
+    font-weight: 900;
+    &::placeholder{
+      letter-spacing: normal;
+      font-weight: normal;
+      }
+    &:-ms-input-placeholder{
+      letter-spacing: normal;
+      font-weight: normal;
+      }
+    &::-ms-input-placeholder{
+      letter-spacing: normal;
+      font-weight: normal;
+      }
+    &::-webkit-input-placeholder{
+    letter-spacing: normal;
+    font-weight: normal;
+    }
+    &:-moz-input-placeholder{
+      letter-spacing: normal;
+      font-weight: normal;
+      }
+    &::-moz-input-placeholder{
+      letter-spacing: normal;
+      font-weight: normal;
+      }
+  }
+//password
+//select
+select.cpl_input,.select_input {
+
+    @include geneBrow(appearance, none);
+    background-image: url("../img/arrow-down.png");
+  
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: auto 25%;
+    &::-ms-expand {
+      display: none;
+    }
+          padding-right: 40px!important;
+          background-image:
+          linear-gradient(45deg, transparent 50%, map-get($colors, 'darkGray') 50%),
+          linear-gradient(135deg, map-get($colors, 'darkGray') 50%, transparent 50%),
+            linear-gradient(to right, map-get($colors, 'lightGray'), map-get($colors, 'lightGray'));
+          background-position:
+            calc(100% - 15px) calc(1em + 2px),
+            calc(100% - 10px) calc(1em + 2px),
+            calc(100% - 31px) 7px;
+          background-size:
+            5px 5px,
+            5px 5px,
+            2px 1.5em;
+          background-repeat: no-repeat;
+
+
+          &:focus {
+            background-image:
+            linear-gradient(45deg, transparent 50%, map-get($colors, 'aqua') 50%),
+            linear-gradient(135deg, map-get($colors, 'aqua') 50%, transparent 50%),
+            linear-gradient(to right, map-get($colors, 'aqua'), map-get($colors, 'aqua'));     
+          } 
+        }
+        
+        
+//select
+//textarea
+textarea.cpl_input {
+  max-width: 100% !important;
+  resize: vertical;
+}
+//textarea
+//envía y descarga
+.cpl_envia_descarga {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    min-height: 100px;
+  
+  
+  
+    @include disp(flex);
+  
+    @include geneBrow(justify-content, center);
+  
+  
+  
+    .envia {
+      width: 50%;
+     
+      flex-wrap: wrap;
+  
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-top: 10px;
+      
+    }
+  
+    .descarga {
+      width: 50%;
+  
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-top: 10px;
+     
+      .cpl_btn{
+        margin: 0 auto;
+        float: none;
+      }
+  
+      @include md{
+        border-right: map-get($colors , 'lightGray' ) 1px solid;
+        
+      }
+    }
+  }
+  @include md {
+    .cpl_col_divider {
+      border-right: 1px solid #e1e2e7;
+    }
+  
+    .cpl_envia_descarga .descarga .cpl_btn {
+      max-width: 300px;
+      margin-bottom: 13px;
+    }
+  }
+  @include mdMax {
+    .cpl_envia_descarga {
+      @include geneBrow(flex-direction, column);
+      max-width: 300px;
+    }
+  
+    .cpl_envia_descarga .envia {
+      width: 100%;
+      max-width: 450px;
+     
+    }
+    .cpl_envia_descarga .descarga {
+      width: 100%;
+      max-width: 450px;
+   
+    }
+  }
+  @include xld {
+    .cpl_col_l_divider {
+      border-right: 1px solid #e1e2e7;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .cpl_envia_descarga .envia {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .cpl_envia_descarga .descarga {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+//envía y descarga  
+//Custom select
+
+
+  
+.custom_select{
+   content:'custom_select';
+    @extend .cpl_input;
+    @extend .select_input;
+    &.error{
+      border-color: map-get($colors, 'red' );
+    }
+    padding: 0!important;
+    height: 43px;
+  
+  .cpl_fondo{
+    padding: 0;
+    .fondo_icon{
+      padding: 0;
+      margin: 0;
+    }
+  }
+    .selected{
+     padding-left: 7px;
+     height: 39px;
+     @include disp(flex);
+     @include geneBrow(align-items, center);
+    
+  
+  
+      padding-right: 40px!important;
+    }
+    @include sdMax{
+      background-image: linear-gradient(45deg, transparent 50%, #d0d6d9 50%),linear-gradient(135deg, #d0d6d9 50%, transparent 20%),linear-gradient(to right, #d0d6d9, #d0d6d9);
+        background-position: calc(100% - 10px) calc(1em + 2px),calc(100% - 5px) calc(1em + 2px),calc(100% - 1.3em) 0.5em;
+        .selected{
+        padding-right: 12px!important;
+      }
+    }
+    ul{ 
+       background: rgb(255, 255, 255);
+              border: 1px rgb(220, 220, 220) solid;
+              border-radius: 6px;
+              box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+              width: calc(100% + 2px);
+      display: none;
+      position: absolute; 
+   
+      padding: 0;
+      border-radius: 3px;
+      z-index: 99;
+      background-color: map-get($colors, 'white' );
+      list-style: none;
+      margin: 0;
+      left: -1px;
+      right: -1px;
+      top:-1px;
+      border:  solid 1px map-get($colors, 'lightGray' ); }
+      li{
+        padding-left: 5px;
+        padding-left: 5px;
+        height: 43px;
+        border-bottom: 1px solid map-get($colors, 'lightGray' );
+        @include disp(flex);
+        @include geneBrow(align-items, center);
+        width: 100%;
+        
+       
+     
+       
+        list-style: none;
+        
+        position: relative;
+        float: left;
+        &:last-child{ border: 0;}
+        
+      }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //Custom Select
+// Partamos por el contenedor o constructor
+.cpl_flex_form {
+	width: 100%;
+	.input_wrap {
+		//input_wrap Properties ---------------------------------------------------------------------------------------------------------------------
+		@include disp(flex);
+		@include geneBrow(flex-direction, column);
+		@include geneBrow(align-items, flex-end);
+		@include geneBrow(justify-content, flex-end);
+		position: relative;
+		margin-bottom: 20px;
+		//input_wrap contents >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        
+      
+        //cpl_btn
+        .cpl_btn {
+            margin-bottom: 0 !important;
+        }
+        //cpl_btn
+        // Label
+        label{
+            margin-top: 27px;
+            padding-bottom: 3px!important;
+        }
+		label,
+		label.label_l,
+		p {
+			min-height: auto;
+			position: relative;
+			width: 100%;
+			float: left;
+			margin-top: 0;
+			margin-bottom: 2px;
+			p,
+			span {
+				width: 100%;
+				position: relative;
+				bottom: 1px !important;
+				font-size: $s_p;
+				font-weight: 500 !important;
+				color: map-get($colors, "extraDarkGray") !important;
+				float: left;
+				margin: 0 !important;
+				font-family: $fontCorp2 !important;
+				font-weight: 600 !important;
+			}
+		}
+        // Label
+
+        
+
+        // Errors
+        .f_error {
+    
+            color: map-get($colors, "red") !important;
+            line-height: 99%;
+            text-align: left;
+            
+            margin-bottom: 10px;
+            position: absolute;
+            top: calc(100% - 5px);
+            border: 0;
+            border-top: 2px solid map-get($colors, "red");
+            right: 7px;
+            left: 7px;
+      
+            border-radius: 0 0 3px 3px;
+            padding: 5px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: $s2!important;
+            font-weight: 500!important;
+            width: calc(100% - 14px);
+                font-family: $fontCorp2;
+            }
+        //Errors
+
+
+
+		//input_wrap aditional atributes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	
+		// Radio wrap
+		&.radio_wrap,
+		&.checkbox_wrap {
+			@include geneBrow(justify-content, auto);
+			@include geneBrow(flex-wrap, wrap);
+			@include geneBrow(flex-direction, row);
+			@include geneBrow(justify-content, normal);
+			>* {
+				@include geneBrow(flex, 0 0 1);
+			}
+		}
+        // Radio wrap
+		// Campo Porcentaje
+		&.percentage_wrap {
+			&:after {
+				position: absolute;
+				right: -2px !important;
+				left: auto !important;
+				text-align: left;
+				font-weight: 500 !important;
+				bottom: 14px;
+				width: 30px;
+				font-family: $fontCorp;
+				color: map-get($colors, "drakGray");
+				content: "%";
+				z-index: 9;
+			}
+			.cpl_input {
+				padding-right: 40px !important;
+				background-image: linear-gradient( 45deg, transparent 50%, transparent 50%), linear-gradient(135deg, transparent 50%, transparent 50%), linear-gradient( to right, map-get($colors, "lightGray"), map-get($colors, "lightGray"));
+				background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 5px) calc(1em + 2px), calc(100% - 31px) 7px;
+				background-size: 5px 5px, 5px 5px, 2px 1.5em;
+				background-repeat: no-repeat;
+			}
+			.cpl_input:focus {
+				background-image: linear-gradient( 45deg, transparent 50%, transparent 50%), linear-gradient(135deg, transparent 50%, transparent 50%), linear-gradient( to right, map-get($colors, "aqua"), map-get($colors, "aqua"));
+			}
+		}
+        // Campo Porcentaje
+        // Campo Selección
+
+      // Campo Selección
+      //campo busqueda
+      &.search_wrap {
+        @include geneBrow(flex-direction, row);
+        .searching {
+          position: fixed;
+          top: 0 !important;
+          left: 0 !important;
+          bottom: 0 !important;
+          right: 0 !important;
+          width: 100%;
+          left: auto;
+          right: auto;
+          text-align: center;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.8);
+          color: map-get($colors, "blue");
+          font-weight: 900;
+          overflow: hidden;
+          display: none;
+          z-index: 9999999;
+  
+          &.active_searching {
+            @include disp(flex!important);
+            @include geneBrow(flex-wrap, wrap);
+            @include geneBrow(flex-direction, column);
+            @include geneBrow(justify-content, center);
+          }
+        }
+  
+        
+  
+        .cpl_input {
+          width: calc(100% - 105px)!important;
+          margin-right: 5px;
+          float: left;
+          
+        }
+  
+        
+        .cpl_btn {
+          content: 'Buscar';
+          width: 100px;
+          margin-top: 0 !important;
+          float: left;
+  
+        }
+        .f_error{
+          right: 110px;
+        }
+  
+  
+        &.without_btn{
+          .cpl_input {
+            width: 100%!important;
+          
+          }
+          .f_error{
+            right: 7px;
+          }
+        }
+  
+    
+        
+      }
+//campo busqueda      
+// PREFIJOS
+ &.telMovil input,
+ &.telFijo input{
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%),linear-gradient(to right, rgb(208, 214, 217), rgb(208, 214, 217));
+    background-position: calc(32% - 20px) calc(1em + 2px),calc(32% - 15px) calc(1em + 2px),54px 7px;
+    background-size: 5px 5px, 5px 5px, 2px 1.5em;
+    background-repeat: no-repeat;
+    padding-left: 64px!important;
+}
+&.telMovil:before,
+&.telFijo:before {
+    position: absolute;
+    left: 12px;
+    text-align: left;
+    bottom: 14px;
+    width: 50px;
+    font-family: $fontCorp;
+    color: map-get($colors, 'darkGray' );
+    z-index: 1;font-weight: 500!important;
+    font-family: $fontCorp;
+}
+ &.telMovil:before{ content: '+56 9'; }
+ &.telFijo:before{ content: '+56 2'; }
+// PREFIJOS
+
+
+
+	}
+
+   
+}
+// Cpl_flex_form
+
+
+
+
+.send_mail {
+    label {
+      width: 100%;
+    }
+    .input_wrap{
+      width: calc(100% - 100px);
+      float: left;
+      position: relative;
+  
+      .f_error{
+  
+      color: map-get($colors, "red") !important;
+      line-height: 99%;
+      
+      margin-bottom: 10px;
+      position: absolute;
+      top: calc(100% - 5px);
+      border-top: 2px solid map-get($colors, "red");
+      right: 3px;
+      left: 3px;
+      // background: #ffffff;
+      border-radius: 0 0 3px 3px;
+      padding: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 2px;
+      font-weight: 400;
+      }
+    }
+    .cpl_input {
+     
+  
+     border-right: 0;
+  
+      border-radius: 50px 0 0 50px    ;
+    }
+    .cpl_btn {
+      width: 100px;
+      float: left;
+      border-radius: 0 50px 50px 0!important   ;
+    }
+  }
+
+//colores de los campos segun sun contenedor
+.b-yellow,
+.b-blue,
+.b-aqua {
+  .cpl_input {
+    border: 1px solid #fff;
+  }
+}
+.b-extraLightAqua {
+  .cpl_input {
+    border: 1px solid #fff;
+    &:focus {
+      border: 1px solid map-get($colors, "blue");
+    }
+  }
+}
+//colores de los campos segun sun contenedor
+
+// Check & radio
+.cpl_input_check, .cpl_checkbox,   .cpl_input_radio {
+    margin-top: 10px !important;
+    margin-bottom: 10px!important;
+   }
+// Check & radio
+
+
+// =====================================================
+// Este f error asigna los estilos de los errores de validacion que  estén fuera de un formulario
+//Es tambien la base del f_error
+// =====================================================
+.f_error {
+    white-space: wrap!important;
+    margin: 0 auto;
+    text-align: center;
+    color: map-get($colors, "red") !important;
+    line-height: 99%;
+    border-radius: 6px;
+    position: relative;
+    top: 1px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid map-get($colors, "red");
+    right: 3px;
+    padding: 15px;
+    font-weight: 400;
+  }
+
+
+  // ======================================================== 
+// estos están fuera del flex form, ya que beneficiarios aun no usaba el flex_ form
+// =====================================================
+
+  // RADIO INPUT 
+
+ 
+  .cpl_input_radio, .cpl_radio {
+    @include disp(flex);
+
+    width: auto!important;
+    @include geneBrow(align-self, flex-start);
+    
+
+    float: left;
+    padding-left:5px!important;
+    padding-right: 10px!important;
+  
+
+    position: relative;
+    padding-left: 35px;
+   
+    cursor: pointer;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    label, .label_l {
+      width: auto;
+      padding-top: 4px;
+      margin: 0 !important;
+      p {
+        float: left;
+        width: auto;
+        margin-right: 0 !important;
+      }
+    }
+
+    
+
+
+
+    span {
+      top: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+ 
+
+  
+ input[type="radio"] {
+
+
+
+  opacity: 0;
+  cursor: pointer;
+
+  z-index: 2; 
+  background: #ccc;
+  border-radius: 6px;
+  float: left;
+  cursor: pointer;
+
+  width: 37px;
+  height: 37px;
+  margin: 0;
+  margin-right: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+
+}
+
+p{padding-left: 4px;}
+
+.checkradio, .check {
+  
+  z-index: 1;
+    position: relative!important;
+    
+    height: 25px!important;
+    width: 25px!important;
+    display: block;
+
+    @include geneBrow(flex, 0 0 25px);
+ 
+    background-color: map-get($colors, 'extraLightGray' );
+    border: solid 2px map-get($colors, 'lightGray' );
+    border-radius: 50%;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  
+  &:hover input ~ .checkradio,  &:hover input ~ .check {
+    background-color: map-get($colors, 'extraLightAqua' );
+  }
+  
+  input:checked ~ .checkradio,  input:checked ~ .check {
+    background-color: map-get($colors, 'white' );
+    border: solid 2px map-get($colors, 'aqua' );
+  }
+  
+  
+  input:checked ~ .checkradio:after, input:checked ~ .check::after{
+    display: block;
+  }
+  
+  .checkradio:after, .check:after {
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: map-get($colors , 'aqua' );
+  }
+
+}
+// FIN RADIO INPUT
+  // CHECK INPUT 
+
+
+ 
+
+  .cpl_input_check, .cpl_checkbox {
+    @include disp(flex);
+
+    width: auto!important;
+    @include geneBrow(align-self, flex-start);
+    
+
+    float: left;
+    padding-left:5px!important;
+    padding-right: 10px!important;
+  
+
+    position: relative;
+    padding-left: 35px;
+   
+    cursor: pointer;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    label, .label_l {
+      width: auto;
+      padding-top: 4px;
+      margin: 0 !important;
+      p {
+        float: left;
+        width: auto;
+        margin-right: 0 !important;
+      }
+    }
+
+    
+
+
+
+    span, .cpl_checkmark {
+      top: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+ 
+
+  
+ input[type="checkbox"] {
+
+
+
+  opacity: 0;
+  cursor: pointer;
+
+  z-index: 2; 
+  background: #ccc;
+  border-radius: 6px;
+  float: left;
+  cursor: pointer;
+
+  width: 37px;
+  height: 37px;
+  
+  margin: 0;
+  margin-right: 5px;
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  float: left;
+
+}
+
+p{padding-left: 4px;}
+
+
+.checkbox, .cpl_checkmark, .check {
+
+  z-index: 1;
+  position: relative!important;
+    display: block;
+  height: 25px!important;
+  width: 25px!important;
+
+  @include geneBrow(flex, 0 0 25px);
+  background-color: map-get($colors, 'extraLightGray' );
+  border: solid 2px map-get($colors, 'lightGray' );
+  border-radius: 3px;
+
+  &:after {
+    
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+ .checkbox:hover, .cpl_checkmark:hover, .check:hover {
+  background-color: map-get($colors, 'extraLightAqua' );
+ 
+}
+
+input:checked ~ .checkbox, input:checked ~ .cpl_checkmark, input:checked ~ .check {
+  background-color: map-get($colors, 'aqua' );
+  border: solid 2px map-get($colors, 'aqua' );
+}
+
+
+input:checked ~ .checkbox:after, input:checked ~ .cpl_checkmark:after, input:checked ~ .check:after {
+  display: block;
+}
+
+.checkbox:after, .cpl_checkmark:after, .check::after {
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+}
+// FIN CHECK INPUT  
+
+
+
+  //eliminar
+  .img_add_ben img {
+    width: 60px;
+  }
+  .icon_check_edit {
+    background: url(../images/check.png) no-repeat 0 center / 20px auto
+      transparent;
+    padding-left: 30px !important;
+    float: left;
+  }
+  .cpl_alert.alert_btn p {
+    float: left;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 4px 0 !important;
+  }
+  .cpl_alert.alert_btn .btn_blank {
+    background: transparent;
+    color: #fff;
+    padding: 4px !important;
+    border-color: #fff;
+    float: right;
+   
+    font-weight: 100;
+    margin: 0;
+  }
+    //eliminar

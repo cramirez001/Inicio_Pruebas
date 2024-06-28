@@ -1,0 +1,79 @@
+.comunicaciones_login_persona{
+    width: 100%!important;
+    left: 0!important;
+    top: 0!important;
+    .cpl_body{
+
+    h2{ display: none!important;}
+
+    .cpl_login_box{
+        width: 100%;
+
+        .cpl_btn.small{
+            max-width: 100%!important;
+        }
+
+
+
+
+        @include mdMax{
+        .cpl_flex_form{
+            max-width: 100%;
+        } 
+    }
+
+
+    
+    .cpl_flex_form{
+
+      .contBtn-load{
+        margin-top: 0!important;
+      }
+
+        .input_wrap{
+            margin-bottom: 20px!important;
+            .f_error{
+                font-size: $s2!important;
+                top: calc(100% - 5px)!important;
+                width: calc( 100% - 14px)!important;
+
+            }
+          }
+
+        .cpl_input {
+            @include geneBrow(box-sizing, border-box);
+            @include geneBrow(border-radius, 3px);
+            font-size: $s_input;
+            font-weight: 500;
+            color: map-get($colors, "blue") !important;
+            padding: 9px !important;
+            margin: 0;
+            position: relative;
+            float: left;
+            width: 100%;
+            font-family: $fontCorp;
+          
+            height: auto;
+            margin-bottom: 0px;
+            display: block;
+            background-color: map-get($colors, 'extraLightGray' )!important;
+          
+            &:disabled {
+              background-color: map-get($colors, "ex-lightGray");
+              opacity: 0.6;
+            }
+          
+            &.cpl_input_error{
+              border-color: map-get($colors, 'red' )!important;
+            }
+          
+            &.cpl_input_ok{
+              // border-color: map-get($colors, 'green' )!important;
+              // position: relative;
+              
+            }
+          }
+    }
+    }
+}
+}

@@ -1,0 +1,42 @@
+#{$masterClass}{
+
+@import 'icons';
+@import 'bullets';
+@import 'links';
+@import 'list';
+@import 'tags';
+@import 'form(v2)';
+@import 'table';
+@import 'table_div';
+@import 'tableResumen';
+@import 'accordion';
+@import 'alerts';
+@import 'attachment'; //old
+@import 'banner';
+@import 'notificationBar.scss';
+@import 'buttons.scss';
+@import 'datepickers'; 
+@import 'states';
+@import 'fondos';
+@import 'headerPage';
+@import 'menuLateral.scss';
+@import 'modal';
+@import 'navigators';
+@import 'optionBoxes'; //old
+@import 'pageTitle'; //old
+@import 'stepLine';
+@import 'tabButtons';
+@import 'tipBox'; //old
+@import 'zoomText'; 
+@import 'envia_descarga.scss';
+
+@import 'co_cards/co_cards';
+@import 'co_cards/co_card_rentabilidad';
+@import 'co_contact_op';
+@import 'co_terms';
+@import 'co_wsp.scss';
+@import 'co_loader.scss';
+@import 'co_option_zone';
+
+
+}

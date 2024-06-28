@@ -1,0 +1,184 @@
+.co_cards{
+    .card{
+        &.card--rentabilidad_periodo{
+
+          
+           
+         
+        
+           
+
+
+.card_header{
+
+    // padding-bottom: 20px;
+ 
+}
+.card_date{
+    max-width: 300px;
+    @include disp(flex);
+    @include geneBrow(align-items, center);
+    @include geneBrow(justify-content, center);
+    padding-bottom: 20px;
+    margin: 0 auto;
+
+    @include mdMax{
+        @include disp(flex);
+        @include geneBrow(flex-direction, column);
+    }
+
+    
+        p{margin-bottom: 0!important;
+          font-size: 0.8em!important;
+          text-transform: uppercase
+        }
+        h4{
+ font-weight: 500!important;
+ margin-bottom: 0!important;
+ font-size: 1em!important;
+        }
+       
+        @include mdMax{
+    .date_start{margin-bottom: 15px;}   
+        } 
+    .date_start, .date_end{
+     
+        @include mdMax{
+   @include disp(flex);
+   @include geneBrow(align-items, center);
+   @include geneBrow(flex-direction, column);
+
+h4{
+    padding-left: 5px;
+}
+
+        }
+
+    }
+    
+    .date_end{
+        order: 2;
+    }
+    &::after{
+        content: map-get($iconos, 'icon-full-arrow-right-fill' );
+      order: 1;
+      margin-left: 30px;
+      margin-right: 30px;
+        font-family: $iconFont;
+        font-size: 20px;
+        color: map-get($colors, 'gray' );
+        @include mdMax{
+            display: none;
+        }
+    }
+}
+
+.card_body{
+    .cpl_fondo{
+
+        border-top: 0;
+        @include geneBrow(justify-content, space-between!important);
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-bottom: solid 1.5px map-get($colors, 'lightGray' );
+        border-left: solid 1.5px map-get($colors, 'lightGray' );
+        border-right: solid 1.5px map-get($colors, 'lightGray' );
+        &:first-child{
+            border-top: solid 1.5px map-get($colors, 'lightGray' );
+        }
+       
+    }
+}
+
+&.card_landScape{
+    .card_body{
+        .cpl_fondo{
+            border: 0;
+            border-left: 1px solid map-get($colors, 'lightGray' );
+        }
+    
+    }
+}
+               
+            
+
+            
+&.card--doubleContent{
+    // @include md{
+     
+        .card_cont{
+            // background-color: map-get($colors, 'red' )!important;
+            width: 50%!important;
+            height: auto!important;
+            &:first-child{
+                padding-right: 10px!important;
+            }
+            &:nth-child(2){
+                padding-left: 10px!important;
+            }
+        }
+    // }
+
+    @include mdMax{
+      
+
+
+        .card_cont{
+            padding: 0;
+           
+            padding-bottom: 20px;
+
+            &:first-child{
+                padding-right: 0px!important;
+                .card_header{
+                    position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0px; bottom: 0px;
+                    right: -1px;
+                    width: 2px;
+                    background-color: map-get($colors, 'lightGray' );
+
+
+                }
+            }
+                .cpl_fondo{
+                    border-left: 0;
+                }
+            }
+            &:nth-child(2){
+                padding-left: 0px!important;
+                .cpl_fondo{
+                    border-right: 0;
+                }
+            }
+
+            .card_header{
+                padding: 20px;
+                padding-bottom: 0;
+                padding-top: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                h4{
+                    margin-bottom: 0!important;
+                }
+            }
+        }
+
+        
+    }
+    @include sdMax {
+        .date_start, .date_end{
+            h4{font-size: 0.9em!important ;}
+            p{font-size: 0.7em!important ;}
+        }
+    }
+}
+
+
+        }
+    }
+}

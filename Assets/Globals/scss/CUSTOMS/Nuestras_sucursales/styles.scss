@@ -1,0 +1,90 @@
+.sucursal_cerrada{
+    order:1!important;
+    }
+    
+    .sucursal_cerrada  .card{
+    border-color: map-get($colors, 'red') !important;
+    .card_cont{
+    background-color: map-get($colors, 'extraLightRed')!important;
+    }
+    }
+
+    
+    // .sucursal_cerrada .card::before {
+    // content: '';
+    // position: absolute;
+    // top: 3px;
+    // left: 3px;
+    // right: 3px;
+    // bottom: 3px;
+    // background-color: map-get($colors, 'extraLightRed')!important;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // z-index: 2;
+    // border-radius: 6px;
+    // }
+    .sucursal_cerrada .card::after {
+    content: 'Sucursal Cerrada';
+    padding: 5px;
+    background-color: map-get($colors, 'red') !important;
+    position: absolute;
+    left: 30px;
+    border-radius: 0 0 6px 6px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 3;
+    font-size: 0.8em;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    .atencion_especial{
+    order:2!important;
+    }
+    .atencion_especial  .card{
+    border-color: map-get($colors, 'aqua') !important;
+    }
+    // .atencion_especial .card::before {
+    // content: '';
+    // position: absolute;
+    // top: 3px;
+    // left: 3px;
+    // right: 3px;
+    
+    // bottom: 3px;
+    // background-color: rgba(0, 174, 199, 0.1);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // z-index: 2;
+    // border-radius: 6px;
+    // }
+    .atencion_especial .card::after {
+    content: 'Horario especial';
+    padding: 5px;
+    background-color: map-get($colors, 'aqua') !important;
+    position: absolute;
+    left: 30px;
+    border-radius: 0 0 6px 6px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 3;
+    font-size: 0.8em;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    .sucursal_crd {
+    /* display: none; */
+    order: 3;
+    .card{
+    border: solid 2px map-get($colors, 'lightGray' );
+}
+    }
+    .sucursal_crd h2{
+    // font-size: 1.2em!important;
+    }
+    #alert_sucursal{
+    display: none;
+    }

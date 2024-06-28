@@ -1,0 +1,177 @@
+/*Fondos*/
+.Seleccionador_fondo{
+
+  width: 20%;
+  float: left;
+  .fondo{
+  border-radius: 1000px;
+  height: 100px;
+  width: 100px;
+  background-color: map-get($colors, 'gray' );
+  &.A {
+    background-color: #cf4143;
+  }
+  
+  &.B {
+    background-color: #e5a700;
+  }
+  
+  &.C {
+    background-color: #a1c619;
+  }
+  
+  &.D {
+    background-color: #5da6e3;
+  }
+  
+  &.E {
+    background-color: #477fc9;
+    
+  }
+  }
+}
+.cpl_fondo {
+  font-family: $fontCorp;
+  @include disp(flex); 
+  @include geneBrow(flex-direction, row);
+  @include geneBrow(align-items, center);
+  margin-left: 3px; margin-right: 3px;
+  p, span{
+    font-family: $fontCorp!important;
+    font-weight: 600!important;
+    margin: 0!important;
+
+  }
+
+
+  // &.porcentaje{
+  //   .fondo_icon:before{
+  //     content:'';
+  //     position: absolute;
+  //     top:-1px;
+  //  width: 330%;
+  //  left: 0;
+  //    height: 29px;
+  //     border-radius: 40px;
+  //     background-color: #333;
+  //     z-index: -1;
+  //   }
+  //   .fondo_icon{z-index: 2; position: relative;
+    
+
+  //     &.fondo_icon.A::before {
+  //       background-color: #cf4143;
+  //     }
+      
+  //     &.fondo_icon.B::before {
+  //       background-color: #e5a700;
+  //     }
+      
+  //     &.fondo_icon.C::before {
+  //       background-color: #a1c619;
+  //     }
+      
+  //     &.fondo_icon.D::before {
+  //       background-color: #5da6e3;
+  //     }
+      
+  //     &.fondo_icon.E::before {
+  //       background-color: #477fc9;
+  //     }
+    
+    
+  //   }
+  //   span.porcentaje{
+  //     color: map-get($colors, 'white' );
+  //     z-index: 3;
+  //   }
+
+  // }
+.fondo_icon {
+  line-height: 12%;
+  // padding-top: 1%;
+  
+  margin: 0 auto;
+  @include disp(flex);
+  @include geneBrow(align-items, center);
+  @include geneBrow(justify-content, center);
+  @include geneBrow(flex, 0 0 1);
+  font-weight: 900;
+  color: #fff;
+  border: #fff solid 2px;
+  width: 29px;
+  height: 29px;
+ 
+  @include geneBrow(border-radius, 50%);
+  font-size: $s7;
+   margin-left:2px;
+   margin-right: 2px;
+
+
+   
+    
+    &.fondo_icon.A {
+      background-color: #cf4143;
+    }
+    
+    &.fondo_icon.B {
+      background-color: #e5a700;
+    }
+    
+    &.fondo_icon.C {
+      background-color: #a1c619;
+    }
+    
+    &.fondo_icon.D {
+      background-color: #5da6e3;
+    }
+    
+    &.fondo_icon.E {
+      background-color: #477fc9;
+    }
+}
+
+
+ 
+span{
+  // margin-right: 4px;
+  font-weight: 700;
+  font-size: $s3!important;
+
+}
+
+&.big .fondo_icon{
+  width: 40px;
+  height: 40px;
+  font-size: $s5!important;
+  border: #fff solid 3px;
+  
+}
+
+&.giant .fondo_icon{
+  width: 70px;
+  height: 70px;
+  font-size: $s7!important;
+  border: #fff solid 3px;
+  
+}
+
+
+
+&.small .fondo_icon{
+  width: 22px;
+  height: 22px;
+  font-size: $s2!important;
+  border: #fff solid 1px;
+}
+
+&.small span{
+  font-size: $s2!important
+}
+
+
+
+  
+}
+
+/*FIn Fondos*/

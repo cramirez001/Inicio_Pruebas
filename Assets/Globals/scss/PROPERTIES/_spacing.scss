@@ -1,0 +1,155 @@
+
+
+@each $name, $value in $spacingRange {
+
+.spacing_#{$name},
+  .margin_#{$name} {
+    margin: $value !important;
+  }
+
+         // attr range
+ @include attrRange(spacing_#{$name}){
+  margin: $value !important;
+     } 
+
+              // attr range
+ @include attrRange(margin_#{$name}){
+  margin: $value !important;
+     } 
+
+  .padding_#{$name} {
+    padding: $value !important;
+  }
+
+                // attr range
+ @include attrRange(padding_#{$name}){
+  padding: $value !important;
+     } 
+
+
+  
+
+  .offset_#{$name} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+    > .flex_row {
+      margin-right: -$value !important;
+      margin-left: -$value !important;
+    }
+  }
+  
+            // attr range
+ @include attrRange(offset_#{$name}){
+  padding-left: $value !important;
+    padding-right: $value !important;
+    > .flex_row {
+      margin-right: -$value !important;
+      margin-left: -$value !important;
+    }
+     } 
+
+  // directions
+
+  @each $direction in $directions {
+    .margin_#{$direction}_#{$name} {
+      margin-#{$direction}: $value !important;
+    }
+       // attr range
+ @include attrRange(margin_#{$direction}_#{$name}){
+  margin-#{$direction}: $value !important;
+     } 
+
+
+    .padding_#{$direction}_#{$name} {
+      padding-#{$direction}: $value !important;
+    }
+
+         // attr range
+ @include attrRange(padding_#{$direction}_#{$name}){
+  padding-#{$direction}: $value !important;
+     } 
+  }
+
+ 
+
+
+}
+
+
+@each $name, $value in $spacingRange {
+
+.spacing_#{$name},
+  .margin_#{$name} {
+    margin: $value !important;
+  }
+
+         // attr range
+ @include attrRange(spacing_#{$name}){
+  margin: $value !important;
+     } 
+
+              // attr range
+ @include attrRange(margin_#{$name}){
+  margin: $value !important;
+     } 
+
+  .padding_#{$name} {
+    padding: $value !important;
+  }
+
+                // attr range
+ @include attrRange(padding_#{$name}){
+  padding: $value !important;
+     } 
+
+
+  
+
+  .offset_#{$name} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+    > .flex_row {
+      margin-right: -$value !important;
+      margin-left: -$value !important;
+    }
+  }
+  
+            // attr range
+ @include attrRange(offset_#{$name}){
+  padding-left: $value !important;
+    padding-right: $value !important;
+    > .flex_row {
+      margin-right: -$value !important;
+      margin-left: -$value !important;
+    }
+     } 
+
+  // directions
+
+  @each $direction in $directions {
+    .margin_#{$direction}_#{$name} {
+      margin-#{$direction}: $value !important;
+    }
+       // attr range
+ @include attrRange(margin_#{$direction}_#{$name}){
+  margin-#{$direction}: $value !important;
+     } 
+
+
+    .padding_#{$direction}_#{$name} {
+      padding-#{$direction}: $value !important;
+    }
+
+         // attr range
+ @include attrRange(padding_#{$direction}_#{$name}){
+  padding-#{$direction}: $value !important;
+     } 
+  }
+
+ 
+
+
+}
+
+
+// margins

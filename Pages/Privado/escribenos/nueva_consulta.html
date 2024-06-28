@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../../../Assets/Globals/css/cpl-Styles.css">
+      <link rel="stylesheet" href="../../../Assets/Customs/Publico/Formulario/css/custom.css">
+      <title>Document</title>
+      <script src="../../../Assets/Globals/js/jquery.js"></script>
+   </head>
+   <body>
+      <div class="cpl_body page_formulario">
+         <div class="cpl_container padding_top_medium">
+            <div class="flex_row">
+               <div class="cpl_col cpl_sidebar" style="z-index: 2;">
+                  <ul class="menu_lateral">
+                     <a class="active" href="./nueva_consulta.html">
+                        <li>Escríbenos</li>
+                     </a>
+                     <a href="./solicitudes-reclamos(inicio).html">
+                        <li>Estado de reclamos o consultas</li>
+                     </a>
+                  </ul>
+               </div>
+               <div class="cpl_col cpl_bodybar ">
+                  <div class="flex_row">
+                     <div class="cpl_col cpl_col_12 step step_1">
+                        <div class="flex_row option_zone ">
+                           <div class="cpl_col cpl_col_12">
+                              <h1 class="center_text ld_margin_bottom_medium xld_margin_bottom_medium">Formulario
+                                 de contacto
+                              </h1>
+                              <h3 class="sd_center_text md_center_text">Selecciona el motivo de contacto</h3>
+                           </div>
+                           <div class="cpl_col cpl_col_12 d-flex wrap wrap_cajas">
+                              <label class="cpl_input_radio caja">
+                                 <div class="circulo-padding">
+                                    <input id="1" class="radio_tipoSolicitud" type="radio"
+                                       name="radio_tipoSolicitud" value="consulta" /><span
+                                       class="check"></span>
+                                 </div>
+                                 <div class="cont">
+                                    <h3 class="p-sin title">
+                                       Consulta
+                                    </h3>
+                                    <p>
+                                       Solicitud de información o consulta de estado de avance de algún trámite
+                                    </p>
+                                    <div
+                                       class="cpl_flex_form margin_top_medium detalle_de_solicitud detalleConsulta">
+                                       <div class="flex_row">
+                                          <div class="cpl_col cpl_col_12 max_w_350 input_wrap">
+                              <label for=""><span>Detalle de solicitud</span></label>
+                              <select name="" id="" class="cpl_input">
+                              <option value="">
+                              Seleccionar
+                              </option>
+                              </select>
+                              <span class="f_error">Debes seleccionar el detalle</span>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </label>
+                              <label class="cpl_input_radio caja">
+                                 <div class="circulo-padding">
+                                    <input id="1" class="radio_tipoSolicitud" type="radio"
+                                       name="radio_tipoSolicitud" value="reclamo" /><span class="check"></span>
+                                 </div>
+                                 <div class="cont">
+                                    <h3 class="p-sin title">
+                                       Reclamo
+                                    </h3>
+                                    <p>
+                                       Queja por mala atención, por transacción no resuelta o malestar por
+                                       alguna determinada situación.
+                                    </p>
+                                    <div
+                                       class="cpl_flex_form margin_top_medium detalle_de_solicitud detalleReclamo">
+                                       <div class="flex_row">
+                                          <div class="cpl_col cpl_col_12 max_w_350 input_wrap ">
+                              <label for=""><span>Detalle del reclamo</span></label>
+                              <select name="" id="" class="cpl_input">
+                              <option value="">
+                              Seleccionar
+                              </option>
+                              </select>
+                              <span class="f_error">Debes seleccionar el detalle</span>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </label>
+                              <label class="cpl_input_radio caja">
+                                 <div class="circulo-padding">
+                                    <input id="1" class="radio_tipoSolicitud" type="radio"
+                                       name="radio_tipoSolicitud" value="tramite" /><span class="check"></span>
+                                 </div>
+                                 <div class="cont">
+                                    <h3 class="p-sin title">
+                                       Inicio de trámite
+                                    </h3>
+                                    <p>
+                                       Solicitud de contacto de un ejecutivo para realizar el ingreso de su
+                                       trámite de pensión, de retiro de fondos (extranjeros), de pagos en
+                                       exceso, entre otros.
+                                    </p>
+                                    <div
+                                       class="cpl_flex_form margin_top_medium detalle_de_solicitud detalleTramite">
+                                       <div class="flex_row">
+                                          <div class="cpl_col cpl_col_12 max_w_350 input_wrap">
+                              <label for=""><span>Trámite que deseas iniciar</span></label>
+                              <select name="" id="" class="cpl_input">
+                              <option value="">
+                              Seleccionar
+                              </option>
+                              </select>
+                              <span class="f_error">Debes seleccionar un trámite</span>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </label>
+                           </div>
+                           <div class="cpl_col cpl_col_12">
+                              <div class="f_error">Debes seleccionar una opción</div>
+                           </div>
+                           <div class="cpl_col cpl_col_12 margin_top_small">
+                              <a onclick="nextAndPrev('next', 'step_2')"
+                                 class="cpl_btn max_w_200 center_div">
+                                 Siguiente
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                   
+                     <div class="cpl_col cpl_col_12 step step_2 cpl_flex_form">
+                        <div class="flex_row">
+                           <div class="cpl_col cpl_col_12">
+                              <h3 class="t-extraDarkGray">Escribe aquí tu reclamo</h3>
+                              <p>Por favor incorpora la mayor cantidad de antecedentes para poder
+                                 resolver su solicitud. Ejemplo: Fechas involucradas, producto, tramite, etc
+                              </p>
+                           </div>
+                           <div class="cpl_col cpl_col_12 input_wrap textarea_wrap  ">
+                              
+                              <textarea name="ctl00$ctl48$g_9b4b1bec_818d_4414_95da_b9a62ed87d88$txtMensaje"
+                                 cols="30" rows="10"
+                                 id="ctl00_ctl48_g_9b4b1bec_818d_4414_95da_b9a62ed87d88_txtMensaje"
+                                 class="cpl_input textarea-generico txtMensaje margin_top_small"
+                                 placeholder="Máximo 1000 caracteres"></textarea>
+                              <div class="f_error">Debes escribir un mensaje</div>
+                           </div>
+                           <div class="cpl_col cpl_col_12 margin_bottom_small">
+                              <div class="cpl_accordion arrow_controler accordion_form_file">
+                                 <div class="accordion_item b-white">
+                                    <span></span>
+                                    <h4 class="center_text file_title"><strong>Adjuntar documentacion</strong>
+                                       (opcional)
+                                    </h4>
+                                    <div class="accordion_arrow_icon"></div>
+                                    <div class="accordion_content">
+                                       <div id="dropzone" class="dropzone"></div>
+                                       <p class="center_text margin_top_small">
+                                          Solo se admiten archivos  <strong>PDF, WORD, JPG, PNG.</strong>
+                                          <br>
+                                          Además, la suma total de los archivos adjuntos no debe superar los <strong>10 MB</strong>
+                                        </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="cpl_col cpl_col_12 margin_bottom_medium margin_top_small">
+                              <div class="flex_row center_div max_w_400">
+                                 <div 
+                                    class="cpl_col sd_cpl_col_6 md_cpl_col_6 ld_cpl_col_6 xld_cpl_col_6">
+                                    <a onclick="nextAndPrev('prev', 'step_1')"
+                                       class="cpl_btn max_w_200 center_div  secondary aqua">
+                                    Atrás</a>
+                                 </div>
+                                 <div class="cpl_col sd_cpl_col_6 md_cpl_col_6 ld_cpl_col_6 xld_cpl_col_6">
+                                    <a href="./enviado.html"
+                                       class="cpl_btn max_w_200 center_div btn_one_click">
+                                    Enviar</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="preview-template" style="display: none;">
+         <div class="dz-preview dz-file-preview">
+            <div class="dz-details">
+               <div class="dz-image"><img data-dz-thumbnail /></div>
+               <div class="dz-filename"><span data-dz-name></span></div>
+               <div class="dz-size" data-dz-size></div>
+            </div>
+            <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+            <div class="dz-success-mark"></div>
+            <div class="dz-error-mark"></div>
+            <div class="dz-error-message"><span data-dz-errormessage></span></div>
+         </div>
+      </div>
+      <!-- scripts -->
+      <script src="../../../Assets/Globals/js/globals.js"></script>
+      <script src="../../../Assets/Globals/js/accordion.js"></script>
+      <script src="../../../Assets/Globals/js/dropzone.js"></script>
+      <script src="../../../Assets/Globals/js/nextAndPrev.js"></script>
+      <script src="../../../Assets/Globals/js/modal.js"></script>
+      <!-- Configuración del dropzone (jquery) -->
+      <script>
+         Dropzone.autoDiscover = false;
+         $(document).ready(function () {
+         
+             var zdrop = new Dropzone('#dropzone', {
+                 url: 'https://httpbin.org/post',
+                 previewTemplate: document.getElementById('preview-template').innerHTML,
+                 dictDefaultMessage: `
+         <h3 class="t-extraDarkGray">Arrastra tus archivos archivos aquí</h3>
+         <a >
+         o selecciona tus archivos aquí
+         </a>
+         `,
+                 maxFilesize: 10,
+                 addRemoveLinks: true,
+                 dictRemoveFile: 'Quitar',
+                 dictCancelUpload: 'Cancelar',
+                 dictCancelUploadConfirmation: '¿Quieres cancelar la carga?',
+         
+                 // removeFilePromise: function() {
+                 //   return new Promise( (resolve, reject) => {
+                 //     let rand = Math.floor(Math.random() * 3)
+                 //     console.log(rand);
+                 //     if (rand == 0) reject('didnt remove properly');
+                 //     if (rand > 0) resolve();
+                 //   });
+                 // }
+         
+             });
+         });
+      </script>
+      <!-- mostrar select detalle segun tipo de solicitud -->
+      <script>
+         $('input[type=radio][name=radio_tipoSolicitud]').change(function () {
+             $('.detalle_de_solicitud').hide();
+             switch (this.value) {
+                 case 'consulta':
+         
+                     $('.detalleConsulta').show();
+                     $('html, body').animate({
+                         scrollTop: $(this).offset().top
+                     }, 200);
+                     break;
+         
+                 case 'reclamo':
+         
+                     $('.detalleReclamo').show();
+                     $('html, body').animate({
+                         scrollTop: $(this).offset().top
+                     }, 200);
+         
+                     break;
+         
+                 case 'tramite':
+         
+                     $('.detalleTramite').show();
+                     $('html, body').animate({
+                         scrollTop: $(this).offset().top
+                     }, 200);
+         
+                     break;
+         
+             }
+         
+         });
+      </script>
+   </body>
+</html>

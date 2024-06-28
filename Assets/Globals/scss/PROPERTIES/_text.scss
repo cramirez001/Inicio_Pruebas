@@ -1,0 +1,212 @@
+@use 'sass:math';
+//Font
+.font_style_h1 {
+  @include define_h1;
+}
+@include attrRange(font_style_h1) {
+  @include define_h1;
+}
+
+.font_style_h2 {
+  @include define_h2;
+}
+
+@include attrRange(font_style_h2) {
+  @include define_h2;
+}
+
+.font_style_h3 {
+  @include define_h3;
+}
+
+@include attrRange(font_style_h3) {
+  @include define_h3;
+}
+
+.font_style_h4 {
+  @include define_h4;
+}
+
+@include attrRange(font_style_h3) {
+  @include define_h3;
+}
+
+.font_style_p {
+  @include define_p;
+}
+
+@include attrRange(font_style_p) {
+  @include define_p;
+}
+
+// ________________________________TAMAÑOS______________________________________
+
+.font_size_normal {
+  font-size: $s2 !important ;
+}
+
+@include attrRange(font_size_normal) {
+  font-size: $s3 !important ;
+}
+
+.font_size_small {
+  font-size: $s2 !important ;
+}
+
+@include attrRange(font_size_small) {
+  font-size: $s2 !important ;
+}
+
+.font_size_extraSmall {
+  font-size: $s1 !important ;
+}
+
+@include attrRange(font_size_extraSmall) {
+  font-size: $s1 !important ;
+}
+
+
+.font_size_medium {
+  font-size: $s8 !important ;
+}
+
+@include attrRange(font_size_medium) {
+  font-size: $s8 !important ;
+}
+
+
+.font_size_big {
+  font-size: $s12 !important ;
+}
+
+@include attrRange(font_size_big) {
+  font-size: $s12 !important ;
+}
+
+// Clases con todos los tamaños disponibles (No están vinculadas a ningun otro elemento, por ejemplo un h1)
+//Ejemplo: fs_1, fs_2, fs_3
+// @each $number, $val in $unitsEm {
+//     .fs_#{$number}{
+//         font-size: $val!important;
+
+//     }
+// }
+
+@each $number, $val in $fontRange {
+  .font_size_#{$number} {
+    font-size: $val !important;
+  }
+
+  @include attrRange(font_size_#{$number}) {
+    font-size: $val !important;
+  }
+}
+
+// dependientes de los headings (tomarán el tamaño de un elemento, como un h1,
+// y adquirirá su tamaño, si el tamaño del h1 se cambia desde las variables, esta clase tambien cambiará
+// Ejemplo: fs_h1, fs_h2)
+@each $var, $val in $headings {
+  .font_size_#{$var} {
+    font-size: $val !important;
+    margin-bottom: math.div($val, 4) !important;
+    // line-height: 107%!important;
+  }
+
+  @include attrRange(font_size_#{$var}) {
+    font-size: $val !important;
+    margin-bottom: math.div($val, 4) !important;
+  }
+}
+
+.font_size_p {
+  font-size: $s_p !important;
+}
+
+@include attrRange(font_size_p) {
+  font-size: $s_p !important;
+}
+
+.font_size_input {
+  font-size: $s_input !important;
+}
+
+@include attrRange(font_size_input) {
+  font-size: $s_input !important;
+}
+
+// ___________________________________________WEIGHT______________________________________________
+
+@each $class in (100), (200), (300), (400), (500), (600), (800), (900) {
+  .font_weight_#{$class} {
+    font-weight: #{$class} !important;
+  }
+  @include attrRange(font_weight_#{$class}) {
+    font-weight: #{$class} !important;
+  }
+}
+
+.font_family_1 {
+  font-family: $fontCorp !important;
+}
+.font_family_2 {
+  font-family: $fontCorp2 !important;
+}
+
+//Text
+
+// _______________________________________ALINIEAMIENTOS_________________________________________
+
+.text_align_center {
+  text-align: center !important;
+}
+
+// attr range
+@include attrRange(text_align_center) {
+  text-align: center !important;
+}
+
+.text_align_left {
+  text-align: left !important;
+}
+
+// attr range
+@include attrRange(text_align_left) {
+  text-align: left !important;
+}
+
+.text_align_right {
+  text-align: right !important;
+}
+
+// attr range
+@include attrRange(text_align_right) {
+  text-align: right !important;
+}
+
+//______________________________________________FAMILY__________________________________________________
+
+//_____________________________________________ESTILOS_________________________________________________
+
+.cpl_number {
+  color: map-get($colors, "blue") !important;
+  font-family: $fontCorp !important;
+  font-weight: 600 !important;
+}
+
+
+.title_page{
+
+  margin-top: 20px!important;
+
+  @include mdMax{
+    margin-top: 0px!important;
+  }
+}
+
+
+
+
+.amount{
+  font-family: $fontCorp !important;
+  font-weight: 900!important;
+}

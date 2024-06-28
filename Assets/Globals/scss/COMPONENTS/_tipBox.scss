@@ -1,0 +1,27 @@
+.tips_box{
+    max-width: 450px!important;
+    width: 100%;
+    display: block;
+    p{ }
+        .step{padding-left: 20px; padding-right: 20px;
+        
+        
+        }
+    
+    .step > .flex_row{height: 100%; align-items: stretch; @include geneBrow(align-items, center); padding-top: 10px; padding-bottom: 10px; border-bottom: solid 1px map-get($colors, 'aqua' );}
+    .step:last-child > .flex_row{border-bottom: 0;}
+        // .cpl_col{border: solid 1px #444}
+      .img_col img{
+          width: 100%;
+          max-width: 80px;
+          align-self: flex-end;
+      }
+      .text{
+          
+          height: 100%;
+          @include geneBrow(align-items, center);
+          
+      }
+
+
+    }

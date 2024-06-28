@@ -1,0 +1,474 @@
+//  TITULO:
+//  - Botones Corporativos
+
+//  DETALLE:
+//  - botones principales color amarillo, Azul, Aqua
+
+/*botones*/
+
+a.cpl_btn{
+	text-decoration: none!important;
+}
+.cpl_btn {
+
+	.btn-loading.ld-ext-right{
+		background-color: transparent!important;
+		span{color: inherit!important}
+	}
+	   
+	
+	  
+		@include geneBrow(box-sizing, border-box);
+		@include geneBrow(border-radius, 100px!important);
+		
+		padding: 9px !important;
+		margin: 0;
+		position: relative;
+		float: left;
+		width: 100%;
+		font-family: $fontCorp!important;
+		height: auto;
+		margin-bottom: 4px;
+		display: block;
+	    @include geneBrow(transition, all 200ms ease-out);
+	    font-weight: 700;
+	    background-color: map-get($colors, "yellow");
+	    border: solid 2px map-get($colors, "yellow");
+	    color: map-get($colors, "blue");
+	    text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: $s_input!important ;
+		cursor: pointer !important;
+		&:hover{
+
+			 background-color: map-get($colors, "darkYellow");
+	    border: solid 2px map-get($colors, "darkYellow");
+		}
+		&.secondary{
+			 background-color: transparent;
+			 color:map-get($colors, "blue");
+	    border: solid 2px map-get($colors, "blue");
+		&:hover{
+			 background-color: map-get($colors, "blue");
+			 color:map-get($colors, "white");
+	    border: solid 2px map-get($colors, "blue");
+		}
+		}
+		&.terciary{
+			background-color: map-get($colors, 'ex-lightGray' )!important;
+			border-color: map-get($colors, 'ex-lightGray' )!important;
+			color: map-get($colors, 'extraDarkGray' )!important;
+			text-transform: none;
+
+
+
+	
+	
+  
+  
+				&:hover {
+				
+					background-color: map-get($colors, "ex-lightAqua")!important;
+					border-color: map-get($colors, "ex-lightAqua")!important;
+				
+					color: map-get($colors, "blue")!important;
+				  }
+		
+		}
+
+		.cpl_icon{
+			 display: inline-block; margin-left: 5px; margin-right: 5px;
+			font-size: $s6!important;height: 0!important; margin-top: -$s8!important; font-weight: 400!important;
+			&:after{ font-weight: 200!important; margin-top: -4px;}
+		 }
+		 	&.btn_one_click{
+
+				overflow: hidden;
+			
+
+			  .lds-spinner{
+			
+				
+				display: inline-block;
+				position: relative;
+				width: 10px;
+				height: 10px;
+				zoom: 0.3;
+				top: -15px;
+				left: 20px;
+				
+			
+			  }
+             
+			  .lds-spinner div{
+			  margin-top: -34px;
+			}
+
+			  .lds-spinner div:after{
+				background: map-get($colors, 'blue' )!important;
+				 }
+
+			
+
+			
+		} 
+		&.loading{
+			span {
+				display: inline-block;
+				position: relative;
+			
+				top:-14px;
+				
+				// animation-duration: 3s;
+				// animation-name: loadingRotation;
+				// animation-iteration-count: infinite;
+				// animation-direction: alternate;
+		
+
+.lds-ring {
+  display: inline-block;
+  position: absolute; top: 0;
+  width: 17px;
+  height: 17px;
+
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid map-get($colors, 'blue' );
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: map-get($colors, 'blue' ) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+			  }
+		} 
+
+
+		
+		
+		@each $class, $color, $bg, $border, $hoverColor, $hoverBg, $hoverBorder  in  
+		
+
+		('yellow', 
+		map-get($colors, "blue")!important,
+		map-get($colors, "yellow")!important,
+		map-get($colors, "yellow")!important,
+		map-get($colors, "blue")!important,
+		map-get($colors, "lightYellow")!important,
+		map-get($colors, "lightYellow")!important),
+
+	
+
+		('aqua', 
+		map-get($colors, "white")!important,
+		map-get($colors, "aqua")!important,
+		map-get($colors, "aqua")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightAqua")!important,
+		map-get($colors, "lightAqua")!important),
+		
+
+		('blue', 
+		map-get($colors, "white")!important,
+		map-get($colors, "blue")!important,
+		map-get($colors, "blue")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightBlue")!important,
+		map-get($colors, "lightBlue")!important),
+
+		('white', 
+		map-get($colors, "blue")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "blue")!important,
+		map-get($colors, "extraLightGray")!important,
+		map-get($colors, "extraLightGray")!important),
+
+		('green',
+		map-get($colors, "white")!important,
+		map-get($colors, "green")!important,
+		map-get($colors, "green")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightGreen")!important,
+		map-get($colors, "lightGreen")!important),
+
+		('red', 
+		map-get($colors, "white")!important,
+		map-get($colors, "red")!important,
+		map-get($colors, "red")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightRed")!important,
+		map-get($colors, "lightRed")!important),
+
+		('gray', 
+		map-get($colors, "white")!important,
+		map-get($colors, "gray")!important,
+		map-get($colors, "gray")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightGray")!important,
+		map-get($colors, "lightGray")!important),
+
+		('whatsapp', 
+		map-get($colors, "white")!important,
+		map-get($colors, "green")!important,
+		map-get($colors, "green")!important,
+		map-get($colors, "white")!important,
+		map-get($colors, "lightGreen")!important,
+		map-get($colors, "lightGreen")!important),
+        {
+&.#{$class}{                
+background-color: $bg;
+border-color: $border;
+color: $color;
+&:hover{
+background-color: $hoverBg;
+border-color: $hoverBorder;
+color: $hoverColor;
+}
+
+
+&.secondary{
+background-color: transparent!important;
+border-color: $bg;
+color: $bg;
+
+&:hover{
+	background-color: $hoverBg;
+	border-color: $hoverBorder;
+	color: $hoverColor;
+}
+}
+
+.lds-spinner div:after{
+	background: $color;
+	 }
+
+&.btn_one_click{
+	.lds-spinner div:after{
+		background: map-get($colors, 'blue' )!important;
+		 }
+}
+
+}
+}
+
+&[disabled]{
+	background-color: #f4f4f4!important; border-color: #f4f4f4!important; color: map-get($colors, 'gray' )!important;
+	cursor: not-allowed!important;
+	&:hover{
+		background-color: #f4f4f4!important; border-color: #f4f4f4!important; color: map-get($colors, 'gray' )!important;
+	}
+	}
+
+
+	  		
+	  	    //   &.secondary {
+			//   border-color: map-get($colors, "aqua")!important;
+			//   background-color: transparent!important;
+			//   outline: 0px!important;
+			//   color: map-get($colors, "blue")!important;
+
+			//   &:hover {
+			// 	  border-color: map-get($colors, "blueDark")!important;
+			// 	  background-color: transparent!important;
+			// 	  outline: 0px!important;
+			// 	  color: map-get($colors, "blueDark")!important;
+			// 	}
+			// }
+
+			//BTN BLUE	
+			// &.blue {
+			//   border-color: map-get($colors, "blue")!important;
+			//   background-color: map-get($colors, "blue")!important;
+			//   outline: 0px!important;
+			//   color: #fff!important;
+
+			//   &:hover {
+			// 	  border-color: map-get($colors, "blueLight")!important;
+			// 	  background-color: map-get($colors, "blueLight")!important;
+			// 	  outline: 0px!important;
+			// 	  color: #fff!important;
+			// 	}
+			// }
+
+			// &.aqua {
+			// 	border-color: map-get($colors, "aqua")!important;
+			// 	background-color: map-get($colors, "aqua")!important;
+			// 	outline: 0px!important;
+			// 	color: #fff!important;
+  
+			// 	&:hover {
+			// 		border-color: map-get($colors, "blueLight")!important;
+			// 		background-color: map-get($colors, "blueLight")!important;
+			// 		outline: 0px!important;
+			// 		color: #fff!important;
+			// 	  }
+			//   }
+
+			//BTN GREY
+			
+
+			&.btn_rounded{
+				@include geneBrow(border-radius, 100px);
+			}
+
+			//BTN EDITAR DE LA TABLA
+			&.btn_edit{
+				padding: 2px 4px !important;
+				
+				margin-bottom: 4px;
+				font-weight: 500;
+				width: 100%;
+				min-width: 70px;
+				border-color: #0033a0;
+				background-color: #0033a0;
+				outline: 0px;
+				color: #fff;
+					&:hover{
+						background-color: #0033a0;
+						border-color: #0033a0;
+						color: #fff;
+					}
+			}
+
+			//BTN ELIMINAR DE LA TABLA
+			&.btn_remove{
+				padding: 2px 4px !important;
+				
+				margin-bottom: 4px;
+				font-weight: 500;
+				width: 100%;
+				min-width: 70px;
+				border-color: #ccc;
+				background-color: #ccc;
+				outline: 0px;
+				color: #0033a0;
+					&:hover{
+						background-color: #ccc;
+						border-color: #ccc;
+						color: #0033a0;
+					}
+			}
+
+			//BTN PEQUEÑO
+			&.small {
+			
+			  padding: 5px !important;
+			  font-size: $s2!important;
+			  margin-bottom: 4px;
+			  padding-left: 12px!important;
+			  padding-right: 12px!important;
+
+			  .lds-spinner{
+				zoom: 0.24;
+
+				div{
+					margin-top:-36px
+				}
+				  }
+			}
+
+			//BTN PEQUEÑO
+			&.extraSmall {
+			
+			  padding: 2px !important;
+			
+			  
+			  margin-bottom: 4px;
+			  font-size: $s2!important;
+			  padding-left: 10px!important;
+			  padding-right: 10px!important;
+
+			  .lds-spinner{
+				zoom: 0.22;
+
+				div{
+					margin-top:-38px
+				}
+				  }
+			}
+
+			//BTN TABLE
+			.table_btn {
+			  max-width: 100px;
+			  margin-right: 5px;
+			}
+
+
+
+
+	}//FIN class cpl_btn 
+
+
+
+	 // BTN CLOSE
+	 .close {
+		opacity: 1;
+		text-shadow:none;
+		 width: 27px;
+		 height: 27px;
+		 top: 0px;
+		 right: 0px;
+		 position: absolute;
+		
+		 padding: 0px;
+		 cursor: pointer;
+		 z-index: 9999;
+	   //   background-image: url(../index_files/close.png);
+		 background-size: 70% auto;
+		 background-position: center;
+		 background-repeat: no-repeat;
+		 &:hover{
+			&:after{
+			background-color:  map-get($colors, 'lightAqua' );
+		}
+		}
+		
+	 }
+	 .close:after{
+		content: "";
+		font-family: "icomoon", "roboto", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+		// border: solid 2px #fff;
+		background-color: #00aec7;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		-ms-border-radius: 30px;
+		-o-border-radius: 30px;
+		border-radius: 30px;
+		padding: 6px;
+		/* position: absolute; */
+		color: #fff;
+		font-size: 23px;
+		font-weight: 900;
+
+	
+	 }
+
+/*FIn botones*/
+
+
+

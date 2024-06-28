@@ -1,0 +1,130 @@
+// Aquí van nuestros estilos personalizados
+.detalle_modal{
+    .amount{
+        text-align: right!important;
+        margin-top: 20px;
+    }
+    .accordion_item{
+        padding-right: 40px!important;
+        .accordion_detail{
+            @include disp(flex);
+            @include geneBrow(justify-content, space-between);
+            @include geneBrow(align-items, center);
+        }
+        .amount{
+          
+            margin-top: 0px;
+        }
+    }
+
+}
+.balance_box{
+    .accordion_item{
+        
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+
+    .data{
+
+   width: 50%;
+   display: flex;
+   align-items: center;
+    }
+    .value{
+     
+        text-align: right;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        .amount{
+         
+              margin-left: auto!important;
+            
+        }
+        
+    }
+
+    .detail
+    {
+     
+        display: flex;
+        align-items: center;
+    }
+}
+}
+.comparative_box{
+    border: solid 2px map-get($colors, 'lightGray');
+
+
+
+    @include md{
+        .crecimiento{
+            border-right: 1px solid map-get($colors, 'lightGray' );
+        }
+    }
+
+    .grafico{
+
+        @include disp(flex);
+
+        padding-top: 20px;
+
+
+        .bars{ width: 85%;
+        
+
+            background-color: map-get($colors, 'extraLightGray');
+
+            .bar{
+                -webkit-transition: all 1.4s 0s ease;
+-moz-transition: all 1.4s 0s ease;
+-o-transition: all 1.4s 0s ease;
+transition: all 1.4s 0s ease;
+                height: 20px;
+                width: 0%;
+                margin-bottom: 15px;
+                background-color: map-get($colors, 'lightGray' );
+                min-width: 2px;
+
+
+                &.crecimiento{
+                    background-color: map-get($colors, 'lightAqua' );
+                }
+            }
+        
+        }
+        .legend{ width: 15%;}
+
+        border-top: 1px solid map-get($colors, 'lightGray' );
+
+        margin-top: 10px;
+    }
+
+
+
+    .crecimiento, .aporte{
+        .header{
+            p{
+                font-weight: 500!important;
+                font-size: $s4!important;
+            }
+            .amount{
+                color: map-get($colors, 'extraDarkGray' )!important;
+            }
+        }
+        .body{
+
+        }
+    }
+
+    .crecimiento{
+        .header{
+        .amount{ color: map-get($colors, 'aqua' )!important;}
+    }
+    }
+
+
+
+}

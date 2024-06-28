@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina Base</title>
+  <link rel="stylesheet" href="../../Assets/Globals/css/cpl-Styles.css" />
+</head>
+
+<body>
+  <div class="cpl_body">
+    <div class="cpl_container mw_950">
+      <div class="flex_row">
+        <div class="cpl_col cpl_col_12">
+          <h1>Formularios</h1>
+          <p>Para construir formularios usaremos algunas clases exclusivas.
+
+            <br><br>
+            Primero, vamos a declarar que es un formulario el que estamos construyendo. Esto con la clase
+            <strong>.cpl_flex_form</strong>.
+            <br><br>
+            <xmp>
+              <div class="cpl_flex_form">
+              ..
+              </div>
+            </xmp>
+            <br><br>
+            Luego tendremos que definir la distribución con el sistema de grillas, crearemos un row
+            <strong>.flex_row</strong> y dentro de este los contenedores de los campos a modo de columna
+            <strong>.cpl_col</strong>, digamos que queremos un formulario de dos columnas, iremos agregando estos contenedores de campo con <strong>.cpl_col .cpl_col_6</strong>. A estos contenedores además le
+             añadiremos la clase <strong>.input_wrap</strong> que nos ayudará a controlar elementos asociados al campo como los mensajes de error. 
+
+             <xmp>
+              <div class="cpl_flex_form">
+                <div class="flex_row">
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                  ...
+                  </div>
+             
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                  ...
+                  </div>
+                </div>
+              </div>
+            </xmp>
+<br><br>
+            Ahora, agregaremos los campos, en este ejemplo agregaremos dos campos de texto. Para que tenga los estilos definidos para los campos debemos agregar a este input la clase <strong>.cpl_input</strong>
+
+            <xmp>
+              <div class="cpl_flex_form">
+                <div class="flex_row">
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                    <input class="cpl_input" type="text" />
+                  </div>
+             
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                    <input class="cpl_input" type="text" />
+                  </div>
+                </div>
+              </div>
+            </xmp>
+
+
+            <br><br>
+
+            Finalmente agregamos los labels con un span y tendremos algo así:
+
+
+            <xmp>
+              <div class="cpl_flex_form">
+                <div class="flex_row">
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                    <label class="label_l">
+                      <span>Campo de texto</span>
+                    </label>
+                    <input class="cpl_input" type="text" />
+                  </div>
+             
+                  <div class="cpl_col cpl_col_6 input_wrap">
+                    <label class="label_l">
+                      <span>Campo de texto</span>
+                    </label>
+                    <input class="cpl_input" type="text" />
+                  </div>
+                </div>
+              </div>
+            </xmp>
+          </p>
+
+          <div class="cpl_flex_form">
+            <div class="flex_row">
+              <div class="cpl_col cpl_col_6 input_wrap">
+                <label class="label_l">
+                  <span>Campo de texto</span>
+                </label>
+                <input class="cpl_input" type="text" />
+              </div>
+         
+              <div class="cpl_col cpl_col_6 input_wrap">
+                <label class="label_l">
+                  <span>Campo de texto</span>
+                </label>
+                <input class="cpl_input" type="text" />
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+         <h3>Mensajes de error</h3>
+         <p>Para agregar los mensajes de error asosciados a un campo </p>
+
+          <br><br> 
+
+
+          <h3>Tipos de Campos</h3>
+
+          <div class="cpl_flex_form spacing_top_small margin_bottom_medium">
+            <div class="flex_row">
+              <div class="cpl_col cpl_col_6 input_wrap">
+                <label class="label_l">
+                  <span>Campo de texto</span>
+                </label>
+                <input class="cpl_input" type="text" />
+                <span class="f_error">Completar campo</span>
+              </div>
+
+              <div class="cpl_col cpl_col_6 input_wrap">
+                <label class="label_l">
+                  <span>Contraseña</span>
+                </label>
+                <input class="cpl_input" type="password" />
+                <!-- <span class="f_error">Completar campo</span> -->
+              </div>
+
+
+
+
+
+              <div class="cpl_col cpl_col_6  input_wrap select_wrap">
+                <label class="label_l">
+                  <span>Selector</span>
+                </label>
+                <select class="cpl_input" name="" id="">
+                  <option value="">Selecciona</option>
+                  <option value="">Opción</option>
+                  <option value="">Opción Lorem ipsum dolor sit amet consectetur adipisicing elit.</option>
+                </select>
+                <!-- <div class="f_error">Ingresa axldo</div> -->
+              </div>
+
+              <div class="cpl_col cpl_col_6  input_wrap percentage_wrap number_wrap">
+                <label class="label_l">
+                  <span>Porcentaje</span>
+                </label>
+                <input type="text" class="cpl_input ">
+                <!-- <div class="f_error">Ingresa axldo</div> -->
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="cpl_col cpl_col_6 input_wrap telMovil">
+                <label class="label_l">
+                  <span>Telefono movil</span>
+                </label>
+                <input class="cpl_input" type="text" />
+                <!-- <span class="f_error">Completar campo</span> -->
+              </div>
+
+              <div class="cpl_col cpl_col_6 input_wrap telFijo">
+                <label class="label_l">
+                  <span>Teléfono fijo</span>
+                </label>
+                <input class="cpl_input" type="password" />
+                <!-- <span class="f_error">Completar campo</span> -->
+              </div>
+
+
+
+
+              <div class="cpl_col cpl_col_6 input_wrap telMovil">
+                <!-- <label class="label_l">
+                  <span>Telefono movil</span>
+                </label> -->
+                <input class="cpl_input" type="text" />
+                <span class="f_error">Completar campo</span>
+              </div>
+
+              <div class="cpl_col cpl_col_6 input_wrap telFijo">
+                <!-- <label class="label_l">
+                  <span>Teléfono fijo</span>
+                </label> -->
+                <input class="cpl_input" type="password" />
+                <span class="f_error">Completar campo</span>
+              </div>
+
+
+              <div class="cpl_col cpl_col_6 input_wrap telMovil">
+                <!-- <label class="label_l">
+                  <span>Telefono movil</span>
+                </label> -->
+                <input class="cpl_input" type="text" />
+                <span class="f_error">Completar campo</span>
+              </div>
+
+              <div class="cpl_col cpl_col_6 input_wrap telFijo">
+                <!-- <label class="label_l">
+                  <span>Teléfono fijo</span>
+                </label> -->
+                <input class="cpl_input" type="password" />
+                <span class="f_error">Completar campo</span>
+              </div>
+
+
+
+              <div class="cpl_col cpl_col_6 input_wrap telFijo">
+                <label class="label_l">
+                  <span>Teléfono fijo</span>
+                </label>
+                <input class="cpl_input" type="password" />
+                <!-- <span class="f_error">Completar campo</span> -->
+              </div>
+
+
+              <div class="cpl_col cpl_col_6 input_wrap ">
+                <div class="cpl_btn">Click!</div>
+              </div>
+
+
+
+
+
+            </div>
+
+            <!-- radios -->
+            <div class="flex_row ">
+              <div class="cpl_flex_form">
+                <div class="cpl_col cpl_col_12 input_wrap radio_wrap center_cont_row">
+                  <label class="cpl_input_radio">
+                    <input id="0" checked type="radio" name="1" value="cuentaBancaria"
+                      onclick="showWithRadio(this, 'tipoPago')"><span class="check"></span>
+                    <p>Cuenta bancaria</p>
+
+                  </label>
+                  <label class="cpl_input_radio">
+                    <input id="1" type="radio" name="1" value="valeVista"
+                      onclick="showWithRadio(this, 'tipoPago')"><span class="check"></span>
+                    <p>Vale vista</p>
+
+                  </label>
+
+                  <span class="f_error">Selecciona una opción</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Checks -->
+            <div class="flex_row ">
+              <div class="cpl_flex_form">
+                <div class="cpl_col cpl_col_12 input_wrap checkbox_wrap center_cont_row">
+                  <label class="cpl_input_check">
+                    <input id="0" checked type="checkbox" name="1" value="cuentaBancaria"
+                      onclick="showWithRadio(this, 'tipoPago')"><span class="check"></span>
+                    <p>Cuenta bancaria</p>
+
+                  </label>
+                  <label class="cpl_input_check">
+                    <input id="1" type="checkbox" name="1" value="valeVista"
+                      onclick="showWithRadio(this, 'tipoPago')"><span class="check"></span>
+                    <p>Vale vista</p>
+
+                  </label>
+
+                  <span class="f_error">Selecciona una opción</span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="flex_row mw_400 center_div ">
+              <div class="cpl_flex_form">
+                <div class="cpl_col cpl_col_12 input_wrap checkbox_wrap">
+                  <div class="cpl_input_check">
+                    <input id="0" checked type="checkbox" name="1" /><span class="checkbox">
+                    </span>
+
+                    <p>
+                      Seleccionar un campo Lorem ipsum dolor, sit amet consectetur
+                      adipisicing elit. Minus molestias impedit assumenda eum sit,
+                      quam maiores similique temporibus. Neque a quo enim
+                      asperiores possimus aperiam numquam debitis labore cumque
+                      ipsam.
+                    </p>
+
+                  </div>
+
+                  <span class="f_error">Selecciona una opción</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

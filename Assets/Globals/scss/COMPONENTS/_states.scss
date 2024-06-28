@@ -1,0 +1,24 @@
+.cpl_estado{
+    text-transform: uppercase;
+    & span:before{
+    font-family: $iconFont;
+    }
+    @each $class, $icono, $color in  (terminado, map-get($iconos, "icon-check"), map-get($colors, "s_green")),
+                                     (Terminado, map-get($iconos, "icon-check"), map-get($colors, "s_green")),
+                                     (enCurso, map-get($iconos, "icon-clock"), map-get($colors, "s_aqua")),
+                                     (Curso, map-get($iconos, "icon-clock"), map-get($colors, "s_aqua")),
+                                     (vencido, map-get($iconos, "icon-alert"), map-get($colors, "s_orange")),
+                                     (error, map-get($iconos, "icon-alert"), map-get($colors, "red"))
+                                     {
+    
+                                  &.#{$class} {
+                                      color: $color!important;
+                                  }
+                                  &.#{$class} span:before{
+                                       content:
+                                       $icono;
+                                  }  
+    
+    }
+    }
+    

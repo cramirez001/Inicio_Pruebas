@@ -1,0 +1,337 @@
+@use 'sass:math';
+//Mixin
+// estilos de texto
+@mixin define_p{
+  
+  $unit_p: map-get($paragraphs, 'normal_text' ); 
+  
+  font-family: $fontCorp2!important;
+  font-weight: 400!important;
+  font-size: $unit_p!important;
+  margin-bottom:  0.5rem ;
+  color: map-get($colors, 'extraDarkGray')!important;
+  
+}
+
+
+@mixin define_h1{
+  
+  $unit_h1: map-get($headings, 'h1' ); 
+  // Tamaño
+  
+  font-family: $fontCorp!important;
+  font-weight: 600!important;
+  font-size: $unit_h1!important;
+  margin-bottom: 0.5rem ;
+  color: map-get($colors, 'blue' )!important;
+    line-height: 107%!important;
+  
+}
+
+
+@mixin define_h2{
+  
+  $unit_h2: map-get($headings, 'h2' ); // Tamaño
+  
+  font-family: $fontCorp!important;
+  font-weight: 600!important;
+  font-size: $unit_h2!important;
+  margin-bottom: 0.5rem ;
+  color: map-get($colors, 'blue' )!important;
+    line-height: 107%!important;
+  
+}
+
+
+@mixin define_h3{
+  
+  $unit_h3: map-get($headings, 'h3' ); // Tamaño
+  
+  font-family: $fontCorp!important;
+  font-weight: 600!important;
+  font-size: $unit_h3!important;
+  margin-bottom:  0.5rem ;
+  color: map-get($colors, 'extraDarkGray')!important;
+    line-height: 107%!important;
+  
+}
+
+
+@mixin define_h4{
+  
+  $unit_h4: map-get($headings, 'h4' ); // Tamaño
+  
+  font-family: $fontCorp!important;
+  font-weight: 400!important;
+  font-size: $unit_h4!important;
+  margin-bottom: 0.5rem ;
+  color: map-get($colors, 'extraDarkGray')!important;
+    line-height: 107%!important;              
+  
+}
+
+
+
+
+
+//Grilla
+@mixin wiGrid($nuGrig, $wiGrid) {
+  width:math.div(100%, $nuGrig) * $wiGrid;
+}
+
+@mixin wiGridFlex($nuGrig, $wiGrid) {
+  -webkit-flex:math.div(100%, $nuGrig) * $wiGrid;
+  -moz-flex:math.div(100%, $nuGrig) * $wiGrid;
+  -ms-flex:math.div(100%, $nuGrig) * $wiGrid;
+  -o-flex:math.div(100%, $nuGrig) * $wiGrid;
+  flex:math.div(100%, $nuGrig) * $wiGrid;
+}
+
+@mixin radius_3 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+@mixin radius_6 {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+@mixin radius_12 {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+}
+
+
+
+@mixin shadow {
+  -webkit-box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+}
+
+@mixin shadow-2 {
+  -webkit-box-shadow: 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+}
+
+
+
+@mixin shadow_inset {
+  -webkit-box-shadow: inset 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: inset 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+}
+
+@mixin shadow-2_inset {
+  -webkit-box-shadow: inset 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: inset 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0px 2px 48px 3px rgba(0, 0, 0, 0.22);
+}
+
+
+@mixin transition_200{
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+
+}
+
+
+//compatibilizador Browser
+@mixin geneBrow($geneBrow1, $geneBrow2) {
+  -webkit-#{$geneBrow1}: $geneBrow2;
+  -moz-#{$geneBrow1}: $geneBrow2;
+  -ms-#{$geneBrow1}: $geneBrow2;
+  -o-#{$geneBrow1}: $geneBrow2;
+  #{$geneBrow1}: $geneBrow2;
+}
+
+@mixin disp($disp) {
+  display: -webkit-#{$disp};
+  display: -moz-#{$disp};
+  display: -ms-#{$disp};
+  display: -o-#{$disp};
+  display: $disp;
+}
+
+// Medias Queries
+//small devices
+@mixin sd {
+  @media (min-width: map-get($devices, sd )) {
+    @content;
+  }
+} //min 450px
+@mixin sdMax {
+  @media (max-width: map-get($devices, sd )) {
+    @content;
+  }
+} //max 450px
+
+//medium devices
+@mixin md {
+  @media (min-width: map-get($devices, md )) {
+    @content;
+  }
+} //min 760px
+
+@mixin mdMax {
+  @media (max-width: map-get($devices, md )) {
+    @content;
+  }
+} //max760px
+
+//large devices
+@mixin ld {
+  @media (min-width: map-get($devices, ld )) {
+    @content;
+  }
+} //min 960px
+@mixin ldMax {
+  @media (max-width: map-get($devices, ld )) {
+    @content;
+  }
+} //max 960px
+
+//extra large devices
+@mixin xld {
+  @media (min-width: map-get($devices, xld )) {
+    @content;
+  }
+} //min 1280px
+
+@mixin xldMax {
+  @media (max-width: map-get($devices, xld )) {
+    @content;
+  }
+} //max1280px
+
+
+// BreakPoints para clases de atributos
+// Todas las clases de atributos lo deben usar
+
+$i : 0;
+
+
+@mixin attrRange($attr){
+  
+  @each $device,
+ $deviceVal in $devices{
+
+$i : $i+1;
+
+  @if $i >= 2{
+    $ii: 0;
+    @each $dev, $val in $devices {
+      $ii : $ii+1;
+
+       $target: $i - 1;
+
+       @if $ii == $target {
+          $prevDevice : $val;
+          @media only screen and (max-width: $deviceVal) and (min-width: $prevDevice) {
+            .#{$device}_#{$attr}{
+              @content;
+             }
+           }
+
+       }
+
+       
+
+
+ 
+    }
+
+  }
+  // @if $i>2 {
+  //   $ii: 0;
+  //   @each $device, $val in $devices {
+  //     $ii : $ii+1;
+
+  //     $target: $i - 1;
+
+  //     @if $ii == $target {
+  //        $prevDevice : $val;
+  //        @media only screen and (max-width: $deviceVal) and (min-width: $prevDevice) {
+  //         .#{$device}_#{$attr}{
+  //           @content;
+  //          }
+  //        }
+
+  //     }
+
+     
+  //   }
+  // }
+//     @if $i>4 {
+//       $ii: 0;
+//       @each $device, $val in $devices {
+//         $ii : $ii+1;
+ 
+//         $target: $i - 1;
+ 
+//         @if $ii == $target {
+//            $prevDevice : $val;
+
+//              @media only screen and (max-width: $deviceVal) and (min-width: $prevDevice) {
+//               .#{$device}_#{$attr}{
+//                        @content;
+//                       }
+//         }
+ 
+//         }
+ 
+      
+//       }
+// }
+  
+}
+ }
+
+
+
+// @mixin attrRange($attr){
+  
+//   @each $device,
+//  $deviceVal in $devices{
+// $i : $i+1;
+
+//   @if $i == 2{
+//     @media screen and (max-width: $deviceVal) {
+//       .#{$device}_#{$attr}{
+//        @content;
+//       }
+//       }
+//   }
+//   @if $i>2 {
+//     @media screen and (max-width: $deviceVal)  {
+//       .#{$device}_#{$attr}{
+//        @content;
+//       }
+//       }
+//     }
+//     @if $i>4 {
+//       @media screen and (min-width: $deviceVal) {
+//         .#{$device}_#{$attr}{
+//          @content;
+//         }
+//         }
+//       }
+// }
+  
+// }
+
+

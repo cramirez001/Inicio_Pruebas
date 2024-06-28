@@ -1,0 +1,7 @@
+$masterClass: "#s4-workspace";
+@import '../../../../Globals/scss/ABSTRACTS/variables';
+@import '../../../../Globals/scss/ABSTRACTS/mixins';
+#{$masterClass}{
+@import './styles.scss';
+}
+

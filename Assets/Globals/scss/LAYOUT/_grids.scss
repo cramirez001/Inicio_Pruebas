@@ -1,0 +1,89 @@
+
+
+.visible_col {
+	background-color: azure;
+	border: solid 1px #ddd;
+}
+
+.flex_row {
+	width: 100%; // ! //
+	@include geneBrow(flex, 0 0 1);
+	@include disp(flex);
+	@include geneBrow(flex-shrink, 0);
+	@include geneBrow(align-items, stretch);
+	@include geneBrow(flex-wrap, wrap!important);
+	&.auto_cols {
+		@include geneBrow(flex-wrap, nowrap!important);
+	}
+
+	@each $name, $value in $spacingRange {
+
+		&.row_cols_offset_#{$name} {
+		  margin-left: -$value !important;
+		  margin-right: -$value !important;
+		  width: calc(100% + #{$value} + #{$value});
+
+		  & > .cpl_col {
+			padding: $value !important;
+			
+		  }
+		}
+
+		  &.row_cols_padding_#{$name} {
+			
+			 .cpl_col {
+			  padding: $value !important;
+			  
+			}
+		}
+}
+}
+
+.cpl_col {
+	@include geneBrow(box-sizing, border-box);
+	@include geneBrow(box-shadow, none);
+	float: left;
+	position: relative;
+	margin: 0;
+	padding: 3px;
+	height: auto;
+
+}
+
+@include mdMax {
+	>.cpl_col> {
+		h1,
+		h2 {
+			text-align: center;
+		}
+	}
+}
+
+.cpl_col > .flex_row {
+    margin-right: -3px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-left: -3px;
+    flex-shrink: 0;
+    width: calc(100% + 6px);
+  }
+
+@for $gridW from 1 through 12 {
+	.cpl_col_#{$gridW} {
+		@include wiGrid(12, 12);// por defecto todos tienen un ancho de 100%
+		@include md {
+			@include wiGrid(12, $gridW); //por defecto el ancho asignado al numero de columna aplicará de md (medium devices) hacia arriba.
+		}
+    }
+        // media attr
+        // Con lo siguiente aplicamos el ancho de las columnas a anchos de pantallas específicos
+        // ej: .sdMax_cpl_col_6 tendrá como salida una columna que tendrá un ancho de 50% en pantallas de 0 a 720px (según las variables del map $devices declaradas a la fecha de construcción de este css) 
+
+
+		@include attrRange(cpl_col_#{$gridW}){
+			
+					@include wiGrid(12, $gridW);
+				
+			}
+		
+}

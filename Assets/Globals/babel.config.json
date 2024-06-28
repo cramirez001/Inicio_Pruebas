@@ -1,0 +1,7 @@
+{
+    "presets": [["@babel/env", {
+        "corejs": 3.14,
+        "useBuiltIns": "usage",
+        "debug": true
+    }]]
+}

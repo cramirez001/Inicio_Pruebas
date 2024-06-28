@@ -1,0 +1,9 @@
+
+La carga de estilos y scripts deben realizarse desde la siguiente ruta 
+
+La tarea de cargar los recursos debe ser ejecutada por parte el equipo web de AFP Capital
+
+    <!-- Desarrollo, QA y Producción -->
+    <link rel="stylesheet"href="/Style%20Library/Assets/..."/>
+    <link rel="stylesheet"href="/Style%20Library/Assets/..."/>
+    <!-- Desarrollo, QA y Producción -->

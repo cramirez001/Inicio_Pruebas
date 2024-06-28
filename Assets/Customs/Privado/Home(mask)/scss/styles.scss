@@ -1,0 +1,115 @@
+// Aquí van nuestros estilos personalizados
+.wp_cuentas_y_saldos{
+    background-color: map-get($colors, 'blue' )!important;
+
+    &.countCpl2{
+    .mas_cuentas .tabla_cuentas .tr-cuentas{
+        padding: 10px!important;
+    }
+}
+}
+@include mdMax{
+    .cpl_container .cpl_col.cpl_wp_accesosDirectos h4{
+        width: 100%!important;
+        text-align: center!important;
+    }
+}
+.wp_cuentas_y_saldos, .wp_secondary{
+    border-radius: 12px!important;
+}
+.wp_cuentas_y_saldos .saldo_total .saldo .monto{
+    font-size: 1.5em!important;
+}
+
+.wp_cuentas_y_saldos .mas_cuentas .clicMas {
+    display: none;
+}
+.wp_cuentas_y_saldos .fecha{
+    // display: none;
+}
+.small-text{
+    font-size: 1em!important;
+}
+.wp_secondary{
+    .saldo {
+        font-size: 1.5em!important;
+    }
+    .small-text{
+        font-size: 0.9em!important;
+    }
+
+}
+.wp_cuentas_y_saldos, .wp_secondary{
+    .icon{
+        display: none!important;
+    }
+}
+.wp_cuentas_y_saldos .mas_cuentas .tabla_cuentas .tr-cuentas  p{
+    color: map-get($colors, 'extraDarkGray' )!important;
+    font-size: 1rem!important;
+}
+.wp_cuentas_y_saldos .mas_cuentas .tabla_cuentas .tr-cuentas .td-tipoCuenta p{
+    font-size: .9rem!important;
+}
+ .wp_secondary .cont .top{
+border-color: map-get($colors, 'lightGray' );
+}
+.CPL_Datos_Fondos{
+    background-color: transparent;
+    .cpl_container{
+        padding-left: 17px;
+    padding-right: 17px;
+    }
+}
+.wp_secondary .cont .top img{
+    height: 60px!important;
+}
+.td-fondos .cpl_fondo span{
+    font-size: 1rem!important ;
+}
+.wp_secondary{ 
+    border: solid 2px map-get($colors, 'lightGray' )!important;
+}
+.CPL_asesHerra{
+    .wp_secondary{
+        border: 0!important;
+    }
+}
+h3.Herra{
+    padding-top: 0!important;
+}
+.cpl_col.cpl_wp_accesosDirectos{
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: solid 2px map-get($colors, 'lightGray' );
+    padding-top: 40px;
+
+
+ h4 {
+    width: 25% !important;
+    margin-top: 0; 
+    text-align: left;
+     padding-top: 0px !important; 
+    font-weight: 400!important;
+}
+}
+.td-saldos.monto{
+p{
+  font-size: 1rem!important;
+}
+}
+
+.wp_cuentas_y_saldos .mas_cuentas .tabla_cuentas .tr-cuentas .td-fondos .cpl_fondo .fondo_icon{
+    font-size: .77rem!important;
+}
+
+
+h3.Herra, .cpl_wp_accesosDirectos h4{
+font-weight: 400!important;
+}
+
+
+.wp_secondary.lightAqua{
+    background-color: map-get($colors, 'extraLightAqua' );
+    border-color: map-get($colors, 'lightAqua' )!important;
+}

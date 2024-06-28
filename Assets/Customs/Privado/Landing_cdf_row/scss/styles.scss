@@ -1,0 +1,113 @@
+// Aquí van nuestros estilos personalizados
+.cpl_accordion{
+    @include mdMax{
+        flex-direction: column;
+    }
+    @include disp(flex);
+    @include geneBrow(align-items, stretch);
+    .accordion_item{
+
+
+        &:first-child{
+            .item_img img, .item_text{
+                animation-delay: 0s;
+            }
+        }
+
+        &:nth-child(2){
+            .item_img img, .item_text{
+                animation-delay:0.3s;
+            }
+        }
+
+        &:nth-child(3){
+            .item_img img, .item_text{
+                animation-delay: 0.6s;
+            }
+        }
+        
+        @include md{
+            border-bottom: 0!important;
+            border-right: 2px solid map-get($colors, 'lightGray' )!important;
+         
+
+            width: 33.33%!important;
+
+            .auto_cols{
+                flex-direction: column!important
+            }
+
+            &:last-child{
+                border-right: 0!important;
+            }
+
+        } 
+        
+        .auto_cols{
+        @include geneBrow(align-items, center);
+        .item_text{
+            width: 100%;
+            // order: 2;
+            @include geneBrow(align-self, flex-end);
+            p{
+                max-width: 700px;
+            }
+            h3{
+                margin-bottom: 20px!important;
+                text-align: center!important;
+            }
+        }
+ 
+
+        .item_img{
+            // order: 1;
+            img{
+                width: 100%;
+                max-width: 150px;
+            }
+        }  
+ 
+
+        }
+        @include mdMax{
+        
+    width: 100%!important;
+
+
+        .auto_cols{
+            @include geneBrow(flex-direction, column);
+            @include geneBrow(justify-content, center);
+            .cpl_col{
+               
+                    width: 100%;
+                    @include disp(flex);
+                    @include geneBrow(align-items,  center);
+                    @include geneBrow(flex-direction,  column);
+                    @include geneBrow(justify-content, center);
+                
+            }
+
+
+            .item_img{
+                // order: 1;
+                img{
+                    max-width: 130px;
+                }
+            }  
+    
+            .item_text{
+            //   order: 2;
+              h3{
+                  text-align: center;
+                  margin-bottom: 20px!important;
+                  margin-top: 0px!important;
+              }
+            }
+        }
+    }
+
+    @include sdMax{
+        // padding: 20px!important;
+    }
+    }
+}

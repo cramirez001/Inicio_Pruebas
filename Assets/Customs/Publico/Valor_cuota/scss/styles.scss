@@ -1,0 +1,1268 @@
+// RECUERDA DESCMARCAR TODAS LAS OPCIONES AL CARGAR LA PÁGINA - Firefox // 
+
+  // label for check 
+label.checkFondo{
+  border-radius: 50px;
+  float: left;
+  padding: 4px;
+  border: solid 2px map-get($colors, 'lightGray' );
+  &.active{
+    background-color: map-get($colors, 'aqua' );
+  }
+}
+
+#divComparacion {
+
+
+> table:first-child{
+
+  width: 100%;
+
+  > tbody > tr:first-child > td:first-child {
+    display: none;
+  }
+} 
+  
+
+
+  span {
+    @include define_p;
+  }
+  .cSuperior {
+    padding-bottom: 30px !important;
+    display: block;
+  }
+
+  .tablaDescargas {
+    > tbody {
+      > tr:nth-child(1) {
+        > td:first-child {
+          display: none;
+        }
+        > td:nth-child(2) {
+          display: none;
+        }
+      }
+      > tr:nth-child(2) {
+      
+        > td:first-child {
+          > table {
+            > tbody {
+              @include disp(flex);
+              @include geneBrow(flex-direction, row);
+              @include mdMax{
+                @include geneBrow(flex-direction, column);
+              }
+              > tr {
+                @include disp(flex);
+                @include geneBrow(flex-direction, column);
+                width: 33.33%;
+                @include mdMax{
+                 width: 100%;
+                }
+
+
+                > td{ width: 50%!important; position: relative; 
+                  
+                //  margin-bottom: 10px!important;
+                }
+
+                > td:nth-child(1) {
+                  display: none;
+                }
+               
+                > td:nth-child(2) {
+                  display: none;
+
+                  @include md{
+                    width: 300%!important;
+                    max-width: 600px;
+                    margin-top: 30px;
+                  }
+                }
+
+
+                &:nth-child(1) {
+                  
+                  > td:nth-child(1):after {
+                    content: "Consultar por periodo";
+                  }
+                 
+                }
+                &:nth-child(2) {
+                  > td:nth-child(1):after {
+                    content: "Consultar por mes";
+                  }
+
+                  > td:nth-child(2) {
+                    font-size: 0!important;
+                    display: block;
+                    @include md{
+                    margin-left: -100%;
+                  }
+                    select{
+                      font-size: 17px!important;
+                      width: calc(50% - 5px)!important;
+                      &:nth-child(1){
+                          margin-right: 5px;
+                          // margin-bottom: 10px;
+                      }
+                      &:nth-child(2){
+                        margin-left: 5px;
+                        // margin-bottom: 10px;
+                      }
+                      @include mdMax{
+                        font-size: 16px!important;
+                      }
+                      @include mdMax{
+                        font-size: 15px!important;
+                      }
+                    }
+                  }
+               
+                }
+                &:nth-child(3) {
+                  > td:nth-child(1):after {
+                    content: "Consultar por rango de fechas";
+                  }
+                  > td:nth-child(2){
+                    @include md{
+                    margin-left: -100%;
+                  }
+                  }
+                  > td:nth-child(2) > table > tbody tr{
+                    @include disp(flex);
+                    @include geneBrow(flex-direction, column);
+                    > td:nth-child(1){
+                      width: 50%;
+                      padding-right: 5px;
+                    }
+                    > td:nth-child(2){
+                      width: 50%;
+                      padding-left: 5px;
+                    }
+                  }
+                
+              
+                }
+              }
+            }
+          }
+        }
+
+        > td:nth-child(2) {
+        display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.tablaDescargas td select,
+.tablaDescargas td input[type="text"] {
+  min-width: 0 !important;
+
+  width: 100% !important;
+}
+.tablaDescargas > tbody > tr > td > table > tbody > tr > td.txt11 {
+  // padding-right: 20px;
+  display: flex !important;
+  @include geneBrow(align-items, center);
+  font {
+    display: flex !important;
+    @include geneBrow(align-items, center);
+  }
+}
+
+.tablaDescargas input[type="text"],
+select,
+textarea {
+  // max-width: 300px!important;
+  @include geneBrow(box-sizing, border-box);
+  @include geneBrow(border-radius, 3px);
+  font-size: $s_input !important;
+  font-weight: 500;
+  color: map-get($colors, "blue") !important;
+  padding: 9px !important;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  -webkit-appearance: none !important;
+  font-family: $fontCorp;
+  height: auto;
+  margin-bottom: 0px;
+  display: block;
+  background-color: map-get($colors, "extraLightGray") !important;
+  border: 2px solid map-get($colors, "lightGray") !important;
+  background-color: white;
+  // max-height: 43px;
+  &:focus {
+    border: 2px solid map-get($colors, "aqua");
+    background-color: white;
+    outline: 0px;
+    color: map-get($colors, "blue");
+  }
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  top: 19px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0 !important;
+  background-color: lawngreen;
+}
+
+.tablaDescargas select {
+  padding-right: 40px !important;
+  background-image: linear-gradient(
+      45deg,
+      transparent 50%,
+      map-get($colors, "darkGray") 50%
+    ),
+    linear-gradient(135deg, map-get($colors, "darkGray") 50%, transparent 50%),
+    linear-gradient(
+      to right,
+      map-get($colors, "lightGray"),
+      map-get($colors, "lightGray")
+    );
+  background-position: calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 10px) calc(1em + 2px), calc(100% - 31px) 7px;
+  background-size: 5px 5px, 5px 5px, 2px 1.5em;
+  background-repeat: no-repeat;
+  &:focus {
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        map-get($colors, "aqua") 50%
+      ),
+      linear-gradient(135deg, map-get($colors, "aqua") 50%, transparent 50%),
+      linear-gradient(
+        to right,
+        map-get($colors, "aqua"),
+        map-get($colors, "aqua")
+      );
+  }
+}
+
+.tablaDescargas select:disabled,
+input[type="text"]:disabled {
+  background-color: map-get($colors, "ex-lightGray");
+  opacity: 0.6;
+  color: map-get($colors, "gray") !important;
+}
+
+// modal calendario (debe estar fuera del .contenidos.c_prod)
+// #ui-datepicker-div {
+// 	display: none;
+// 	z-index: 99999!important;
+// 	top: 0!important;
+// 	left: 0!important;
+// 	right: 0!important;
+// 	bottom: 0!important;
+// 	background-color: rgba(0, 0, 0, 0.8);
+// 	max-width: 100%!important;
+// 	width: 100%!important;
+// }
+
+// .ui-datepicker-header{
+// 	max-width: 270px;
+// margin: 0 auto;
+
+// top: calc(50% - 193px);
+
+// }
+
+// .ui-datepicker-calendar {
+// 	position: absolute;
+// 	max-width: 300px;
+// 	width: 300px;
+// 	left: 50%;
+// 	margin-left: -150px;
+// 	top: 50%;
+// 	margin-top: -142px;
+// }
+
+#tab {
+  display: none;
+}
+
+// modal calendario
+
+@include md {
+  #WebPartctl00_ctl56_g_4012eca1_8f93_4858_a48e_7e36f3282388 {
+    width: 100%;
+    max-width: 300px;
+    float: left;
+  }
+  #WebPartctl00_ctl56_g_4012eca1_8f93_4858_a48e_7e36f3282388 + div + div,
+  #WebPartctl00_ctl56_g_4012eca1_8f93_4858_a48e_7e36f3282388 + div {
+    width: calc(100% - 320px);
+    float: left;
+    margin-left: 20px;
+  }
+  #WebPartctl00_ctl56_g_4012eca1_8f93_4858_a48e_7e36f3282388 + div + div {
+    float: right;
+  }
+}
+
+.vcSuperior {
+  @include define_p;
+  display: none;
+}
+
+// #divValorCuota{
+// 	&:before{
+// 		content: 'Consultar valor cuota';
+// 		position: relative;
+// 		@include define_h2;
+// 		color: map-get($colors, 'extraDarkGray' )!important;
+
+// 	}
+// }
+
+#divValorCuota > table {
+  width: 100%;
+}
+#VCResultado {
+  padding-top: 15px;
+
+  & > table {
+    width: 100%;
+    // margin: 0 auto;
+    max-width: 500px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    &.active::after {
+      display: none;
+    }
+  }
+
+  & > table > tbody > tr {
+    display: flex;
+
+    td {
+      width: 100%;
+      padding: 6px;
+      &:first-child {
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+
+    td:first-child {
+      order: 2;
+    }
+  }
+  .contBtn-load,
+  .ver_todas {
+    background-color: map-get($colors, "yellow");
+    font-family: $fontCorp;
+    text-transform: uppercase;
+    padding: 9px;
+    font-weight: 700;
+    border-radius: 50px;
+
+    text-decoration: none;
+    width: 100% !important;
+    max-width: 300px;
+    color: map-get($colors, "blue") !important;
+    border: solid 2px map-get($colors, "yellow");
+    text-align: center;
+    margin-bottom: 20px !important;
+
+    span {
+      color: map-get($colors, "blue") !important;
+    }
+  }
+  .ver_todas {
+    background-color: transparent;
+    border-color: map-get($colors, "aqua") !important;
+    color: map-get($colors, "aqua");
+
+    span {
+      color: map-get($colors, "aqua") !important;
+    }
+  }
+
+  // #tblVC{
+
+  // 	border: solid 2px map-get($colors, 'lightGray' );
+  // 	thead{
+  // 		border-bottom: solid 2px map-get($colors, 'blue' );
+  // 		th{padding: 5px;}
+  // 	}
+  //    td{
+  // 	   padding: 5px;
+  // 	   font-family: $fontCorp2;
+  // 	}
+
+  // 	.dataTables_empty{
+  // 		padding: 25px;
+
+  // 	}
+  // }
+}
+
+.dataTables_empty {
+  // 		padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#VCFiltro,
+#VCResultado {
+  .f_error {
+    border: 0;
+    border-top: 2px map-get($colors, "red") solid;
+    border-radius: 0;
+    padding: 0px;
+    width: calc(100% - 6px);
+    text-align: left;
+    margin-left: 6px;
+    margin-top: -3px;
+    font-size: $s2 !important;
+    font-weight: 500 !important;
+    float: left;
+  }
+}
+
+#VCFiltro {
+  max-width: 650px !important;
+  float: left;
+  display: block;
+  width: 100%;
+
+  label {
+    font-family: $fontCorp;
+  }
+
+  span {
+    font-family: $fontCorp2 !important;
+  }
+
+  table {
+    width: 100% !important;
+    font-size: inherit;
+    max-width: 500px;
+  }
+
+  .txt11 {
+    font-size: inherit !important;
+  }
+
+  .tablaDescargas {
+    label {
+      font-weight: 700 !important;
+    }
+
+    td {
+      border: 0 !important;
+      padding: 3px !important;
+    }
+
+    > tbody {
+      @include disp(flex);
+      @include geneBrow(flex-wrap, wrap);
+
+      > tr {
+        display: block;
+        float: left;
+        width: 33.33% !important;
+        flex-grow: 1;
+        @include disp(flex);
+        @include geneBrow(flex-direction, column);
+        @include geneBrow(align-items, center);
+        position: relative;
+
+        .tablaDescargasTitulo {
+          margin-bottom: 15px;
+          @include disp(flex);
+          @include geneBrow(flex-direction, row);
+          font-family: $fontCorp2 !important;
+          font-weight: 700 !important;
+          position: initial !important;
+          // @include geneBrow(justify-content, center);
+
+          input[type="radio"] {
+            margin: 5px;
+            z-index: 2;
+          }
+
+          label {
+            order: 1 !important;
+            // position: absolute;
+            // top: 0px;
+            // bottom: 0;
+            // left: 0;
+            // padding-left: 25px;
+            // right: 0;
+            // z-index: 1;
+            // background-color: rgba(255,255,255,.8);
+          }
+
+          input[type="radio"]:checked + label {
+            z-index: 0;
+          }
+        }
+      }
+
+      & > tr:first-child {
+        padding-top: 22px !important;
+        width: 100% !important;
+        margin-bottom: 20px;
+        display: none;
+
+        .tablaDescargasTitulo {
+          @include define_p;
+          font-family: $fontCorp !important;
+          font-weight: 700 !important;
+          color: map-get($colors, "extraDarkGray") !important;
+        }
+
+        td {
+          width: 100% !important;
+        }
+
+        select {
+          // margin:  0 auto;
+          float: left;
+          width: 100%;
+          max-width: 500px;
+        }
+
+        // &:after{
+        // 	content: 'Elige el tipo de consulta';
+        // 	font-family: $fontCorp;
+        // 	font-size: $s_h2;
+        // 	position: relative;
+        // 	width: 100%;
+        // 	margin-bottom: 10px;
+        // 	font-weight: 600;
+        // 	display: block;
+        // 	float: left;
+        // 	margin-top: 50px;
+        // 	margin-bottom: 30px;
+        // 	text-align: center;
+        // }
+      }
+      & > tr:nth-child(2n) {
+        & > td:nth-child(2n) > table > tbody > tr > td:first-child {
+          @include disp(flex);
+          @include geneBrow(flex-direction, column);
+          @include geneBrow(align-items, flex-start);
+        }
+        & > td:nth-child(2n) > table > tbody > tr > td:first-child:before {
+          content: "Elige un periodo";
+          position: relative;
+          float: left;
+          display: block;
+          width: 100%;
+        }
+        @include md {
+          // border-right: solid 1px map-get($colors, 'lightGray' )!important;
+        }
+      }
+      & > tr:nth-child(2n),
+      & > tr:nth-child(3n) {
+        max-width: 261px;
+
+        display: block;
+        // margin-bottom: 20px;
+        // border-radius: 6px;
+        // width: 50%!important;
+        float: left;
+
+        table {
+          // margin-top: 40px!important;
+          // max-width: 300px;
+          margin: 0 auto;
+          width: 100%;
+          float: left;
+        }
+
+        td {
+          overflow: hidden;
+        }
+
+        & > td:first-child {
+          // ocultar al final!
+          display: none;
+        }
+
+        & > td:nth-child(2n) {
+          display: none;
+          width: 200% !important;
+          float: left !important;
+          z-index: 9;
+        }
+
+        // padding-top: 9px;
+
+        // height: 100%;
+      }
+
+      & > tr:nth-child(2n) {
+        padding-right: 0;
+        .tablaDescargasTitulo {
+          label {
+            right: 10px;
+          }
+        }
+      }
+      & > tr:nth-child(3n) {
+        // padding-left: 10px;
+        .tablaDescargasTitulo {
+          label {
+            left: 10px;
+          }
+        }
+
+        & > td:nth-child(2n) {
+          display: none;
+          width: 200% !important;
+          float: left !important;
+          left: -100% !important;
+        }
+      }
+
+      // periodo
+      tr:nth-child(3n) {
+        td:nth-child(2n) {
+          table tbody tr {
+            @include disp(flex);
+            @include geneBrow(flex-direction, row);
+          }
+          table tbody tr td {
+            @include disp(flex);
+            @include geneBrow(flex-direction, column);
+            @include geneBrow(align-items, flex-start);
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            .cpl_input {
+              margin-bottom: 20px;
+            }
+            &:first-child {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        @include md {
+          > td {
+            //    padding-left: 30px!important;
+          }
+        }
+      }
+    }
+  }
+
+  .tablaDescargas td {
+    width: auto !important;
+    position: relative;
+    display: block;
+    height: auto;
+    div {
+      float: left !important;
+    }
+    #tcMensual,
+    #tcDiaria,
+    #tcAnual {
+      padding-top: 20px;
+      width: 100% !important;
+      select {
+        float: revert !important;
+        margin-bottom: 20px;
+      }
+    }
+
+    #tcMensual {
+      font-size: 0 !important;
+      padding-top: 40px !important;
+      @include disp(flex);
+      select,
+      input {
+        font-size: 17px !important;
+      }
+      select:first-child {
+        margin-right: 10px;
+      }
+
+      &:before {
+        content: "Mes";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        font-size: 17px !important;
+      }
+      &:after {
+        content: "Año";
+        position: absolute;
+        top: 15px;
+        left: calc(50% + 10px);
+        font-size: 17px !important;
+      }
+    }
+  }
+
+  .tablaDescargas td.txtDer {
+    text-align: left !important;
+  }
+
+
+
+  .tablaDescargas > tbody > tr > td {
+    // border: solid 1px #333!important;
+    padding: 0px !important;
+  }
+
+  .tablaDescargas > tbody > tr > td > table > tbody > tr {
+    // @include disp(flex);
+  }
+
+
+
+  .fila_con {
+    width: 100%;
+    float: left;
+    padding: 3px !important;
+    margin-bottom: 20px;
+    position: relative;
+    .validador2 {
+      color: map-get($colors, "red") !important;
+      line-height: 99%;
+      text-align: left;
+      margin-bottom: 10px;
+      position: absolute;
+      top: calc(100% - 5px);
+      border: 0;
+      border-top: 2px solid map-get($colors, "red");
+      right: 7px;
+      left: 7px;
+      // background: #ffffff;
+      border-radius: 0 0 3px 3px;
+      padding: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: $s2 !important;
+      font-weight: 500 !important;
+      width: calc(100% - 14px);
+      font-family: $fontCorp2;
+      font-style: normal !important;
+    }
+  }
+}
+
+.menu_lateral {
+  li {
+    // border-left: 5px solid map-get($colors, 'lightGray' );
+    padding: 10px;
+    padding-left: 0px;
+    list-style: none;
+    @include disp(flex);
+    @include geneBrow(align-items, center);
+    // @include geneBrow(justify-content, center);
+    @include geneBrow(flex-wrap, nowrap);
+
+    &::before {
+      content: "";
+      -webkit-transition: all 200ms ease-in;
+      -moz-transition: all 200ms ease-in;
+      -ms-transition: all 200ms ease-in;
+      -o-transition: all 200ms ease-in;
+      transition: all 200ms ease-in;
+      position: relative;
+      z-index: 99;
+
+      margin-right: 10px;
+      width: 8px;
+      height: 16px;
+      background-color: map-get($colors, "white");
+      border-radius: 30px;
+    }
+
+    &:hover {
+      color: map-get($colors, "aqua");
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        background-color: map-get($colors, "aqua");
+      }
+    }
+
+    &.active {
+      color: map-get($colors, "blue");
+      font-weight: 600 !important;
+
+      &::before {
+        content: "";
+
+        background-color: map-get($colors, "blue");
+      }
+    }
+  }
+}
+
+.menu_lateral li {
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  float: left !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  border-bottom: solid 1.5px #d0d6d9 !important;
+  position: relative;
+  border-bottom: 0;
+  color: #35363a;
+
+  &:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+.menu_lateral li.active {
+  color: #0033a0;
+  font-weight: 600 !important;
+}
+
+// tabla _______________________________________________________________________________________________________________________________________________
+
+#tblVC_wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+  display: none;
+
+  #blVC_info {
+    font-size: 14px !important;
+    padding-top: 10px !important;
+  }
+
+  // LA TABLA V2
+  // LA TABLA VERSIÓN 2________________________________________________________________________________________________________________
+  #tblVC {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+
+    tr {
+      // &:nth-child(even) {background:map-get($colors, "ex-lightGray")}
+      @include geneBrow(transition, all 500ms ease-out);
+      background-color: map-get($colors, "white");
+      border: 0;
+      text-align: center;
+      border-bottom: solid 2px map-get($colors, "lightGray") !important;
+      border: solid 2px map-get($colors, "lightGray") !important;
+      // &:hover {
+      // color: map-get($colors, "blue");
+      // border-top-color: map-get($colors, "blue");
+      // background-color: white;
+      // }
+
+      .th_movil {
+        display: none;
+        // width: 100%;
+        max-width: 50%;
+        padding-right: 20px;
+
+        font-weight: 400 !important;
+        margin-right: auto;
+      }
+
+      td,
+      th {
+        font-family: $fontCorp2 !important;
+        line-height: 130%;
+        border: 0;
+        text-align: left;
+        border: solid 2px map-get($colors, "lightGray");
+        padding: 10px;
+
+        vertical-align: middle !important;
+        width: auto !important;
+        p {
+          margin: 0 !important;
+        }
+      }
+
+      th {
+        vertical-align: top !important;
+        font-weight: 700;
+
+        // border: solid 2px map-get($colors, "lightGray") ;
+
+        border-bottom: 3px solid map-get($colors, "blue");
+        color: map-get($colors, "extraDarkGray");
+      }
+
+      td {
+        color: map-get($colors, "extraDarkGray");
+
+        //  overflow: hidden;
+        .input_wrap {
+          margin-top: 12px;
+          margin-bottom: 1px;
+          .f_error {
+            white-space: nowrap;
+            margin-bottom: 0;
+            text-align: center;
+            width: auto;
+          }
+        }
+        &.saldo {
+          text-align: right;
+
+          span {
+            display: block;
+            width: 100%;
+            text-align: right;
+          }
+        }
+        &.check {
+          right: 0;
+
+          input {
+            margin-right: -12px;
+          }
+        }
+        @include md {
+          &.btn {
+            width: 1px;
+          }
+          &.check {
+            width: 1px !important;
+            label {
+              margin: 0 auto !important;
+              float: none;
+            }
+          }
+        }
+      } //fin td
+
+      &.total {
+        border: solid 2px map-get($colors, "lightGray");
+        // background-color: map-get($colors, 'ex-lightGray' );
+
+        td {
+          border: 0;
+          background-color: transparent !important;
+          color: map-get($colors, "blue");
+        }
+        > td:last-child {
+          font-weight: 700 !important;
+        }
+
+        // .th_movil{display: none;}
+
+        // td{width: 50%;}
+
+        // .cpl_number{text-align: right!important;}
+      } // TR TOTAL
+    } // fin tr
+
+    .table_pagination {
+      background-color: map-get($colors, "ex-lightGray");
+    }
+
+    tfoot tr {
+      background-color: map-get($colors, "ex-lightGray");
+
+      td {
+        border: 0 !important;
+      }
+    }
+
+    @include mdMax {
+      tfoot tr th {
+      }
+    }
+
+    // LA TABLA RESPONSIVA___________________________________________
+
+    @include mdMax {
+      border: 1;
+      span.indexTable {
+        //?????
+        display: none;
+      }
+
+      .cpl_estado {
+        float: right !important;
+        span {
+          max-width: 100% !important;
+        }
+      }
+
+      tbody {
+        .th_movil {
+          display: block;
+          @include geneBrow(align-self, flex-start);
+          float: left;
+          text-align: left;
+        }
+      }
+
+      &.no_th_movil {
+        tbody {
+          .th_movil {
+            display: none;
+          }
+
+          td {
+            text-align: left;
+          }
+        }
+      }
+
+      .table_pagination {
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+        td {
+          border: 0;
+          background-color: transparent;
+        }
+        td:first-child {
+          border-bottom: 0;
+        }
+        @include mdMax {
+          td {
+            display: table-cell !important;
+          }
+        }
+      }
+
+      tfoot {
+        tr {
+          @include disp(flex);
+          @include geneBrow(justify-content, space-between);
+          margin-top: 20px !important;
+          border: solid 2.5px map-get($colors, "ex-lightGray") !important;
+
+          td {
+            border: 0;
+          }
+        }
+      }
+
+      tbody tr {
+        &.tr_prevent_responsive {
+          display: table-row;
+          margin-top: -1px;
+          td:first-child {
+            border-bottom: 0;
+            padding-left: 10px;
+          }
+        }
+        display: block;
+        width: 100%;
+        clear: both;
+        position: relative;
+        // margin-top: 20px;
+
+        float: left;
+        border: solid 2.5px map-get($colors, "ex-lightGray");
+        border-top: 0 !important;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.total {
+          background-color: transparent;
+
+          @include disp(flex);
+          @include geneBrow(justify-content, space-between);
+          @include geneBrow(align-items, center);
+
+          .th_movil {
+            display: none;
+          }
+
+          td {
+            border: 0 !important;
+            background-color: transparent !important;
+            color: map-get($colors, "blue");
+          }
+          > td:last-child {
+            font-weight: 700 !important;
+          }
+        } // TR TOTAL
+      } // fin tr
+
+      thead {
+        display: none;
+        th {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      tbody td {
+        vertical-align: text-top;
+        width: 100%;
+        border: 0;
+        border-top: 2.5px solid map-get($colors, "ex-lightGray");
+        text-align: right;
+        @include disp(flex);
+
+        @include geneBrow(align-items, center);
+        @include geneBrow(justify-content, flex-end);
+        &.visible_th {
+          .th_movil {
+            display: block !important;
+          }
+        }
+        &:first-child {
+          border-top: 0;
+
+          font-weight: 700;
+        }
+      } // fin td
+
+      td {
+        &:first-child {
+          background-color: map-get($colors, "lightGray");
+        }
+
+        &.td_group {
+          @include mdMax {
+            background-color: map-get($colors, "ex-lightGray");
+          }
+        }
+      }
+
+      span.indexTable {
+        float: left;
+        display: block;
+        font-weight: 900;
+
+        z-index: 999;
+        margin-bottom: 1px;
+        padding: 10px;
+        color: map-get($colors, "blue");
+        border-bottom: solid 3px map-get($colors, "blue");
+        text-align: left;
+        width: 100%;
+      }
+    } //FIN mdMax
+
+    //FIN TABLA RESPONSIVA
+  } //FIN TABLA
+
+  // LA TABLA V2
+
+  &.external_search {
+    .dataTables_length,
+    .dataTables_info {
+      display: none;
+    }
+  }
+} //real table cont
+
+.paginate_cont .pages,
+.paginate_button {
+  float: left;
+  padding: 13px;
+  cursor: pointer;
+  border-radius: 7px;
+  width: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: white;
+  display: table;
+}
+
+.paginate_cont .pagina {
+  padding: 13px;
+}
+
+.paginate_button.current,
+.paginate_cont .page_active {
+  background-color: map-get($colors, "blue");
+  color: white;
+  border-radius: 4px;
+}
+
+.ellipsis {
+  float: left;
+  margin-top: 34px;
+}
+
+.dataTables_filter label {
+  font-weight: 600;
+  width: 50%;
+  color: map-get($colors, "extraDarkGray");
+  float: left;
+  margin-top: 14px;
+  /* border: solid 2px white; */
+}
+
+.external_search .dataTables_filter label {
+  display: none;
+
+  .dataTables_length {
+    display: none;
+  }
+}
+
+.dataTables_filter input {
+  margin-top: 7px;
+}
+
+/*.cpl_input {
+    font-weight: 400;
+  }*/
+
+.total_box {
+  padding: 20px !important;
+  text-align: right;
+  span {
+    text-align: right;
+    line-height: normal;
+    display: block;
+    width: 100%;
+    &:first-child {
+    }
+    &:nth-child(2) {
+    }
+  }
+}

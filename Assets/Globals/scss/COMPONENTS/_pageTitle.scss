@@ -1,0 +1,58 @@
+.cpl_title{
+  border-bottom: 1px solid map-get($colors, 'lightGray');
+  margin-bottom:20px;
+  @include disp(flex);
+  @include geneBrow(flex-direction, column);
+  // @include geneBrow(justify-content, center);
+  padding-bottom: 5px;
+  // @include geneBrow(align-items, center);
+
+  .title_text{
+    width: 100%;
+  }
+
+  img{ 
+      width: 44px
+  }
+  h1{
+      margin-bottom: 0!important;
+      width: 100%;
+      font-size: $s5!important;
+   }
+
+   .breadcrumb-trail{
+      //  margin-top: 5px;
+       a{ color: map-get($colors, 'gray'); text-decoration: none; text-transform: uppercase; font-weight: 600;
+          :hover{ color: map-get($colors, 'blue')}
+      }
+       span{ color: map-get($colors, 'gray'); text-decoration: none; text-transform: uppercase; font-weight: 600; font-size: $s2;}
+       .active{color: map-get($colors, 'blue')}
+       .separator{ margin-left: 5px;margin-right: 5px}
+
+   }
+
+   .steps-line{
+  //      max-width: 300px;
+  //      width: 30%;
+       padding-bottom: 0;
+  //      @include geneBrow(align-items, center);
+  //        span{ display: none; }
+   }
+
+  @include mdMax{
+          @include geneBrow(align-items, center);
+          @include geneBrow(flex-direction, column);
+          .breadcrumb-trail{ display: none;}
+          .title_text{
+              width: 100%;
+              text-align: center;
+            }
+          //   .steps-line{
+          //       width: 100%;
+          //   }
+        
+      
+
+   }
+}
+

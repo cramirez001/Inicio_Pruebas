@@ -1,0 +1,88 @@
+.option_zone{
+    h1{  margin-bottom: 0!important;}
+    @include md{
+h1{ text-align: left!important;}
+}
+h1, h2, h3, h4{ width: 100%!important; }
+
+
+
+.wrap_cajas {
+    align-items: stretch !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+
+ .caja {
+    border: 2px solid #d0d6d9;
+    border-radius: 10px;
+    padding: 20px !important;
+    /* padding-left: 6px;  */
+    display: flex;
+    width: calc(100%) !important;
+
+
+
+    overflow: hidden;
+    /* min-height: 200px; */
+
+    span{
+        position: relative;
+    }
+
+}
+
+ .caja .cont {
+    width: 100%;
+    margin-left: 10px;
+
+}
+
+/*  .caja .cont p{
+padding-right: 30px;
+} */
+ .caja:hover {
+    border: 2px solid #00aec7;
+    background-color: #d2f5ff;
+
+}
+
+ .caja:hover .check {
+    background-color: #fff !important;
+
+}
+
+ .caja .title {
+    font-family: "FSJoey", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif !important;
+    /* font-size: 1.1em!important; */
+    font-weight: 500 !important;
+
+}
+
+
+
+ .caja.cpl_input_radio {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin: 0 !important;
+
+    flex-wrap: nowrap;
+
+    // margin: 3px !important;
+    align-self: inherit !important;
+
+} 
+
+
+
+
+
+}
+}
+

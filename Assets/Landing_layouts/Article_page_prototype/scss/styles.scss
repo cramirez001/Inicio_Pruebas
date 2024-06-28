@@ -1,0 +1,84 @@
+// Aquí van nuestros estilos personalizados
+.aticle_page{
+
+
+}
+
+.article_header{
+  border-radius: 12px; min-height: 320px; position: relative;
+  
+   border-radius: 20px;
+   overflow: hidden;
+   padding-bottom: 90px;
+}
+
+.title_area{
+    z-index: 3;
+    position: relative;
+    padding: 40px;
+    padding-top: 50px;
+
+
+}
+
+.img_header{
+position: absolute;
+z-index: 0;
+width: 100%;
+top: 0;
+bottom: 0;
+background-size: auto 100% ; background-position: center; 
+background-repeat: no-repeat;
+background-color: map-get($colors, 'extraLightGray' );
+}
+
+
+.article{
+margin-top: -90px; margin-left: 40px;
+background-color: map-get($colors, 'white' );
+padding: 40px;
+border-radius: 12px;
+max-width: 700px;
+float: left;
+position: relative;
+z-index: 2;
+}
+
+
+@include mdMax{
+
+
+
+    .img_header{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        top: auto;
+        bottom: auto;
+        height: 230px;
+        background-size:  auto 100%; background-position: top  right; 
+        background-repeat: no-repeat;
+        }
+
+
+
+        .title_area{
+            margin-top: 240px;
+            padding: 20px;
+        
+        }
+        
+        
+
+
+    
+    .article{
+
+
+        margin-left: initial;
+        margin: 15px;
+        margin-top: -90px;
+        padding: 10px;
+        
+    }
+}

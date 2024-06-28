@@ -1,0 +1,195 @@
+
+<div class="header_valor_cuota">
+    <div class="cpl_flex_form">
+        <div class="flex_row ">
+            <div class="cpl_col cpl_col_12 ">
+            <h2>Consultar valor cuota historico</h2>
+            <p>
+            El valor cuota cambia diariamente y desde esta sección podrás revisar la variación en distintos periodos de tiempo y fondos. ¿Qué es valor cuota?
+            
+            </p>
+            </div>
+                            <div class="cpl_col cpl_col_12 max_w_500 margin_top_small input_wrap select_wrap custom_select_wrap">
+    
+    <label> <span> Selecciona un fondo a consultar</span></label>
+            
+                                <input id="value_seleccion_fondo_consulta" type="hidden" class="inputSelect" />
+                                <!-- CAMPO FONDO  PARA ALMACENAR -->
+                                <div class="custom_select" id="ddlFondo_custom_select">
+                                    <div class="selected"></div>
+                                    <ul>
+                                        <li class="default">Elegir fondo</li>
+                                        <li class="A">
+                                            <div class="cpl_fondo cpl_col">
+                                               
+                                                <div class="fondo_icon A animated flipInY ">
+                                                    A
+                                                </div>
+                                               <div class="margin_left_5"> Más riesgoso</div>
+                                            </div>
+                                        </li>
+                                        <li class="B">
+                                            <div class="cpl_fondo cpl_col">
+                                                
+                                                <div class="fondo_icon B animated flipInY ">
+                                                    B
+                                                </div>
+                                            <div class="margin_left_5"> Riesgoso</div>
+                                            </div>
+                                        </li>
+            
+                                        <li class="C">
+                                            <div class="cpl_fondo cpl_col">
+                                            
+                                                <div class="fondo_icon C animated flipInY ">
+                                                    C
+                                                </div>
+                                            <div class="margin_left_5"> Intermedio</div>
+                                            </div>
+                                        </li>
+            
+            
+                                        <li class="D">
+                                            <div class="cpl_fondo cpl_col">
+                                               
+                                                <div class="fondo_icon D animated flipInY ">
+                                                    D
+                                                </div>
+                                            <div class="margin_left_5"> Conservador</div>
+                                            </div>
+                                        </li>
+            
+            
+                                        <li class="E">
+                                            <div class="cpl_fondo cpl_col">
+                                                
+                                                <div class="fondo_icon E animated flipInY ">
+                                                    E
+                                                </div>
+                                            <div class="margin_left_5"> Más conservador</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+          
+                                </div>
+            
+                                <span id="error_seleccion_fondo_consulta" class="f_error" style="display: none;">Selecciona un fondo</span>
+                            </div>
+                        </div>
+        
+        
+        
+                        <div class="cpl_flex_form mw_500">
+        <div class="flex_row ">
+                     
+                        <div class="cpl_col cpl_col_12 input_wrap radio_wrap">
+                          <label class="cpl_input_radio">
+                            <input id="rdo_tipo_consulta_periodo"  type="radio" name="tipo_consulta_rdo_msk" value="rdo_tipo_consulta_periodo" >
+                            <span class="check"></span>
+                            <p>Consultar por periodo</p>
+        
+                          </label>
+                          <label class="cpl_input_radio">
+                            <input id="rdo_tipo_consulta_consulta" type="radio" name="tipo_consulta_rdo_msk" value="rdo_tipo_consulta_rango" >
+                            <span class="check"></span>
+                            <p>Cosultar por rango de fechas</p>
+        
+                          </label>
+        
+                          <span class="f_error" id="error_tipo_consulta" style="display: none;">Selecciona una opción</span>
+                        </div>
+                      </div>
+                    </div>
+    
+    
+                    </div>
+     </div>
+
+     <div class="header_comparacion">
+         <div class="flex_row">
+             <div class="cpl_col cpl_col_12 margin_bottom_small">
+                 <h3>Selecciona los fondos que deseas consultar</h3>
+             </div>
+             <div class="cpl_col cpl_col_12 margin_bottom_medium">
+              
+    
+
+                <label for="chkA" class="checkFondo">
+                    <div class="cpl_fondo cpl_col">
+                                           
+                        <div class="fondo_icon A animated flipInY ">
+                            A
+                        </div>
+                       <div class="margin_left_5"> Más riesgoso</div>
+                    </div>
+                </label>
+
+
+                <label for="chkB" class="checkFondo active">
+                    <div class="cpl_fondo cpl_col">
+                                           
+                        <div class="fondo_icon B animated flipInY ">
+                            B
+                        </div>
+                       <div class="margin_left_5"> Más riesgoso</div>
+                    </div>
+                </label>
+
+
+                <label for="chkC" class="checkFondo">
+                    <div class="cpl_fondo cpl_col">
+                                           
+                        <div class="fondo_icon C animated flipInY ">
+                            C
+                        </div>
+                       <div class="margin_left_5"> Más riesgoso</div>
+                    </div>
+                </label>
+
+
+                <label for="chkD" class="checkFondo">
+                    <div class="cpl_fondo cpl_col">
+                                           
+                        <div class="fondo_icon D animated flipInY ">
+                            D
+                        </div>
+                       <div class="margin_left_5"> Más riesgoso</div>
+                    </div>
+                </label>
+
+
+                <label for="chkE" class="checkFondo">
+                    <div class="cpl_fondo cpl_col">
+                                           
+                        <div class="fondo_icon E animated flipInY ">
+                            E
+                        </div>
+                       <div class="margin_left_5"> Más riesgoso</div>
+                    </div>
+                </label>
+
+                
+             </div>
+
+             <div class="cpl_col cpl_col_12">
+                <label class="cpl_input_radio">
+                    <input id="rdo_tipo_comparacion_periodo" type="radio" name="tipo_comparacion_rdo_msk" value="rdo_tipo_consulta_periodo">
+                    <span class="check"></span>
+                    <p>Consultar por periodo</p>
+
+                  </label>
+                  <label class="cpl_input_radio">
+                    <input id="rdo_tipo_comparacion_periodo" type="radio" name="tipo_comparacion_rdo_msk" value="rdo_tipo_consulta_periodo">
+                    <span class="check"></span>
+                    <p>Consultar por mes</p>
+
+                  </label>
+                  <label class="cpl_input_radio">
+                    <input id="rdo_tipo_comparacion_periodo" type="radio" name="tipo_comparacion_rdo_msk" value="rdo_tipo_consulta_periodo">
+                    <span class="check"></span>
+                    <p>Consultar por rango de fechas</p>
+
+                  </label>
+             </div>
+         </div>
+     </div>

@@ -1,0 +1,67 @@
+.cpl_icon{
+    font-weight: 400!important;
+    font-family: $iconFont!important;
+    vertical-align:  middle;
+    font-style: normal;
+    margin-left: 3px;
+    margin-right: 3px;
+
+&:after{
+
+    font-family: $iconFont!important;
+
+    }    
+
+@each $class, $value in $iconos {
+    &.#{$class}:after {
+       
+ content: $value;
+    }
+  }
+
+
+
+&.pack2{
+
+  font-family: $iconFontPack2!important;
+  &:after{
+    font-family: $iconFontPack2!important;
+  }
+
+  @each $class, $value in $iconos {
+    &.#{$class}:after {
+
+        content: $value;
+    }
+  }
+}
+
+&.arrowPack{
+
+  font-family: $iconArrowPack!important;
+  &:after{
+    font-family: $iconArrowPack!important;
+  }
+
+  @each $class, $value in $iconos {
+    &.#{$class}:after {
+
+        content: $value;
+    }
+  }
+}
+
+
+
+
+&.big{
+  font-size: $s10!important;
+}
+&.medium{
+  font-size: $s6!important;
+}
+&.small{
+  font-size: $s3!important;
+}
+
+}

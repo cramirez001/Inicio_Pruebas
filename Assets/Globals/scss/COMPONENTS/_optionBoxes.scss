@@ -1,0 +1,84 @@
+.options_boxes{
+    &.grayBg:after{
+        content:'';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: map-get($colors, 'ex-lightGray' );
+        z-index: -1;
+        top: 10px;
+    }
+        .cpl_col{
+            // background-color: #333;
+        }
+        .option{
+            // p{max-width: 200px;}
+            -webkit-transition: all 200ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+            .hoverBar{
+                -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+                width: 25px;
+                height: 3px;
+                margin: 0 auto;
+                background-color: map-get($colors, 'yellow' );
+                margin-top: 10px;
+                margin-bottom: 20px;
+    
+            }
+            &:hover{
+    -webkit-box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+    -moz-box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+    box-shadow: 0px 20px 40px -14px rgba(0,0,0,0.35)!important;
+    .hoverBar{
+    background-color: map-get($colors, 'blue' );
+    width: 45px;
+    }
+    
+            }
+            padding: 20px;
+            @include disp(flex);
+            @include geneBrow(flex-direction, column);
+            @include geneBrow(justify-content, space-between);
+            max-width: 290px;
+            margin: 0 auto;
+            background-color: map-get($colors, 'white' );
+            border-radius: 6px;
+    
+            background-size: 125px auto;
+            min-height: 320px;
+            background-repeat: no-repeat;
+            background-position: bottom 10px right 10px;
+            &.diez{
+                background-image: url('../img/home_landing/diez.jpg');
+          
+            }
+            &.sitio{
+                background-image: url('../img/home_landing/sitio.jpg');
+          
+            }
+            &.cdf{
+                background-image: url('../img/home_landing/cdf.jpg');
+            
+            }
+            
+    
+            @include mdMax{ 
+    
+                max-width: 420px;
+                min-height: 220px;
+                background-size: 100px auto;
+                background-position: bottom -10px right -10px;
+    
+            }
+        }
+        
+    }
